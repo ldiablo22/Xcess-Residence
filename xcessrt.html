@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
+   <link rel="stylesheet" href="styles.css">
+   <meta name="description"
+      content="Discover Xcess Residence Pattaya, a peaceful retreat along the Eastern Seaboard. Explore our luxurious rooms, rooftop spa, and convenient location near Pattaya's attractions.">
+   <meta name="keywords"
+      content="Xcess Residence, Pattaya hotels, luxury accommodation Pattaya, rooftop spa, Eastern Seaboard">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <!-- Other meta tags and CSS styles -->
+</head>
+<style>
+   body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #040308;
+      background-image: url('xcess6.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      /* Keeps the background fixed while scrolling */
+   }
+
+   .container {
+      font-family: 'Roboto', sans-serif;
+   }
+
+
+   header {
+      background-color: #faf7f7;
+      color: rgb(7, 6, 10);
+      padding: 10px 0;
+      /* Adjust top and bottom padding */
+      height: 25px;
+      /* Set a fixed height */
+   }
+
+   body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(252, 247, 247, 0.5);
+      /* Adjust transparency (0.5) as needed */
+      z-index: -1;
+   }
+
+   /* Define styles for the custom margin and width */
+   .custom-style {
+      margin: 40px auto;
+      /* Center the container horizontally */
+      width: 80%;
+      /* Adjust the width value as needed */
+      box-sizing: border-box;
+      padding: 0 90px;
+      /* Add padding to adjust inner content */
+   }
+
+   /* To explicitly move it to the left */
+   .custom-style {
+      margin: 0px;
+      /* Uniform margin */
+      width: calc(100% - 40px);
+      /* Full width minus total margin */
+   }
+
+   nav {
+      float: right;
+   }
+
+   nav ul {
+      list-style: none;
+      padding: 0;
+   }
+
+   nav ul li {
+      display: inline;
+      margin-left: 20px;
+   }
+
+   nav ul li a {
+      color: rgb(5, 4, 12);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 30px;
+   }
+
+
+   #home {
+      background-color: rgba(46, 7, 238, 0.5);
+      /* semi-transparent color */
+      color: #f7f6fc;
+      padding: 10px 0;
+      text-align: center;
+   }
+
+
+   #home h2 {
+      font-size: 50px;
+      margin: 0;
+   }
+
+   #home p {
+      font-size: 40px;
+   }
+
+   section {
+      padding: 20px 0;
+   }
+
+   .room-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+   }
+
+   .room {
+      text-align: center;
+      width: 48%;
+   }
+
+   .room img {
+      max-width: 80%;
+      border-radius: 10px;
+   }
+
+   .room-details {
+      background-color: rgba(168, 156, 233, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+
+   .room-details h3,
+   .room-details p {
+      color: #333;
+   }
+
+   form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+   }
+
+   form input,
+   form textarea {
+      padding: 20px;
+      border: 1px solid #0875a0;
+      border-radius: 5px;
+   }
+
+   form button {
+      padding: 30px;
+      background-color: #333;
+      color: rgb(78, 66, 66);
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+   }
+
+   footer {
+      color: rgb(18, 235, 18);
+      text-align: center;
+      padding: 20px 0;
+   }
+
+   .large-font {
+      font-size: 30px;
+   }
+
+   .links {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding: 20px 0;
+      gap: 30px;
+   }
+
+   .links a {
+      text-decoration: none;
+      text-align: center;
+   }
+
+   .links img {
+      display: block;
+      border-radius: 50%;
+      transition: transform 0.3s ease-in-out;
+      margin: 0 auto;
+   }
+
+   .links img:hover {
+      transform: scale(1.2);
+   }
+
+
+   .room video {
+      width: 100%;
+      /* Adjust width as needed */
+      max-width: 300px;
+      /* Max width constraint */
+      height: 400px;
+      /* Maintain aspect ratio */
+      object-fit: cover;
+      /* Ensure the whole video is shown */
+   }
+
+   .video-container {
+      display: flex;
+      justify-content: center;
+      /* Center horizontally */
+      gap: 120px;
+      /* Adjust gap between videos */
+      margin: 0 auto;
+      /* Center the container itself */
+      text-align: center;
+      /* Center content inside flex items (for older browser support) */
+      max-width: 80%;
+      /* Ensure the container does not exceed its parent width */
+      padding: 40px;
+      /* Optional: Add padding to the container */
+      box-sizing: border-box;
+      /* Ensure padding is included in the width */
+   }
+
+   .video-container video {
+      width: 370px;
+      /* Fixed width for each video */
+      height: 380px;
+      /* Fixed height for each video */
+      max-width: 100%;
+      /* Ensure videos don't exceed their container */
+   }
+</style>
+
+<body>
+   <header>
+      <div class="container custom-style">
+         <nav>
+            <ul>
+               <li><a href="index.html" style="color: #070000; font-size: 15px;">Home</a></li>
+               <li><a href="xcessrooms.html" style="color: #070000; font-size: 15px;">Gallery</a></li>
+               <li><a href="xcessrt.html" style="color: #070000; font-size: 15px;">Rooftop & Spa</a></li>
+               <li><a href="xcesslocation.html" style="color: #070000; font-size: 15px;">Location</a></li>
+               <li><a href="xcessleisure.html" style="color: #070000; font-size: 15px;">Leisure</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <section id="home">
+      <div class="container">
+         <h2></h2>
+         <p></p>
+      </div>
+   </section>
+   <section id="rooftop-and-spa" style="background-color: rgba(237, 235, 241, 0.5);">
+      <div class="container">
+         <div style="padding: 40px;">
+            <h2 style="font-family: font-size 50px; color: #070000;">Rooftop and Spa</h2>
+
+            <p class=" large-text" style="font-size: 18px; color: #070000;">
+               Xcess Rooftop and Spa is a luxurious urban retreat that offers an exceptional combination of
+               relaxation
+               and entertainment. Nestled atop a high-rise building, this elegant oasis provides breathtaking
+               panoramic
+               views of the city skyline, making it a perfect escape from the hustle and bustle below.
+
+               The spa's amenities are designed to provide a comprehensive wellness experience. It features two hot
+               tubs, each with its own unique ambiance. These hot tubs are perfect for soaking away stress while
+               enjoying the stunning views and the soothing warmth of the water.
+            <p class="large-text" style="font-size: 18px; color: #070000;">
+               In addition to the hot tubs, Xcess Rooftop and Spa boasts a relaxation pool. This tranquil pool is
+               ideal
+               for a leisurely swim or simply lounging by the water's edge, surrounded by stylish décor and serene
+               settings that enhance the calming atmosphere.
+            <p class="large-text" style="font-size: 18px; color: #070000;">
+               For those seeking a deeper level of relaxation, the spa offers two saunas. These saunas are
+               designed
+               to
+               detoxify the body, promote circulation, and rejuvenate the spirit. The heat and humidity provide a
+               therapeutic environment, helping guests to unwind and relieve tension.
+
+               Complementing the wellness facilities, Xcess Rooftop and Spa features a full bar. The bar serves a
+               curated selection of cocktails, fine wines, and refreshing beverages, allowing guests to indulge in
+               their
+               favorite drinks while enjoying the luxurious surroundings. Whether you're looking to sip on a
+               cocktail
+               by
+               the pool or enjoy a glass of wine in the sauna's lounge area, the bar adds a touch of
+               sophistication
+               to
+               the spa experience.
+            <p class="large-text" style="font-size: 18px; color: #070000;">
+               Overall, Xcess Rooftop and Spa is a sanctuary of relaxation and indulgence, offering a blend of
+               wellness
+               amenities and social spaces. It is the perfect destination for those looking to relax, rejuvenate,
+               and
+               enjoy the finer things in life amidst a stunning urban backdrop.
+            </p>
+         </div>
+      </div>
+   </section>
+
+   <section id="rooms">
+      <div class="container">
+         <div class="room-grid">
+            <div class="room">
+               <img src="rooftop1.png" alt="Deluxe Room" width="900" height="400">
+            </div>
+            <div class="room">
+               <img src="rooftop2.png" alt="Suite Room" width="900" height="400">
+            </div>
+            <div class="room">
+               <img src="rooftop3.png" alt="Executive Room" width="900" height="400">
+            </div>
+            <div class="room">
+               <img src="rooftop4.png" alt="Rooftop bar" width="900" height="400">
+            </div>
+            <div class="room">
+               <img src="rooftop5.png" alt="Rooftop bar" width="900" height="400">
+            </div>
+            <div class="room">
+               <img src="rooftop7.png" alt="Rooftop bar" width="900" height="400">
+            </div>
+            <div class="room">
+               <img src="rooftop7.png" alt="Rooftop bar" width="900" height="400">
+            </div>
+            <div class="room">
+               <img src="rooftop8.jpg" alt="Rooftop bar" width="900" height="400">
+            </div>
+            <!-- Add your videos here -->
+
+
+
+            <section>
+               <div class="video-container">
+                  <video controls>
+                     <source src="video1.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                  </video>
+                  <video controls>
+                     <source src="video3.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                  </video>
+                  <video controls>
+                     <source src="video2.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                  </video>
+
+               </div>
+         </div>
+      </div>
+   </section>
+
+   <style>
+      .room-title {
+         font-size: 40px;
+         margin: 0;
+         padding: 0;
+      }
+
+      .large-text {
+         font-size: 40px;
+         margin-top: 5px;
+      }
+   </style>
+
+   <footer style="background-color: #faf7f7;text-align: center; padding: 10px 0;">
+      <p style="color:  rgb(7, 0, 0);  font-size: 10px;">2024 Xcess Residence, Rooftop and Spa. All rights
+         reserved.
+      </p>
+   </footer>
+
+</body>
+
+</html>

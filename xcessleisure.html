@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
+   <link rel="stylesheet" href="styles.css">
+   <meta name="description"
+      content="Discover Xcess Residence Pattaya, a peaceful retreat along the Eastern Seaboard. Explore our luxurious rooms, rooftop spa, and convenient location near Pattaya's attractions.">
+   <meta name="keywords"
+      content="Xcess Residence, Pattaya hotels, luxury accommodation Pattaya, rooftop spa, Eastern Seaboard">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <!-- Other meta tags and CSS styles -->
+</head>
+<style>
+   body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+   }
+
+   .container {
+      font-family: 'Roboto', sans-serif;
+   }
+
+
+   header {
+      background-color: #faf7f7;
+      color: rgb(7, 6, 10);
+      padding: 10px 0;
+      /* Adjust top and bottom padding */
+      height: 25px;
+      /* Set a fixed height */
+   }
+
+   body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Adjust transparency (0.5) as needed */
+      background-color: rgba(252, 247, 247, 0.5);
+      z-index: -1;
+   }
+
+   .container {
+      width: 85%;
+      margin: 0 auto;
+   }
+
+   .logo {
+      display: inline-block;
+      font-size: 20px;
+      margin: 0;
+   }
+
+   nav {
+      float: right;
+   }
+
+   nav ul {
+      list-style: none;
+      padding: 0;
+   }
+
+   nav ul li {
+      display: inline;
+      margin-left: 20px;
+   }
+
+   nav ul li a {
+      color: rgb(3, 2, 5);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 30px;
+   }
+
+   #home {
+      background-color: rgba(46, 7, 238, 0.5);
+      /* semi-transparent color */
+      color: #f7f6fc;
+      padding: 10px 0;
+      text-align: center;
+   }
+
+
+   .room-grid {
+      display: flex;
+      flex-wrap: wrap;
+      /* Allow items to wrap to the next row */
+      justify-content: space-between;
+      /* Evenly distribute items on each row */
+      gap: 70px;
+   }
+
+   .room {
+      text-align: center;
+      width: 48%;
+      /* Each room takes nearly half of the container */
+   }
+
+   .room img {
+      max-width: 100%;
+      border-radius: 10px;
+   }
+
+   .room-details {
+      background-color: rgba(17, 14, 36, 0.8);
+      /* Adjust opacity to fit your background */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+
+   .room-details h3,
+   .room-details p {
+      color: #070202;
+      /* Text color inside the box */
+   }
+
+   form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+   }
+
+   form input,
+   form textarea {
+      padding: 20px;
+      border: 1px solid #0875a0;
+      border-radius: 5px;
+   }
+
+   form button {
+      padding: 30px;
+      background-color: #333;
+      color: rgb(78, 66, 66);
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+   }
+
+   footer {
+
+      text-align: center;
+      padding: 20px 0;
+   }
+
+   .large-font {
+      font-size: 30px;
+   }
+
+   .links {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding: 20px 0;
+      gap: 30px;
+   }
+
+   .links a {
+      text-decoration: none;
+      text-align: center;
+   }
+
+   .links img {
+      display: block;
+      border-radius: 50%;
+      transition: transform 0.3s ease-in-out;
+      margin: 0 auto;
+   }
+
+   .links img:hover {
+      transform: scale(1.2);
+   }
+
+   @media (max-width: 768px) {
+      .room {
+         width: 100%;
+         /* On smaller screens, each room takes full width */
+      }
+   }
+
+   body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+   }
+
+   .content {
+      padding: 20px;
+      background-color: rgba(255, 252, 252, 0.7);
+      /* Optional: Adds a semi-transparent white background behind content */
+      position: relative;
+      /* Ensures content doesn't overlap with fixed background */
+      z-index: 1;
+      /* Ensure content is on top of the background */
+   }
+
+
+   /* Additional styles for the five pieces section */
+   #additional-section-2 {
+      background-color: #a5a8aa;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px 0;
+      position: relative;
+   }
+
+   #additional-section-2 .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+   }
+
+   #additional-section-2 .box {
+      flex: 1;
+      min-width: 40px;
+      padding: 10px;
+      text-align: center;
+      box-sizing: border-box;
+   }
+
+   #additional-section-2 .box h2 {
+      margin: 0 0 5px;
+   }
+
+   #additional-section-2 .box p {
+      margin: 0 0 5px;
+   }
+
+   #additional-section-2 .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      color: rgb(7, 0, 0);
+      background-color: #007bff;
+      text-decoration: none;
+      border-radius: 5px;
+   }
+
+   #additional-section-2 .btn:hover {
+      background-color: #0056b3;
+   }
+
+   .room-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* Center aligns the grid horizontally */
+   }
+
+   .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      /* Space around items in each row */
+      margin-bottom: 20px;
+   }
+
+   .room {
+      flex: 0 0 calc(33.33% - 20px);
+      /* Adjust width and add margin */
+      margin-right: 30px;
+      /* Add space between items */
+      margin-bottom: 10px;
+      /* Add vertical space between rows */
+   }
+
+   .room:last-child {
+      margin-right: 0;
+   }
+
+   .room-image {
+      max-width: 100%;
+      height: auto;
+   }
+</style>
+
+</head>
+
+<body>
+   <header>
+      <div class="container">
+         <nav>
+            <ul>
+               <li><a href="index.html" style="color: rgb(7, 0, 0); font-size: 15px;  ">Home</a></li>
+               <li><a href="xcessrooms.html" style="color: rgb(7, 0, 0); font-size: 15px; ">Gallery</a></li>
+               <li><a href="xcessrt.html" style="color: rgb(7, 0, 0); font-size: 15px; ">Rooftop & Spa</a></li>
+               <li><a href="xcesslocation.html" style="color: rgb(7, 0, 0); font-size: 15px; ">Location</a></li>
+               <li><a href="xcessleisure.html" style="color: rgb(7, 0, 0); font-size: 15px; ">Leisure</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <section id="home">
+      <div class="container">
+         <h2></h2>
+      </div>
+   </section>
+   <section id="additional-section">
+      <div class="container">
+         <h2 style="font-size: 20px;">Discover Pattaya's Electrifying Nightlife on Walking Street</h2>
+         <p style="font-size: 20px;">A Journey Through the Hottest Clubs and Underground Havens,
+            Where the Party Never Sleeps !</p>
+      </div>
+   </section>
+   <section id="room">
+      <div class="container">
+         <p style="font-size: 18px;">Pattaya's nightlife is legendary, with a plethora of hot nightclubs that
+            pulse with energy until the early hours. Here's a glimpse into some of the city's most iconic
+            clubs:</p>
+         <p><strong style="font-size: 20px;">Republic:</strong><br>
+         <p style="font-size: 18px;">Republic Club is where the city's elite come to play. Located in the heart
+            of Walking Street,
+            Republic boasts sleek modern interiors,
+            state-of-the-art sound systems,
+            and world-class DJs spinning the latest tracks. With its upscale atmosphere and VIP sections,
+            it's the go-to spot for those looking to see and be seen.</p>
+         <!-- Add more club descriptions as needed -->
+         <p><strong style="font-size: 20px;">Myst:</strong><br>
+         <p style="font-size: 18px;">Thailand welcomed its first-ever Hip Hop Super Club in May 2022,
+            boasting an unparalleled lighting and laser experience that promises to leave you awe-inspired!
+            Reserve your spot on the vibrant dance floor for an immersive experience,
+            or opt for one of our exclusive VIP booths for a spacious and personalized service,
+            ensuring you enjoy the show every single night! Whichever option you choose,
+            we assure you an unforgettable experience!</p>
+         <p><strong style="font-size: 20px;">Tunnel:</strong><br>
+         <p style="font-size: 18px;">Tunnel Club takes clubbing to a whole new level with its underground
+            setting and cutting-edge beats. Located beneath Walking Street,
+            this club boasts an intimate atmosphere,
+            pulsating music,
+            and a crowd that's ready to dance until dawn. The immersive experience of Tunnel Club makes it a favorite
+            among
+            locals and tourists alike.</p>
+         <p><strong style="font-size: 20px;">Insomnia:</strong><br>
+         <p style="font-size: 18px;">Insomnia is a legendary name in Pattaya's club scene, known for its massive
+            dance floors, high-energy atmosphere,
+            and international DJ lineup. Situated on Walking Street,
+            it's a mecca for party animals looking to lose themselves in the music and the moment. From EDM to hip-hop,
+            Insomnia caters to every taste in music.</p>
+         <p><strong style="font-size: 20px;">Club Panda:</strong><br>
+         <p style="font-size: 18px;">Club Panda brings a touch of Asian-inspired luxury to Pattaya's nightlife
+            scene. Nestled in the heart of the city,
+            Club Panda offers a sophisticated setting with plush décor,
+            premium drinks,
+            and a lineup of top DJs spinning the latest tracks. It's where style meets substance for those
+            who appreciate elegance in their party experience.</p>
+         <p><strong style="font-size: 20px;">Lucifer:</strong><br>
+         <p style="font-size: 18px;">Lucifer Disco is a long-standing institution on Walking Street,
+            renowned for its wild parties and retro vibes. With multiple levels,
+            each offering a different genre of music,
+            Lucifer guarantees a diverse and energetic atmosphere. It's a favorite haunt for those who love
+            to dance until sunrise to the sounds of classic hits and chart-toppers.</p>
+         <p><strong style="font-size: 20px;">808:</strong><br>
+         <p style="font-size: 18px;">808 Nightclub is the place to be for electronic music aficionados.
+            Situated near Walking Street,
+            it boasts cutting-edge sound systems,
+            immersive visuals,
+            and a lineup of renowned DJs spinning the latest beats. Whether you're into techno, house, or
+            trance, 808 delivers an electrifying experience.</p>
+         <p style="font-size: 20px;">Pattaya's nightclub scene offers something for everyone, from upscale
+            lounges to underground dance havens,
+            ensuring that the city never sleeps and the party never ends.</p>
+      </div>
+   </section>
+
+   <!-- Additional Section with Different Background Image -->
+   <section class="room-grid">
+      <div class="row">
+         <div class="room">
+            <a href="https://republic-nightclub.com/" target="_blank">
+               <img src="Republic.png" alt="Republic" class="room-image" style="height: 200px; width: 300px;">
+            </a>
+         </div>
+         <div class="room">
+            <a href="https://www.mystclubpattaya.com/" target="_blank">
+               <img src="Myst.jpg" alt="Myst" class="room-image" style="height: 200px; width: 300px;">
+            </a>
+         </div>
+         <div class="room">
+            <a href="https://www.facebook.com/tunnelclubpattaya" target="_blank">
+               <img src="Tunnel.png" alt="Tunnel" class="room-image" style="height: 200px; width: 300px;">
+            </a>
+         </div>
+      </div>
+      <div class="row">
+         <div class="room">
+            <a href="https://www.clubinsomniapattaya.com/" target="_blank">
+               <img src="Insomnia.png" alt="Insomnia" class="room-image" style="height: 200px; width: 300px;">
+            </a>
+         </div>
+         <div class="room">
+            <a href="https://www.808pattaya.com/" target="_blank">
+               <img src="808.png" alt="808" class="room-image" style="height: 200px; width: 300px;">
+            </a>
+         </div>
+         <div class="room">
+            <a href="https://lucifer-pattaya.com/" target="_blank">
+               <img src="Lucifer.png" alt="Lucifer" class="room-image" style="height: 200px; width: 300px;">
+            </a>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+   <!-- New Section Above the Footer -->
+   <section id="additional-section-2">
+      <div class="container">
+         <div class="box">
+            <h2 style="color: black; font-size: 14px;">Koh Larn</h2>
+            <p style="color: black; font-size: 10px;">Book your day trip</p><a href="https://www.kohlarn.com/"
+               class="btn" style="font-size: 10px;" target="_blank">Visit Koh Larn</a>
+         </div>
+         <div class="box">
+            <h2 style="color: black; font-size: 14px;">Sanctuary of Truth</h2>
+            <p style="color: black; font-size: 10px;">Visit</p><a href="https://sanctuaryoftruthmuseum.com/" class="btn"
+               style="font-size: 10px;" target="_blank">Sanctuary of Truth</a>
+         </div>
+         <div class="box">
+            <h2 style="color: black; font-size: 14px;">Central Mall</h2>
+            <p style="color: black; font-size: 10px;">Indulge</p><a
+               href="https://www.centralpattana.co.th/en/our-business/shopping-center/356/central-pattaya" class="btn"
+               style="font-size: 10px;" target="_blank">Shop at Central Mall</a>
+         </div>
+         <div class="box">
+            <h2 style="color: black; font-size: 14px;">Terminal 21</h2>
+            <p style="color: black; font-size: 10px;">Spoil Yourself</p><a
+               href="https://www.terminal21.co.th/pattaya/en/home-en/" class="btn" style="font-size: 10px;"
+               target="_blank">Visit Terminal 21</a>
+         </div>
+         <div class="box">
+            <h2 style="color: black; font-size: 14px;">Ripley Thailand</h2>
+            <p style="color: black; font-size: 10px;">Unlock Your Inner Child</p><a
+               href="https://ripleysthailand.com/about_us" class="btn" style="font-size: 10px;" target="_blank">Discover
+               Ripley Thailand</a>
+         </div>
+      </div>
+   </section>
+
+   <footer style="background-color:  #f3ecec; text-align: center; padding: 10px 0;">
+      <p style="color: rgb(7, 0, 0); font-size: 10px;">2024 Xcess Residence,
+         Rooftop and Spa. All rights reserved.</p>
+   </footer>
+
+   <script>
+      var slides = document.querySelectorAll('.slide');
+      var currentIndex = 0;
+
+      // Array of background images with associated sizes
+      var backgroundImages = [{
+         url: 'Beach.jpg', size: '100% 100%'
+      }
+         // Add more images if needed
+      ];
+      var currentBackgroundIndex = 0;
+
+      function changeBackgroundImage() {
+         // Increment index to the next background image
+         currentBackgroundIndex++;
+
+         // Reset index if it exceeds the number of background images
+         if (currentBackgroundIndex >= backgroundImages.length) {
+            currentBackgroundIndex = 0;
+         }
+
+         // Set the new background image
+         document.body.style.backgroundImage = "url('" + backgroundImages[currentBackgroundIndex].url + "')";
+         // Set the new background size
+         document.body.style.backgroundSize = backgroundImages[currentBackgroundIndex].size;
+      }
+
+      // Change background image every 5 seconds (5000 milliseconds)
+      setInterval(changeBackgroundImage, 1000);
+   </script>
+</body>
+
+</html>
