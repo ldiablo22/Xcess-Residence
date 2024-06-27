@@ -221,6 +221,35 @@
          border-radius: 5px;
       }
 
+
+      .room-grid {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 10px;
+         /* Adjust the gap between images */
+      }
+
+
+      /* Adjust margins for images within the room grid */
+      #rooms .room {
+         display: flex;
+         justify-content: center;
+         /* Center align items horizontally */
+         gap: 0px;
+         /* Adjust spacing between images */
+      }
+
+      #rooms .room img {
+         max-width: 100%;
+         margin-left: 40px;
+         /* Adjust margin to move images to the left */
+         margin-right: 40px;
+         /* Adjust margin to move images to the right */
+         border-radius: 30px;
+         /* Keep the border radius as needed */
+      }
+
+
       footer {
          background-color: #f3ecec;
          /* Dark background color */
@@ -255,20 +284,6 @@
          /* Remove underline */
       }
 
-      .container {
-         position: relative;
-      }
-
-      .room-grid {
-         display: flex;
-         flex-wrap: wrap;
-         gap: 20px;
-      }
-
-      .room {
-         position: relative;
-         text-align: center;
-      }
 
 
       footer {
@@ -311,10 +326,6 @@
          }
 
 
-         .room img {
-            margin-bottom: 20px;
-            max-width: 100%;
-         }
 
          .check-availability {
             margin-left: 0;
@@ -535,8 +546,6 @@
                         onclick="window.open('https://www.agoda.com/xcess-residence/hotel/pattaya-th.html?finalPriceView=1&isShowMobileAppPrice=false&cid=1919571&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2024-07-1&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=THB&isFreeOccSearch=false&tag=0002d4f2-d0b3-4684-9a42-27ea2c122dab&los=4&searchrequestid=8115e895-498f-4887-adee-e3b95da167a1&ds=wPq3w7xMDXyA%2BClG', '_blank')">
                         Check Availability</button>
                   </div>
-
-
       </section>
       <section id="services" style="background-color: #583ece; padding: 10px;">
          <div class="container">
