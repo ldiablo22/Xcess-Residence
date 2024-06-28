@@ -33,7 +33,7 @@
       width: 80%;
       /* Adjust the width value as needed */
       box-sizing: border-box;
-      padding: 0 50px;
+      padding: 0 100px;
       /* Add padding to adjust inner content */
    }
 </style>
@@ -162,7 +162,7 @@
          background-color: rgba(81, 59, 209, 0.5);
          /* semi-transparent color */
          color: #03000e;
-         padding: 10px 0;
+         padding: 20px 0;
          text-align: center;
       }
 
@@ -206,20 +206,31 @@
          width: 80%;
       }
 
-      .room .check-availability {
-         margin-top: 5px;
-         /* Adjust vertical margin as needed */
-         margin-left: -35px;
-         /* Adjust horizontal margin as needed */
+      .room {
+         position: relative;
+         /* Ensure the parent container is relatively positioned */
+         display: flex;
+         align-items: flex-start;
+         margin: 0;
+      }
+
+      .check-availability {
+         position: absolute;
+         top: -150px;
+         /* Adjust top position as needed */
+         left: 210px;
+         /* Adjust left position as needed */
          background-color: #2706b9;
          color: rgb(240, 227, 227);
-         padding: 10px 20px;
+         padding: 10px 50px;
          text-align: center;
          text-decoration: none;
          font-size: 10px;
          cursor: pointer;
          border: none;
          border-radius: 10px;
+         z-index: 1;
+         /* Ensure the button appears above the images */
       }
 
 
@@ -249,9 +260,9 @@
 
       #rooms .room img {
          max-width: 100%;
-         margin-left: 40px;
+         margin-left: 70px;
          /* Adjust margin to move images to the left */
-         margin-right: 40px;
+         margin-right: 150px;
          /* Adjust margin to move images to the right */
          border-radius: 30px;
          /* Keep the border radius as needed */
