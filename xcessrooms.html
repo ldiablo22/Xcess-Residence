@@ -6,47 +6,35 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
    <link rel="stylesheet" href="styles.css">
-   <meta name="description"
-      content="Discover Xcess Residence Pattaya, a peaceful retreat along the Eastern Seaboard. Explore our luxurious rooms, rooftop spa, and convenient location near Pattaya's attractions.">
-   <meta name="keywords"
-      content="Xcess Residence, Pattaya hotels, luxury accommodation Pattaya, rooftop spa, Eastern Seaboard">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
    <style>
       body {
          margin: 0;
-         font-family: Arial, sans-serif;
+         font-family: 'Roboto', sans-serif;
          color: #040308;
          background-image: url('xcess7.jpg');
          background-size: cover;
          background-position: center;
          background-attachment: fixed;
          /* Makes the background image remain stationary */
+         display: flex;
+         flex-direction: column;
+         min-height: 100vh;
       }
 
       .container {
-         font-family: 'Roboto', sans-serif;
-      }
-
-
-      .container {
-         margin: 0 auto;
-         /* Center the container horizontally */
          max-width: 1200px;
-         /* Adjust the maximum width as needed */
+         margin: 0 auto;
          padding: 0 20px;
-         /* Adjust padding as needed */
          box-sizing: border-box;
-         /* Ensure padding is included in width calculation */
+         flex: 1;
       }
 
       header {
          background-color: #faf7f7;
-         color: rgb(7, 6, 10);
+         color: #07060a;
          padding: 10px 0;
-         /* Adjust top and bottom padding */
          height: 25px;
-         /* Set a fixed height */
       }
 
       nav {
@@ -64,7 +52,7 @@
       }
 
       nav ul li a {
-         color: rgb(5, 4, 12);
+         color: #05040c;
          text-decoration: none;
          font-weight: bold;
          font-size: 14px;
@@ -72,7 +60,6 @@
 
       #home {
          background-color: rgba(46, 7, 238, 0.5);
-         /* semi-transparent color */
          color: #f7f6fc;
          padding: 10px 0;
          text-align: center;
@@ -87,9 +74,14 @@
          font-size: 40px;
       }
 
-      section {
+      #rooms {
+         background-color: rgba(199, 199, 219, 0.5);
          padding: 20px 0;
-         /* Add padding as needed */
+         min-height: calc(100vh - 170px);
+         /* Adjust according to your header and footer height */
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
       }
 
       .room-grid {
@@ -97,29 +89,32 @@
          flex-wrap: wrap;
          justify-content: space-between;
          gap: 30px;
+         flex: 1;
+         /* Ensure the room grid takes full height */
       }
 
       .room {
          text-align: center;
          width: 48%;
          margin-bottom: 20px;
-         /* Adjust margin as needed */
       }
 
       .room-image {
          border-radius: 10px;
-         /* Adjust border radius as needed */
       }
 
       .room-details {
          margin-top: 10px;
-         /* Adjust margin as needed */
       }
+
 
       footer {
          text-align: center;
          padding: 10px 0;
          background-color: #faf7f7;
+         margin-top: auto;
+         /* Pushes footer to the bottom */
+         width: 100%;
       }
 
       img {
@@ -128,174 +123,151 @@
          display: block;
          margin: auto;
          border-radius: 10px;
-         /* Adjust border radius as needed */
       }
 
       @media (max-width: 768px) {
          .room {
             width: 100%;
-            /* Full width on smaller screens */
          }
       }
    </style>
 </head>
 
-
-<header>
-   <div class="container custom-style">
-      <nav>
-         <ul>
-            <li><a href="index.html" style="color: rgb(7, 0, 0); font-size: 15px;">Home</a></li>
-            <li><a href="xcessrooms.html" style="color: rgb(7, 0, 0); font-size: 15px;">Gallery</a></li>
-            <li><a href="xcessrt.html" style="color: rgb(7, 0, 0); font-size: 15px;">Rooftop & Spa</a></li>
-            <li><a href="xcesslocation.html" style="color: rgb(7, 0, 0); font-size: 15px;">Location</a></li>
-            <li><a href="xcessleisure.html" style="color: rgb(7, 0, 0); font-size: 15px;">Leisure</a></li>
-         </ul>
-      </nav>
-   </div>
-</header>
-
-
-<section id="home">
-   <div class="container">
-      <h2></h2>
-      <p></p>
-   </div>
-</section>
-
-<title>Room Gallery</title>
-<style>
-   #about {
-      margin-bottom: 0px;
-      /* Adjust this value to increase/decrease space */
-   }
-
-   .room-grid {
-      margin-top: 10px;
-      /* Ensure there is some space at the top of the room grid */
-   }
-
-   .room-image {
-      margin-bottom: 30px;
-      /* Adjust this value to increase/decrease space */
-   }
-
-   .room-details {
-      margin-top: 0px;
-      /* Adjust this value to increase/decrease space between the image and the room details */
-   }
-</style>
-
 <body>
-   <section id="about" style="background-color: rgba(255, 252, 252, 0.7);">
-      <div class=" container">
-         <h2 style=" font-family: font-size 30px; color: #070000;">Rooms</h2>
-         <p class="large-text" style="font-size: 18px; color:  #070000;">
-            At Xcess Residence, comfort meets luxury. Our range of meticulously designed rooms ensures that every
-            guest enjoys a truly relaxing stay. Indulge in the serene atmosphere of our double rooms, each adorned
-            with a private balcony offering breathtaking views. Unwind in our Queen rooms, complete with cozy
-            furnishings and the added luxury of a balcony to soak in the fresh air.
 
-            At Xcess Residence, cleanliness is our priority. Rest assured, our rooms are meticulously maintained
-            to guarantee your comfort and well-being throughout your stay.
-
-
-
-         <p class="large-text" style="font-size: 18px; color:  #070000;">
-            For families seeking spacious accommodation, our family rooms provide ample space and comfort for
-            everyone to enjoy. Upgrade to our Deluxe Queen rooms for enhanced luxury, or opt for our Superior
-            King
-            rooms for an extra touch of elegance and space.
-
-            Families can enjoy the ultimate relaxation in our family rooms with balconies, perfect for spending
-            quality time together while enjoying panoramic views.
-
-            Looking for a budget-friendly option without compromising on comfort? Our Econo double rooms offer
-            great value without sacrificing quality, ensuring a comfortable stay for all our guests.
-
-            Whether you're traveling for business or leisure, Xcess Residence offers a variety of room options
-            to
-            suit every need. Book your stay with us today and experience the epitome of comfort and
-            hospitality.
-         </p>
+   <header>
+      <div class="container">
+         <nav>
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="xcessrooms.html">Gallery</a></li>
+               <li><a href="xcessrt.html">Rooftop & Spa</a></li>
+               <li><a href="xcesslocation.html">Location</a></li>
+               <li><a href="xcessleisure.html">Leisure</a></li>
+            </ul>
+         </nav>
       </div>
-      </div>
-      <section id="rooms" style=" background-color:  rgba(16, 16, 22, 0.5);">
-         <div class="container">
-            <div class="overlay">
-               <div class="room-grid">
-                  <div class="room">
-                     <img class="room-image" src="xcess14.png" alt="Deluxe Room" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess15.png" alt="Suite Room" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess16.png" alt="Executive Room" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess17.png" alt="Rooftop bar" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess18.png" alt="Suite Room" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess19.png" alt="Suite Room" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess22.png" alt="Suite Room" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess8.png" alt="Suite Room" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess12.jpg" alt="Suite Room" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess13.jpg" alt="Suite Room" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess25.jpg" alt="Suite Room" width="800" height="400">
-                     <div class="room-details"></div>
-                  </div>
-                  <div class="room">
-                     <img class="room-image" src="xcess26.png" alt="Suite Room" width="900" height="400">
-                     <div class="room-details"></div>
-                  </div>
+   </header>
 
+   <section id="home">
+      <div class="container">
+         <h2></h2>
+         <p></p>
+      </div>
+   </section>
+
+
+   <body>
+      <section id="about" style="background-color: rgba(255, 252, 252, 0.7);">
+         <div class=" container">
+            <h2 style=" font-family: font-size 30px; color: #070000;">Rooms</h2>
+            <p class="large-text" style="font-size: 18px; color:  #070000;">
+               At Xcess Residence, comfort meets luxury. Our range of meticulously designed rooms ensures that every
+               guest enjoys a truly relaxing stay. Indulge in the serene atmosphere of our double rooms, each adorned
+               with a private balcony offering breathtaking views. Unwind in our Queen rooms, complete with cozy
+               furnishings and the added luxury of a balcony to soak in the fresh air.
+
+               At Xcess Residence, cleanliness is our priority. Rest assured, our rooms are meticulously maintained
+               to guarantee your comfort and well-being throughout your stay.
+
+
+
+            <p class="large-text" style="font-size: 18px; color:  #070000;">
+               For families seeking spacious accommodation, our family rooms provide ample space and comfort for
+               everyone to enjoy. Upgrade to our Deluxe Queen rooms for enhanced luxury, or opt for our Superior
+               King
+               rooms for an extra touch of elegance and space.
+
+               Families can enjoy the ultimate relaxation in our family rooms with balconies, perfect for spending
+               quality time together while enjoying panoramic views.
+
+               Looking for a budget-friendly option without compromising on comfort? Our Econo double rooms offer
+               great value without sacrificing quality, ensuring a comfortable stay for all our guests.
+
+               Whether you're traveling for business or leisure, Xcess Residence offers a variety of room options
+               to
+               suit every need. Book your stay with us today and experience the epitome of comfort and
+               hospitality.
+            </p>
+         </div>
+
+         <section id="home" style="padding-top: 10 background-color rgba(77, 77, 90, 0.5);">
+            <div class="container">
+               <div class="overlay">
+                  <div class="room-grid">
+                     <div class="room">
+                        <img class="room-image" src="xcess14.png" alt="Deluxe Room" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess15.png" alt="Suite Room" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess16.png" alt="Executive Room" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess17.png" alt="Rooftop bar" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess18.png" alt="Suite Room" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess19.png" alt="Suite Room" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess22.png" alt="Suite Room" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess8.png" alt="Suite Room" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess12.jpg" alt="Suite Room" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess13.jpg" alt="Suite Room" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess25.jpg" alt="Suite Room" width="800" height="400">
+                        <div class="room-details"></div>
+                     </div>
+                     <div class="room">
+                        <img class="room-image" src="xcess26.png" alt="Suite Room" width="900" height="400">
+                        <div class="room-details"></div>
+                     </div>
+         </section>
+         <style>
+            .room-title {
+               font-size: 40px;
+               margin: 0;
+               /* Remove default margins */
+               padding: 0;
+               /* Remove default paddings */
+            }
+
+            .large-text {
+               font-size: 40px;
+               margin-top: 30px;
+               /* Adjust this value to reduce or increase the space */
+            }
+         </style>
       </section>
-      <style>
-         .room-title {
-            font-size: 40px;
-            margin: 0;
-            /* Remove default margins */
-            padding: 0;
-            /* Remove default paddings */
-         }
 
-         .large-text {
-            font-size: 40px;
-            margin-top: 20px;
-            /* Adjust this value to reduce or increase the space */
-         }
-      </style>
-
-      <footer style="background-color:  #faf7f7; text-align: center; padding: 10px 0;">
-         <p style="color: rgb(7, 0, 0);  font-size: 10px;">2024 Xcess Residence, Rooftop and Spa. All rights
-            reserved.
-         </p>
+      <footer>
+         <div class="container">
+            <p style="color: #070000; font-size: 10px;">2024 Xcess Residence, Rooftop and Spa. All rights
+               reserved.</p>
+         </div>
       </footer>
 
-</body>
+   </body>
 
 </html>
