@@ -41,7 +41,7 @@
    .search-box-container {
       display: flex;
       justify-content: space-between;
-      max-width: 1200px;
+      max-width: 900px;
       margin: 20px auto;
       padding: 10px;
       border: 1px solid #0a0000;
@@ -72,7 +72,7 @@
 
    .search-box-container input[type="date"],
    .search-box-container input[type="number"] {
-      width: 100px;
+      width: 70px;
       padding: 5px;
       border: 1px solid #080000;
       border-radius: 3px;
@@ -80,7 +80,7 @@
    }
 
    .search-box-container button {
-      padding: 8px 20px;
+      padding: 0px 20px;
       background-color: #2e1199;
       color: #f0f6f7;
       border: none;
@@ -110,131 +110,131 @@
          </nav>
       </div>
    </header>
-   <div class="container custom-style">
-      <form id="search-form"
-         action="https://www.booking.com/hotel/th/xcess-residence.en-gb.html?checkin=YYYY-MM-DD&checkout=YYYY-MM-DD"
-         method="get" target="_blank">
 
-         <div class="search-box-container">
+   <form id="search-form"
+      action="https://www.booking.com/hotel/th/xcess-residence.en-gb.html?checkin=YYYY-MM-DD&checkout=YYYY-MM-DD"
+      method="get" target="_blank">
+      <div class="search-box-container">
 
-            <label for="check-in">Check-in:</label>
-            <input type="date" id="check-in" name="check-in">
+         <label for="check-in">Check-in:</label>
+         <input type="date" id="check-in" name="check-in">
 
-            <label for="check-out">Check-out:</label>
-            <input type="date" id="check-out" name="check-out">
+         <label for="check-out">Check-out:</label>
+         <input type="date" id="check-out" name="check-out">
 
-            <label for="rooms">Rooms:</label>
-            <input type="number" id="rooms" name="rooms" min="1" max="10">
+         <label for="rooms">Rooms:</label>
+         <input type="number" id="rooms" name="rooms" min="1" max="10">
 
-            <label for="adults">Adults:</label>
-            <input type="number" id="adults" name="adults" min="1" max="10">
+         <label for="adults">Adults:</label>
+         <input type="number" id="adults" name="adults" min="1" max="10">
 
-            <label for="children">Children:</label>
-            <input type="number" id="children" name="children" min="0" max="10">
+         <label for="children">Children:</label>
+         <input type="number" id="children" name="children" min="0" max="10">
 
-            <button type="submit">Search</button>
-         </div>
-
+         <button type="submit">Search</button>
+      </div>
 
 
-         <script>
-            // Function to get today's date in YYYY-MM-DD format
-            function getCurrentDate() {
-               var today = new Date();
-               var dd = String(today.getDate()).padStart(2, '0');
-               var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-               var yyyy = today.getFullYear();
 
-               return yyyy + '-' + mm + '-' + dd;
+      <script>
+         // Function to get today's date in YYYY-MM-DD format
+         function getCurrentDate() {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+            var yyyy = today.getFullYear();
+
+            return yyyy + '-' + mm + '-' + dd;
+         }
+
+         // Function to set checkout date to the next day
+         function getNextDayDate(dateString) {
+            var today = new Date(dateString);
+            var nextDay = new Date(today);
+            nextDay.setDate(today.getDate() + 1);
+
+            var dd = String(nextDay.getDate()).padStart(2, '0');
+            var mm = String(nextDay.getMonth() + 1).padStart(2, '0'); // January is 0!
+            var yyyy = nextDay.getFullYear();
+
+            return yyyy + '-' + mm + '-' + dd;
+         }
+
+         // Set default values for check-in and checkout dates
+         document.addEventListener('DOMContentLoaded', function () {
+            var checkinInput = document.getElementById('check-in');
+            var checkoutInput = document.getElementById('check-out');
+
+            checkinInput.value = getCurrentDate();
+            checkoutInput.value = getNextDayDate(getCurrentDate());
+         });
+
+
+      </script>
+
+
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+            var checkinDateElement = document.getElementById('check-in-date');
+            var checkoutDateElement = document.getElementById('check-out-date');
+            var roomsCountElement = document.getElementById('rooms-count');
+            var adultsCountElement = document.getElementById('adults-count');
+            var childrenCountElement = document.getElementById('children-count');
+            var searchButton = document.getElementById('search-button');
+
+            // Function to update display
+            function updateDisplay() {
+               checkinDateElement.textContent = formatDate(checkinInput.value);
+               checkoutDateElement.textContent = formatDate(checkoutInput.value);
+               roomsCountElement.textContent = roomsInput.value;
+               adultsCountElement.textContent = adultsInput.value;
+               childrenCountElement.textContent = childrenInput.value;
+
+               // Enable search button only if both check-in and check-out dates are selected
+               if (checkinInput.value && checkoutInput.value) {
+                  searchButton.disabled = false;
+               } else {
+                  searchButton.disabled = true;
+               }
             }
 
-            // Function to set checkout date to the next day
-            function getNextDayDate(dateString) {
-               var today = new Date(dateString);
-               var nextDay = new Date(today);
-               nextDay.setDate(today.getDate() + 1);
-
-               var dd = String(nextDay.getDate()).padStart(2, '0');
-               var mm = String(nextDay.getMonth() + 1).padStart(2, '0'); // January is 0!
-               var yyyy = nextDay.getFullYear();
-
-               return yyyy + '-' + mm + '-' + dd;
-            }
+            // Default values and event listeners
+            var checkinInput = document.getElementById('check-in');
+            var checkoutInput = document.getElementById('check-out');
+            var roomsInput = document.getElementById('rooms');
+            var adultsInput = document.getElementById('adults');
+            var childrenInput = document.getElementById('children');
 
             // Set default values for check-in and checkout dates
-            document.addEventListener('DOMContentLoaded', function () {
-               var checkinInput = document.getElementById('check-in');
-               var checkoutInput = document.getElementById('check-out');
+            checkinInput.value = getCurrentDate();
+            checkoutInput.value = getNextDayDate(getCurrentDate());
 
-               checkinInput.value = getCurrentDate();
-               checkoutInput.value = getNextDayDate(getCurrentDate());
-            });
+            // Set default values for rooms, adults, and children
+            roomsInput.value = 1;
+            adultsInput.value = 1;
+            childrenInput.value = 0;
 
+            // Add event listeners to update display on input change
+            checkinInput.addEventListener('change', updateDisplay);
+            checkoutInput.addEventListener('change', updateDisplay);
+            roomsInput.addEventListener('change', updateDisplay);
+            adultsInput.addEventListener('change', updateDisplay);
+            childrenInput.addEventListener('change', updateDisplay);
 
-         </script>
+            // Initial update of display
+            updateDisplay();
 
+            // Function to format date (example function, adjust as needed)
+            function formatDate(dateString) {
+               // Example formatting, adjust as per your needs
+               var date = new Date(dateString);
+               return date.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+            }
+         });
+      </script>
+      <!-- Continue with your other sections and content -->
 
-         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-               var checkinDateElement = document.getElementById('check-in-date');
-               var checkoutDateElement = document.getElementById('check-out-date');
-               var roomsCountElement = document.getElementById('rooms-count');
-               var adultsCountElement = document.getElementById('adults-count');
-               var childrenCountElement = document.getElementById('children-count');
-               var searchButton = document.getElementById('search-button');
-
-               // Function to update display
-               function updateDisplay() {
-                  checkinDateElement.textContent = formatDate(checkinInput.value);
-                  checkoutDateElement.textContent = formatDate(checkoutInput.value);
-                  roomsCountElement.textContent = roomsInput.value;
-                  adultsCountElement.textContent = adultsInput.value;
-                  childrenCountElement.textContent = childrenInput.value;
-
-                  // Enable search button only if both check-in and check-out dates are selected
-                  if (checkinInput.value && checkoutInput.value) {
-                     searchButton.disabled = false;
-                  } else {
-                     searchButton.disabled = true;
-                  }
-               }
-
-               // Default values and event listeners
-               var checkinInput = document.getElementById('check-in');
-               var checkoutInput = document.getElementById('check-out');
-               var roomsInput = document.getElementById('rooms');
-               var adultsInput = document.getElementById('adults');
-               var childrenInput = document.getElementById('children');
-
-               // Set default values for check-in and checkout dates
-               checkinInput.value = getCurrentDate();
-               checkoutInput.value = getNextDayDate(getCurrentDate());
-
-               // Set default values for rooms, adults, and children
-               roomsInput.value = 1;
-               adultsInput.value = 1;
-               childrenInput.value = 0;
-
-               // Add event listeners to update display on input change
-               checkinInput.addEventListener('change', updateDisplay);
-               checkoutInput.addEventListener('change', updateDisplay);
-               roomsInput.addEventListener('change', updateDisplay);
-               adultsInput.addEventListener('change', updateDisplay);
-               childrenInput.addEventListener('change', updateDisplay);
-
-               // Initial update of display
-               updateDisplay();
-
-               // Function to format date (example function, adjust as needed)
-               function formatDate(dateString) {
-                  // Example formatting, adjust as per your needs
-                  var date = new Date(dateString);
-                  return date.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
-               }
-            });
-         </script>
-         <!-- Continue with your other sections and content -->
-   </div>
+      <div>
 
 </body>
 
@@ -662,7 +662,9 @@
    </div>
 
    <section id="home">
-      </style>
+
+
+
 
       <div class="container" style="font-family: Arial, sans-serif; background-color: rgba(31, 5, 85, 0.5);">
          <h2>Xcess Residence</h2>
@@ -675,15 +677,21 @@
          <div style="padding: 30px;">
             <h2 style="font-family: font-size 30px; color: #070000;">About Us</h2>
             <p class=" large-text" style="font-size: 18px; color: #0e0101;">
-               Welcome to Xcess Residence, Rooftop and Spa, a charming boutique hotel nestled in the serene Pratumnak
+               Welcome to Xcess Residence, Rooftop and Spa, a charming boutique hotel nestled in the serene
+               Pratumnak
                Hill
-               area of Pattaya. With just 15 elegantly designed rooms, we offer an intimate and personalized retreat
+               area of Pattaya. With just 15 elegantly designed rooms, we offer an intimate and personalized
+               retreat
                for
-               travelers seeking comfort and tranquility. Our prime location provides easy access to both the vibrant
-               nightlife of Pattaya and the pristine beaches of Jomtien, ensuring you experience the best of both
+               travelers seeking comfort and tranquility. Our prime location provides easy access to both
+               the vibrant
+               nightlife of Pattaya and the pristine beaches of Jomtien, ensuring you experience the best of
+               both
                worlds.
-               Whether you are here for a romantic getaway, a family vacation, or a solo adventure, Xcess Residence,
-               Rooftop and Spa is your perfect home away from home, where luxury meets convenience. Join us for an
+               Whether you are here for a romantic getaway, a family vacation, or a solo adventure, Xcess
+               Residence,
+               Rooftop and Spa is your perfect home away from home, where luxury meets convenience. Join us
+               for an
                unforgettable stay, where every detail is designed to exceed your expectations.
             </p>
          </div>
