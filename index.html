@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.">
    <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
    <link rel="stylesheet" href="styles.css">
    <meta name="description"
@@ -26,15 +26,107 @@
       font-family: 'Roboto', sans-serif;
    }
 
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+   }
+
+   .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+   }
+
+   /* Styles for mobile devices */
+   @media (max-width: 600px) {
+      .container {
+         padding: 10px;
+      }
+
+      .search-box {
+         flex-direction: column;
+         align-items: stretch;
+      }
+
+      .search-box input,
+      .search-box select,
+      .search-box button {
+         width: 100%;
+         margin-bottom: 10px;
+      }
+
+      .search-box button {
+         margin-bottom: 0;
+      }
+   }
+
    /* Define styles for the custom margin and width */
    .custom-style {
       margin: 40px auto;
       /* Center the container horizontally */
-      width: 80%;
+      width: 100%;
       /* Adjust the width value as needed */
       box-sizing: border-box;
-      padding: 0 50px;
+      padding: 0 20px;
       /* Add padding to adjust inner content */
+   }
+
+   /* Additional styles can be added here */
+   .search-box-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #0a0000;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #a89dd6;
+   }
+
+   .search-box-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(103, 112, 236, 0.5);
+      /* Adjust opacity and color as needed */
+      z-index: -1;
+      /* Ensure pseudo-element is behind */
+      border-radius: 5px;
+      /* Match the border-radius of .search-box-container */
+   }
+
+   .search-box-container label {
+      font-weight: none;
+      margin-right: 10px;
+   }
+
+   .search-box-container input[type="date"],
+   .search-box-container input[type="number"] {
+      width: 70px;
+      padding: 5px;
+      border: 1px solid #080000;
+      border-radius: 3px;
+      font-size: 14px;
+   }
+
+   .search-box-container button {
+      padding: 0px 20px;
+      background-color: #2e1199;
+      color: #f0f6f7;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 10px;
+   }
+
+   .search-box-container button:hover {
+      background-color: #0056b3;
+
    }
 </style>
 </head>
@@ -53,6 +145,132 @@
          </nav>
       </div>
    </header>
+
+   <form id="search-form"
+      action="https://www.booking.com/hotel/th/xcess-residence.en-gb.html?checkin=YYYY-MM-DD&checkout=YYYY-MM-DD"
+      method="get" target="_blank">
+      <div class="search-box-container">
+
+         <label for="check-in">Check-in:</label>
+         <input type="date" id="check-in" name="check-in">
+
+         <label for="check-out">Check-out:</label>
+         <input type="date" id="check-out" name="check-out">
+
+         <label for="rooms">Rooms:</label>
+         <input type="number" id="rooms" name="rooms" min="1" max="10">
+
+         <label for="adults">Adults:</label>
+         <input type="number" id="adults" name="adults" min="1" max="10">
+
+         <label for="children">Children:</label>
+         <input type="number" id="children" name="children" min="0" max="10">
+
+         <button type="submit">Search</button>
+      </div>
+
+
+
+      <script>
+         // Function to get today's date in YYYY-MM-DD format
+         function getCurrentDate() {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+            var yyyy = today.getFullYear();
+
+            return yyyy + '-' + mm + '-' + dd;
+         }
+
+         // Function to set checkout date to the next day
+         function getNextDayDate(dateString) {
+            var today = new Date(dateString);
+            var nextDay = new Date(today);
+            nextDay.setDate(today.getDate() + 1);
+
+            var dd = String(nextDay.getDate()).padStart(2, '0');
+            var mm = String(nextDay.getMonth() + 1).padStart(2, '0'); // January is 0!
+            var yyyy = nextDay.getFullYear();
+
+            return yyyy + '-' + mm + '-' + dd;
+         }
+
+         // Set default values for check-in and checkout dates
+         document.addEventListener('DOMContentLoaded', function () {
+            var checkinInput = document.getElementById('check-in');
+            var checkoutInput = document.getElementById('check-out');
+
+            checkinInput.value = getCurrentDate();
+            checkoutInput.value = getNextDayDate(getCurrentDate());
+         });
+
+
+      </script>
+
+
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+            var checkinDateElement = document.getElementById('check-in-date');
+            var checkoutDateElement = document.getElementById('check-out-date');
+            var roomsCountElement = document.getElementById('rooms-count');
+            var adultsCountElement = document.getElementById('adults-count');
+            var childrenCountElement = document.getElementById('children-count');
+            var searchButton = document.getElementById('search-button');
+
+            // Function to update display
+            function updateDisplay() {
+               checkinDateElement.textContent = formatDate(checkinInput.value);
+               checkoutDateElement.textContent = formatDate(checkoutInput.value);
+               roomsCountElement.textContent = roomsInput.value;
+               adultsCountElement.textContent = adultsInput.value;
+               childrenCountElement.textContent = childrenInput.value;
+
+               // Enable search button only if both check-in and check-out dates are selected
+               if (checkinInput.value && checkoutInput.value) {
+                  searchButton.disabled = false;
+               } else {
+                  searchButton.disabled = true;
+               }
+            }
+
+            // Default values and event listeners
+            var checkinInput = document.getElementById('check-in');
+            var checkoutInput = document.getElementById('check-out');
+            var roomsInput = document.getElementById('rooms');
+            var adultsInput = document.getElementById('adults');
+            var childrenInput = document.getElementById('children');
+
+            // Set default values for check-in and checkout dates
+            checkinInput.value = getCurrentDate();
+            checkoutInput.value = getNextDayDate(getCurrentDate());
+
+            // Set default values for rooms, adults, and children
+            roomsInput.value = 1;
+            adultsInput.value = 1;
+            childrenInput.value = 0;
+
+            // Add event listeners to update display on input change
+            checkinInput.addEventListener('change', updateDisplay);
+            checkoutInput.addEventListener('change', updateDisplay);
+            roomsInput.addEventListener('change', updateDisplay);
+            adultsInput.addEventListener('change', updateDisplay);
+            childrenInput.addEventListener('change', updateDisplay);
+
+            // Initial update of display
+            updateDisplay();
+
+            // Function to format date (example function, adjust as needed)
+            function formatDate(dateString) {
+               // Example formatting, adjust as per your needs
+               var date = new Date(dateString);
+               return date.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+            }
+         });
+      </script>
+      <!-- Continue with your other sections and content -->
+
+      <div>
+
 </body>
 
 <style>
@@ -119,7 +337,7 @@
       header {
          background-color: #faf7f7;
          color: rgb(7, 6, 10);
-         padding: 20px 20;
+         padding: 7px 7px;
          /* Adjust top and bottom padding */
          height: 40px;
          /* Set a fixed height */
@@ -141,10 +359,13 @@
          float: right;
       }
 
-      nav ul {
-         list-style: none;
-         padding: 0;
+      .container {
+         width: 100%;
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 0 20px;
       }
+
 
       nav ul li {
          display: inline;
@@ -152,17 +373,20 @@
       }
 
       nav ul li a {
-         color: rgb(2, 1, 12);
+         color: rgb(7, 0, 0);
+         font-size: 15px;
          text-decoration: none;
          font-weight: bold;
-         font-size: 30px;
+         transition: color 0.3s ease;
+         /* Smooth transition for link color */
       }
+
 
       #home {
          background-color: rgba(81, 59, 209, 0.5);
          /* semi-transparent color */
          color: #03000e;
-         padding: 10px 0;
+         padding: 5px 0;
          text-align: center;
       }
 
@@ -192,7 +416,7 @@
 
       .room img {
          max-width: 100%;
-         margin-left: 80px;
+         margin-left: 10px;
          border-radius: 30px;
       }
 
@@ -206,26 +430,45 @@
          width: 80%;
       }
 
+      .room {
+         position: relative;
+         /* Ensure the parent container is relatively positioned */
+         display: flex;
+         align-items: flex-start;
+         margin: 0;
+      }
 
       .check-availability {
+         position: absolute;
+         top: -150px;
+         /* Adjust top position as needed */
+         left: 210px;
+         /* Adjust left position as needed */
          background-color: #2706b9;
          color: rgb(240, 227, 227);
-         padding: 10px 10px;
+         padding: 10px 50px;
          text-align: center;
          text-decoration: none;
-         display: inline-block;
          font-size: 10px;
-         margin-left: 1px;
          cursor: pointer;
          border: none;
-         border-radius: 5px;
+         border-radius: 10px;
+         z-index: 1;
+         /* Ensure the button appears above the images */
       }
+
+
+      .room .check-availability {
+         margin-top: 150px !important;
+         /* Adjust this value to move the button closer */
+      }
+
 
 
       .room-grid {
          display: flex;
          flex-wrap: wrap;
-         gap: 10px;
+         gap: 50px;
          /* Adjust the gap between images */
       }
 
@@ -241,9 +484,9 @@
 
       #rooms .room img {
          max-width: 100%;
-         margin-left: 40px;
+         margin-left: 70px;
          /* Adjust margin to move images to the left */
-         margin-right: 40px;
+         margin-right: 150px;
          /* Adjust margin to move images to the right */
          border-radius: 30px;
          /* Keep the border radius as needed */
@@ -454,29 +697,36 @@
    </div>
 
    <section id="home">
-      </style>
+
+
+
 
       <div class="container" style="font-family: Arial, sans-serif; background-color: rgba(31, 5, 85, 0.5);">
          <h2>Xcess Residence</h2>
          <!-- Other content here -->
       </div>
    </section>
-
    </section>
-   <section id="about" style="background-color: rgba(244, 242, 247, 0.911);">
-      <div class=" container">
+   <section id="about" style="background-color:rgba(255, 252, 252, 0.7);">
+      <div class="container">
          <div style="padding: 30px;">
             <h2 style="font-family: font-size 30px; color: #070000;">About Us</h2>
             <p class=" large-text" style="font-size: 18px; color: #0e0101;">
-               Welcome to Xcess Residence, Rooftop and Spa, a charming boutique hotel nestled in the serene Pratumnak
+               Welcome to Xcess Residence, Rooftop and Spa, a charming boutique hotel nestled in the serene
+               Pratumnak
                Hill
-               area of Pattaya. With just 15 elegantly designed rooms, we offer an intimate and personalized retreat
+               area of Pattaya. With just 15 elegantly designed rooms, we offer an intimate and personalized
+               retreat
                for
-               travelers seeking comfort and tranquility. Our prime location provides easy access to both the vibrant
-               nightlife of Pattaya and the pristine beaches of Jomtien, ensuring you experience the best of both
+               travelers seeking comfort and tranquility. Our prime location provides easy access to both
+               the vibrant
+               nightlife of Pattaya and the pristine beaches of Jomtien, ensuring you experience the best of
+               both
                worlds.
-               Whether you are here for a romantic getaway, a family vacation, or a solo adventure, Xcess Residence,
-               Rooftop and Spa is your perfect home away from home, where luxury meets convenience. Join us for an
+               Whether you are here for a romantic getaway, a family vacation, or a solo adventure, Xcess
+               Residence,
+               Rooftop and Spa is your perfect home away from home, where luxury meets convenience. Join us
+               for an
                unforgettable stay, where every detail is designed to exceed your expectations.
             </p>
          </div>
