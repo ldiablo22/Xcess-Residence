@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.">
    <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
    <link rel="stylesheet" href="styles.css">
    <meta name="description"
@@ -26,11 +26,46 @@
       font-family: 'Roboto', sans-serif;
    }
 
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+   }
+
+   .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+   }
+
+   /* Styles for mobile devices */
+   @media (max-width: 600px) {
+      .container {
+         padding: 10px;
+      }
+
+      .search-box {
+         flex-direction: column;
+         align-items: stretch;
+      }
+
+      .search-box input,
+      .search-box select,
+      .search-box button {
+         width: 100%;
+         margin-bottom: 10px;
+      }
+
+      .search-box button {
+         margin-bottom: 0;
+      }
+   }
+
    /* Define styles for the custom margin and width */
    .custom-style {
       margin: 40px auto;
       /* Center the container horizontally */
-      width: 90%;
+      width: 100%;
       /* Adjust the width value as needed */
       box-sizing: border-box;
       padding: 0 20px;
