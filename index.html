@@ -442,7 +442,7 @@
          position: absolute;
          top: -150px;
          /* Adjust top position as needed */
-         left: 210px;
+         left: 150px;
          /* Adjust left position as needed */
          background-color: #2706b9;
          color: rgb(240, 227, 227);
@@ -468,28 +468,22 @@
       .room-grid {
          display: flex;
          flex-wrap: wrap;
-         gap: 50px;
+         gap: 20px;
          /* Adjust the gap between images */
       }
 
-
-      /* Adjust margins for images within the room grid */
-      #rooms .room {
-         display: flex;
-         justify-content: center;
-         /* Center align items horizontally */
-         gap: 0px;
-         /* Adjust spacing between images */
+      .room {
+         flex: 1 1 300px;
+         /* Example: Adjust flex basis as needed */
+         margin-bottom: 20px;
+         /* Example: Adjust margin between rows */
       }
 
-      #rooms .room img {
+      .room img {
          max-width: 100%;
-         margin-left: 70px;
-         /* Adjust margin to move images to the left */
-         margin-right: 150px;
-         /* Adjust margin to move images to the right */
-         border-radius: 30px;
-         /* Keep the border radius as needed */
+         /* Ensure images resize properly */
+         border-radius: 10px;
+         /* Example: Adjust border radius */
       }
 
 
