@@ -5,7 +5,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="">
    <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
    <link rel="stylesheet" href="styles.css">
    <meta name="description"
@@ -72,26 +72,7 @@
       /* Full width minus total margin */
    }
 
-   nav {
-      float: right;
-   }
 
-   nav ul {
-      list-style: none;
-      padding: 0;
-   }
-
-   nav ul li {
-      display: inline;
-      margin-left: 20px;
-   }
-
-   nav ul li a {
-      color: rgb(5, 4, 12);
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 30px;
-   }
 
 
    #home {
@@ -167,11 +148,7 @@
       cursor: pointer;
    }
 
-   footer {
-      color: rgb(18, 235, 18);
-      text-align: center;
-      padding: 20px 0;
-   }
+
 
    .large-font {
       font-size: 30px;
@@ -242,19 +219,44 @@
 </style>
 
 <body>
+   <style>
+      header {
+         text-align: right;
+         /* Align content to the right */
+      }
+
+      nav ul {
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+         white-space: nowrap;
+         /* Prevent items from wrapping */
+         margin-right: 128px;
+         /* Initial right margin */
+      }
+
+      nav ul li {
+         display: inline-block;
+         /* Display items inline */
+         margin-left: 20px;
+         /* Left margin between items */
+      }
+   </style>
+
    <header>
-      <div class="container custom-style">
+      <div class="container">
          <nav>
             <ul>
-               <li><a href="index.html" style="color: #070000; font-size: 15px;">Home</a></li>
-               <li><a href="xcessrooms.html" style="color: #070000; font-size: 15px;">Gallery</a></li>
-               <li><a href="xcessrt.html" style="color: #070000; font-size: 15px;">Rooftop & Spa</a></li>
-               <li><a href="xcesslocation.html" style="color: #070000; font-size: 15px;">Location</a></li>
-               <li><a href="xcessleisure.html" style="color: #070000; font-size: 15px;">Leisure</a></li>
+               <li><a href="index.html" style="color: rgb(7, 0, 0); font-size: 15px;">Home</a></li>
+               <li><a href="xcessrooms.html" style="color: rgb(7, 0, 0); font-size: 15px;">Gallery</a></li>
+               <li><a href="xcessrt.html" style="color: rgb(7, 0, 0); font-size: 15px;">Rooftop & Spa</a></li>
+               <li><a href="xcesslocation.html" style="color: rgb(7, 0, 0); font-size: 15px;">Location</a></li>
+               <li><a href="xcessleisure.html" style="color: rgb(7, 0, 0); font-size: 15px;">Leisure</a></li>
             </ul>
          </nav>
       </div>
    </header>
+
 
    <section id="home">
       <div class="container">
