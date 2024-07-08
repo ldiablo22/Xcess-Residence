@@ -47,115 +47,129 @@
 
    }
 
-   /* Define styles for the custom margin and width */
-   .custom-style {
-      margin: 40px auto;
-      /* Center the container horizontally */
-      width: 80%;
-      /* Adjust the width value as needed */
+   header {
+      width: 100%;
       box-sizing: border-box;
-      padding: 0 0px;
-      /* Add padding to adjust inner content */
+      text-align: right;
+      /* Align content to the right */
+      background-color: #faf7f7;
+      color: rgb(7, 6, 10);
+      padding: 8px 8px;
+      /* Adjust top and bottom padding */
+      height: 40px;
+      /* Set a fixed height */
+   }
+
+   .container {
+      font-family: 'Roboto', sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+   }
+
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* Corrected padding value */
+      background-image: url('xcess24.png');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #020008;
+   }
+
+   nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      white-space: nowrap;
+      /* Prevent items from wrapping */
+      margin-right: 50px;
+      /* Initial right margin */
+   }
+
+   nav ul li {
+      display: inline-block;
+      /* Display items inline */
+      margin-left: 20px;
+      /* Left margin between items */
+   }
+
+   nav ul li a {
+      color: rgb(7, 0, 0);
+      font-size: 15px;
+      text-decoration: none;
+      /* Remove underlining from links */
+   }
+
+   nav ul li a:hover {
+      text-decoration: underline;
+      /* Underline on hover if desired */
    }
 </style>
-</head>
 
-<body>
+<header>
+   <div class="container">
+      <nav>
+         <ul>
+            <li><a href="index.html" style="color: rgb(7, 0, 0); font-size: 15px;">Home</a></li>
+            <li><a href="xcessrooms.html" style="color: rgb(7, 0, 0); font-size: 15px;">Gallery</a></li>
+            <li><a href="xcessrt.html" style="color: rgb(7, 0, 0); font-size: 15px;">Rooftop & Spa</a></li>
+            <li><a href="xcesslocation.html" style="color: rgb(7, 0, 0); font-size: 15px;">Location</a></li>
+            <li><a href="xcessleisure.html" style="color: rgb(7, 0, 0); font-size: 15px;">Leisure</a></li>
+         </ul>
+      </nav>
+   </div>
+</header>
+
+
+<div>
+
+   </body>
+
    <style>
-      header {
-         text-align: right;
-         /* Align content to the right */
+      .room {
+         display: flex;
+         align-items: flex-start;
+         margin: 0px;
       }
 
-      nav ul {
-         list-style-type: none;
-         padding: 0;
-         margin: 0;
-         white-space: nowrap;
-         /* Prevent items from wrapping */
-         margin-right: 50px;
-         /* Initial right margin */
+      .description-container {
+         margin-left: 0px;
       }
 
-      nav ul li {
-         display: inline-block;
-         /* Display items inline */
-         margin-left: 20px;
-         /* Left margin between items */
+
+      .description-box {
+         display: block;
+         margin-top: 10px;
+         width: 100px;
+         height: 100px;
+         resize: both;
+         /* Allows resizing in both directions */
+         font-size: 16px;
       }
-   </style>
 
-   <header>
-      <div class="container">
-         <nav>
-            <ul>
-               <li><a href="index.html" style="color: rgb(7, 0, 0); font-size: 15px;">Home</a></li>
-               <li><a href="xcessrooms.html" style="color: rgb(7, 0, 0); font-size: 15px;">Gallery</a></li>
-               <li><a href="xcessrt.html" style="color: rgb(7, 0, 0); font-size: 15px;">Rooftop & Spa</a></li>
-               <li><a href="xcesslocation.html" style="color: rgb(7, 0, 0); font-size: 15px;">Location</a></li>
-               <li><a href="xcessleisure.html" style="color: rgb(7, 0, 0); font-size: 15px;">Leisure</a></li>
-            </ul>
-         </nav>
-      </div>
-   </header>
+      .description-box::placeholder {
+         font-size: 16px;
+         /* Adjust the font size for the placeholder text */
+      }
 
+      .service-groups {
+         display: flex;
+         flex-wrap: wrap;
+      }
 
-   <div>
+      .service-group {
+         flex: 1;
+         margin-right: 100px;
+         /* Adjust the spacing between groups */
+      }
 
-</body>
+      .service-group:last-child {
+         margin-right: 0;
+         /* Remove margin from the last group */
+      }
 
-<style>
-   .room {
-      display: flex;
-      align-items: flex-start;
-      margin: 0px;
-   }
-
-   .description-container {
-      margin-left: 0px;
-   }
-
-   .check-availability {
-      display: block;
-      margin-top: 00px;
-   }
-
-   .description-box {
-      display: block;
-      margin-top: 10px;
-      width: 100px;
-      height: 100px;
-      resize: both;
-      /* Allows resizing in both directions */
-      font-size: 16px;
-   }
-
-   .description-box::placeholder {
-      font-size: 16px;
-      /* Adjust the font size for the placeholder text */
-   }
-</style>
-<style>
-   .service-groups {
-      display: flex;
-      flex-wrap: wrap;
-   }
-
-   .service-group {
-      flex: 1;
-      margin-right: 100px;
-      /* Adjust the spacing between groups */
-   }
-
-   .service-group:last-child {
-      margin-right: 0;
-      /* Remove margin from the last group */
-   }
-</style>
-
-
-<body>
-   <style>
       body {
          margin: 0;
          font-family: Arial, sans-serif;
@@ -168,9 +182,9 @@
       header {
          background-color: #faf7f7;
          color: rgb(7, 6, 10);
-         padding: 8px 8px;
+         padding: 7px 7px;
          /* Adjust top and bottom padding */
-         height: 40px;
+         height: 25px;
          /* Set a fixed height */
 
          /* Adjust this value to move the header to the left */
@@ -252,30 +266,6 @@
          margin: 0;
       }
 
-      .check-availability {
-         position: absolute;
-         top: -150px;
-         /* Adjust top position as needed */
-         left: 160px;
-         /* Adjust left position as needed */
-         background-color: #2706b9;
-         color: rgb(240, 227, 227);
-         padding: 10px 50px;
-         text-align: center;
-         text-decoration: none;
-         font-size: 10px;
-         cursor: pointer;
-         border: none;
-         border-radius: 10px;
-         z-index: 1;
-         /* Ensure the button appears above the images */
-      }
-
-
-      .room .check-availability {
-         margin-top: 150px !important;
-         /* Adjust this value to move the button closer */
-      }
 
 
 
@@ -377,11 +367,6 @@
          }
 
 
-
-         .check-availability {
-            margin-left: 0;
-            margin-top: 20px;
-         }
       }
 
       .adjustable-image {
@@ -485,16 +470,110 @@
          /* Center align content inside */
       }
 
+      #about {
+         background-color: rgba(215, 207, 207, 0.5);
+         /* Light gray background color */
+         color: #040404;
+         /* Dark text color */
+         padding: 50px 20px;
+         /* Padding for content */
+         text-align: center;
+      }
 
+      #about h2 {
+         font-size: 36px;
+         margin-bottom: 30px;
+      }
 
-      .availability-button {
-         display: block;
-         width: 100%;
-         /* Button takes full width of image-wrapper */
+      #about p {
+         font-size: 18px;
+         line-height: 1.6;
+         max-width: 800px;
+         margin: 0 auto;
+         text-align: left;
+         padding: 20px;
+      }
+
+      .image-group {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         margin-top: 30px;
+      }
+
+      .image-group img {
+         width: 200px;
+         height: 200px;
+         object-fit: cover;
+         margin: 10px;
+         border-radius: 10px;
+      }
+
+      .logo {
+         width: 100px;
+         /* Example width */
+         height: auto;
+         /* Maintain aspect ratio */
+      }
+
+      #about .cta-button {
+         display: inline-block;
+         padding: 10px 20px;
+         background-color: #4CAF50;
+         color: white;
+         text-decoration: none;
+         border-radius: 5px;
+         transition: background-color 0.3s ease;
+         /* Example styles for the button */
+      }
+
+      .check-availability-container {
+         text-align: center;
+         margin-top: 20px;
+      }
+
+      .check-availability-container button {
+         background-color: #4CAF50;
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 16px;
+         transition: background-color 0.3s ease;
+      }
+
+      .check-availability-container button:hover {
+         background-color: #45a049;
+      }
+
+      .availability-options {
          margin-top: 10px;
-         /* Adjust margin between image and button */
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+      }
+
+      .availability-options a {
+         padding: 10px 20px;
+         background-color: #f9f9f9;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         text-decoration: none;
+         color: #333;
+         transition: background-color 0.3s ease;
+      }
+
+      .availability-options a:hover {
+         background-color: #eee;
+      }
+
+
+      #about .cta-button:hover {
+         background-color: #45a049;
       }
    </style>
+
    <!-- Popup Box Container -->
    <div id="popup-box" class="popup-box">
       <div class="popup-content">
@@ -504,17 +583,15 @@
       </div>
    </div>
 
+
+
+
    <section id="home">
-
-
-
-
       <div class="container"
          style="font-family: Arial, sans-serif; background-color: rgba(31, 5, 85, 0.5); padding: 0px;">
          <h2>Xcess Residence</h2>
-         <!-- Other content here -->
+
       </div>
-   </section>
    </section>
    <section id="about" style="background-color:rgba(255, 252, 252, 0.801);">
       <div class="container">
@@ -538,9 +615,21 @@
                for an
                unforgettable stay, where every detail is designed to exceed your expectations.
             </p>
+            <!-- Check Availability Button and Options -->
+            <div class="check-availability-container">
+               <button onclick="showAvailabilityOptions()">Check Availability</button>
+               <div id="availability-options" class="availability-options" style="display: none;">
+                  <a href="https://www.booking.com/hotel/th/xcess-residence.en-gb.html" target="_blank">Booking.com</a>
+                  <a href="https://www.agoda.com/xcess-residence/hotel/pattaya-th.html?finalPriceView=1&isShowMobileAppPrice=false&cid=1919571&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2024-07-1&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=THB&isFreeOccSearch=false&tag=0002d4f2-d0b3-4684-9a42-27ea2c122dab&los=4&searchrequestid=8115e895-498f-4887-adee-e3b95da167a1&ds=wPq3w7xMDXyA%2BClG"
+                     target="_blank">Agoda.com</a>
+               </div>
+            </div>
          </div>
       </div>
    </section>
+
+
+
 
    <body>
       <section id="rooms" style=" background-color: rgba(147, 147, 161, 0.664);">
@@ -549,61 +638,49 @@
                <div class="row">
                   <div class="room">
                      <div class="image-wrapper">
-                        <img src="xcess11.png" alt="Deluxe Queen Room" width="450" height="375"
+                        <img src="xcess11.png" alt="Deluxe Queen Room" width="450" height="300"
                            onclick="openDescriptionPopup('Deluxe Queen Room')">
                      </div>
-                     <button class="check-availability"
-                        onclick="window.open('https://www.booking.com/hotel/th/xcess-residence.en-gb.html', '_blank')">
-                        Check Availability</button>
+
                   </div>
                   <div class="room">
                      <div class="image-wrapper">
-                        <img src="xcess10.png" alt="Superior King Room" width="450" height="375"
+                        <img src="xcess10.png" alt="Superior King Room" width="450" height="300"
                            onclick="openDescriptionPopup('Superior King Room')">
                      </div>
-                     <button class="check-availability"
-                        onclick="window.open('https://www.agoda.com/xcess-residence/hotel/pattaya-th.html?finalPriceView=1&isShowMobileAppPrice=false&cid=1919571&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2024-07-1&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=THB&isFreeOccSearch=false&tag=0002d4f2-d0b3-4684-9a42-27ea2c122dab&los=4&searchrequestid=8115e895-498f-4887-adee-e3b95da167a1&ds=wPq3w7xMDXyA%2BClG', '_blank')">
-                        Check Availability</button>
+
                   </div>
                </div>
                <div class="row">
                   <div class="room">
                      <div class="image-wrapper">
-                        <img src="xcess13.jpg" alt="Double Room with balcony" width="450" height="375"
+                        <img src="xcess13.jpg" alt="Double Room with balcony" width="450" height="300"
                            onclick="openDescriptionPopup('Double Room with balcony')">
                      </div>
-                     <button class="check-availability"
-                        onclick="window.open('https://www.booking.com/hotel/th/xcess-residence.en-gb.html', '_blank')">
-                        Check Availability</button>
+
                   </div>
                   <div class="room">
                      <div class="image-wrapper">
-                        <img src="xcess21.png" alt="Family Room" width="450" height="375"
+                        <img src="xcess21.png" alt="Family Room" width="450" height="300"
                            onclick="openDescriptionPopup('Family Room')">
                      </div>
-                     <button class="check-availability"
-                        onclick="window.open('https://www.agoda.com/xcess-residence/hotel/pattaya-th.html?finalPriceView=1&isShowMobileAppPrice=false&cid=1919571&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2024-07-1&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=THB&isFreeOccSearch=false&tag=0002d4f2-d0b3-4684-9a42-27ea2c122dab&los=4&searchrequestid=8115e895-498f-4887-adee-e3b95da167a1&ds=wPq3w7xMDXyA%2BClG', '_blank')">
-                        Check Availability</button>
+
                   </div>
                </div>
                <div class="row">
                   <div class="room">
                      <div class="image-wrapper">
-                        <img src="xcess22.png" alt="Queen Room with Balcony" width="450" height="375"
+                        <img src="xcess22.png" alt="Queen Room with Balcony" width="450" height="300"
                            onclick="openDescriptionPopup('Queen Room with Balcony')">
                      </div>
-                     <button class="check-availability"
-                        onclick="window.open('https://www.booking.com/hotel/th/xcess-residence.en-gb.html', '_blank')">
-                        Check Availability</button>
+
                   </div>
                   <div class="room">
                      <div class="image-wrapper">
-                        <img src="xcess23.png" alt="Family Room with balcony" width="450" height="375"
+                        <img src="xcess23.png" alt="Family Room with balcony" width="450" height="300"
                            onclick="openDescriptionPopup('Family Room with balcony')">
                      </div>
-                     <button class="check-availability"
-                        onclick="window.open('https://www.agoda.com/xcess-residence/hotel/pattaya-th.html?finalPriceView=1&isShowMobileAppPrice=false&cid=1919571&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2024-07-1&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=THB&isFreeOccSearch=false&tag=0002d4f2-d0b3-4684-9a42-27ea2c122dab&los=4&searchrequestid=8115e895-498f-4887-adee-e3b95da167a1&ds=wPq3w7xMDXyA%2BClG', '_blank')">
-                        Check Availability</button>
+
                   </div>
       </section>
       <section id="services" style="background-color: #583ece; padding: 10px;">
@@ -777,6 +854,16 @@
                }
             });
          });
+
+         function showAvailabilityOptions() {
+            var options = document.getElementById('availability-options');
+            if (options.style.display === "none" || options.style.display === "") {
+               options.style.display = "flex";
+            } else {
+               options.style.display = "none";
+            }
+         }
+
 
       </script>
 
