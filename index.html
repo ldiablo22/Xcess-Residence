@@ -16,6 +16,67 @@
 
 </head>
 <style>
+   .popup {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+   }
+
+   /* Style for the overlay */
+   .overlay {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Semi-transparent black */
+      z-index: 999;
+   }
+
+   /* Style for the clickable image container */
+   .clickable-image-container {
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      /* Ensure block display for positioning */
+   }
+
+   /* Style for the icon */
+   .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      /* Adjust size of icon as needed */
+      height: 60px;
+      /* Adjust size of icon as needed */
+      background-image: url('click.png');
+      /* Replace with your icon */
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      /* Initially hidden */
+      transition: opacity 0.3s ease;
+      /* Smooth transition for opacity */
+   }
+
+   /* Show icon when hovering over clickable image */
+   .clickable-image-container:hover .icon {
+      opacity: 1;
+      /* Show icon on hover */
+   }
+
    @media (max-width: 600px) {
       .container {
          padding: 10px;
@@ -581,56 +642,54 @@
 
 
    <body>
-      <section id="rooms" style=" background-color: rgba(147, 147, 161, 0.664);">
+      <section id="rooms" style="background-color: rgba(147, 147, 161, 0.664);">
          <div class="container">
             <div class="room-grid">
                <div class="row">
                   <div class="room">
-                     <div class="image-wrapper">
-                        <img src="xcess11.png" alt="Deluxe Queen Room" width="450" height="300"
-                           onclick="openDescriptionPopup('Deluxe Queen Room')">
+                     <div class="clickable-image-container" onclick="openDescriptionPopup('Deluxe Queen Room')">
+                        <img src="xcess11.png" alt="Deluxe Queen Room" width="450" height="300">
+                        <div class="icon"></div>
                      </div>
-
                   </div>
                   <div class="room">
-                     <div class="image-wrapper">
-                        <img src="xcess10.png" alt="Superior King Room" width="450" height="300"
-                           onclick="openDescriptionPopup('Superior King Room')">
+                     <div class="clickable-image-container" onclick="openDescriptionPopup('Superior King Room')">
+                        <img src="xcess10.png" alt="Superior King Room" width="450" height="300">
+                        <div class="icon"></div>
                      </div>
-
                   </div>
                </div>
                <div class="row">
                   <div class="room">
-                     <div class="image-wrapper">
-                        <img src="xcess13.jpg" alt="Double Room with balcony" width="450" height="300"
-                           onclick="openDescriptionPopup('Double Room with balcony')">
+                     <div class="clickable-image-container" onclick="openDescriptionPopup('Double Room with balcony')">
+                        <img src="xcess13.jpg" alt="Double Room with balcony" width="450" height="300">
+                        <div class="icon"></div>
                      </div>
-
                   </div>
                   <div class="room">
-                     <div class="image-wrapper">
-                        <img src="xcess21.png" alt="Family Room" width="450" height="300"
-                           onclick="openDescriptionPopup('Family Room')">
+                     <div class="clickable-image-container" onclick="openDescriptionPopup('Family Room')">
+                        <img src="xcess21.png" alt="Family Room" width="450" height="300">
+                        <div class="icon"></div>
                      </div>
-
                   </div>
                </div>
                <div class="row">
                   <div class="room">
-                     <div class="image-wrapper">
-                        <img src="xcess22.png" alt="Queen Room with Balcony" width="450" height="300"
-                           onclick="openDescriptionPopup('Queen Room with Balcony')">
+                     <div class="clickable-image-container" onclick="openDescriptionPopup('Queen Room with Balcony')">
+                        <img src="xcess22.png" alt="Queen Room with Balcony" width="450" height="300">
+                        <div class="icon"></div>
                      </div>
-
                   </div>
                   <div class="room">
-                     <div class="image-wrapper">
-                        <img src="xcess23.png" alt="Family Room with balcony" width="450" height="300"
-                           onclick="openDescriptionPopup('Family Room with balcony')">
-                     </div>
+                     <div class="clickable-image-container" onclick="openDescriptionPopup('Family Room with balcony')">
+                        <img src="xcess23.png" alt="Family Room with balcony" width="450" height="300">
 
+                        <div class="icon"></div>
+                     </div>
                   </div>
+               </div>
+            </div>
+         </div>
       </section>
       <section id="services" style="background-color: #583ece; padding: 10px;">
          <div class="container">
@@ -813,8 +872,24 @@
             }
          }
 
+         // JavaScript function to open popup
+         function openDescriptionPopup(roomType) {
+            // Show overlay
+            document.getElementById('overlay').style.display = 'block';
+            // Show popup with room description
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('roomDescription').innerText = `Room type: ${roomType}`;
+         }
 
+         // JavaScript function to close popup
+         function closeDescriptionPopup() {
+            // Hide overlay
+            document.getElementById('overlay').style.display = 'none';
+            // Hide popup
+            document.getElementById('popup').style.display = 'none';
+         }
       </script>
+      </head>
 
    </body>
 
