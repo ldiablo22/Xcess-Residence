@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
    <link rel="stylesheet" href="styles.css">
    <meta name="description"
@@ -77,12 +77,6 @@
       /* Show icon on hover */
    }
 
-   @media (max-width: 600px) {
-      .container {
-         padding: 10px;
-      }
-
-   }
 
    header {
       width: 100%;
@@ -370,13 +364,40 @@
          transform: scale(1.2);
       }
 
-      @media (max-width: 768px) {
-         .room {
-            width: 100%;
-            flex-direction: column;
+      /* Basic style for the box (applies to all screen sizes) */
+      .box {
+         width: 100%;
+         /* Make the box take up the full width of the screen */
+         padding: 20px;
+         /* Add some space inside the box */
+         background-color: lightblue;
+         /* Make the box light blue */
+         text-align: center;
+         /* Center the text inside the box */
+         box-sizing: border-box;
+         /* Include padding and border in the element's total width and height */
+      }
+
+      /* Special rules for screens smaller than 600 pixels */
+      @media (max-width: 599px) {
+         .box {
+            padding: 10px;
+            /* Reduce padding to fit better on small screens */
+            font-size: 14px;
+            /* Make text smaller for better readability */
          }
+      }
 
-
+      /* Special rules for screens that are at least 600 pixels wide */
+      @media (min-width: 600px) {
+         .box {
+            width: 50%;
+            /* Make the box take up half the screen width */
+            margin: 0 auto;
+            /* Center the box on the screen */
+            font-size: 18px;
+            /* Increase font size for better readability */
+         }
       }
 
       .adjustable-image {
