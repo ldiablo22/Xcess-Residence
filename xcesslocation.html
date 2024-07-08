@@ -196,8 +196,34 @@
 
 <style>
    header {
+      width: 100%;
+      box-sizing: border-box;
       text-align: right;
       /* Align content to the right */
+      background-color: #faf7f7;
+      color: rgb(7, 6, 10);
+      padding: 6px 6px;
+      /* Adjust top and bottom padding */
+      height: 40px;
+      /* Set a fixed height */
+   }
+
+   .container {
+      font-family: 'Roboto', sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px;
+   }
+
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* Corrected padding value */
+      background-image: url('Kohlarnbeach.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #020008;
    }
 
    nav ul {
@@ -206,7 +232,7 @@
       margin: 0;
       white-space: nowrap;
       /* Prevent items from wrapping */
-      margin-right: 20px;
+      margin-right: 50px;
       /* Initial right margin */
    }
 
@@ -215,6 +241,13 @@
       /* Display items inline */
       margin-left: 20px;
       /* Left margin between items */
+   }
+
+   nav ul li a {
+      color: rgb(7, 0, 0);
+      font-size: 15px;
+      text-decoration: none;
+      /* Remove underlining from links */
    }
 </style>
 
@@ -356,28 +389,7 @@
 <footer style="background-color:  #f3ecec; text-align: center; padding: 10px 0;">
    <p style="color:  rgb(7, 0, 0);  font-size: 10px;">2024 Xcess Residence, Rooftop and Spa. All rights reserved.</p>
 </footer>
-<script>
-   var slides = document.querySelectorAll('.slide');
-   var currentIndex = 0;
 
-   var backgroundImages = [
-      { url: 'Kohlarnbeach.jpg', size: '100% 100%' }
-   ];
-   var currentBackgroundIndex = 0;
-
-   function changeBackgroundImage() {
-      currentBackgroundIndex++;
-
-      if (currentBackgroundIndex >= backgroundImages.length) {
-         currentBackgroundIndex = 0;
-      }
-
-      document.body.style.backgroundImage = "url('" + backgroundImages[currentBackgroundIndex].url + "')";
-      document.body.style.backgroundSize = backgroundImages[currentBackgroundIndex].size;
-   }
-
-   setInterval(changeBackgroundImage, 1000);
-</script>
 </body>
 
 </html>
