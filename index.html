@@ -16,19 +16,6 @@
 
 </head>
 <style>
-   .popup {
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #ffffff;
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-   }
-
    /* Style for the overlay */
    .overlay {
       display: none;
@@ -98,11 +85,12 @@
    }
 
    .container {
-      font-family: 'Roboto', sans-serif;
+      width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 100px;
+      padding: 0 15px;
    }
+
 
    body {
       font-family: Arial, sans-serif;
@@ -154,435 +142,571 @@
    </div>
 </header>
 
+<style>
+   .room {
+      display: flex;
+      align-items: flex-start;
+      margin: 0px;
+   }
 
-<div>
+   .description-container {
+      margin-left: 0px;
+   }
 
-   </body>
 
-   <style>
+   .description-box {
+      display: block;
+      margin-top: 10px;
+      width: 100px;
+      height: 100px;
+      resize: both;
+      /* Allows resizing in both directions */
+      font-size: 16px;
+   }
+
+   .description-box::placeholder {
+      font-size: 16px;
+      /* Adjust the font size for the placeholder text */
+   }
+
+   .service-groups {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   .service-group {
+      flex: 1;
+      margin-right: 100px;
+      /* Adjust the spacing between groups */
+   }
+
+   .service-group:last-child {
+      margin-right: 0;
+      /* Remove margin from the last group */
+   }
+
+   .container {
+      width: 100%;
+      margin: 0 auto;
+   }
+
+   .logo {
+      display: inline-block;
+      font-size: 20px;
+      margin: 10px;
+   }
+
+   #home {
+      background-color: rgba(81, 59, 209, 0.5);
+      /* semi-transparent color */
+      color: #03000e;
+      padding: 5px 0;
+      text-align: center;
+   }
+
+
+   #home h2 {
+      font-size: 40px;
+      margin: 10px 0;
+      /* Corrected to '10px 0' for margin */
+   }
+
+   /* Style for the h2 inside the #home section */
+   #home h2 {
+      color: #fcfeff;
+      /* Change this color as needed */
+      font-size: 50px;
+      /* Change this size as needed */
+   }
+
+   #home p {
+      font-size: 10px;
+   }
+
+   section {
+      padding: 50px 0;
+   }
+
+
+   .room img {
+      max-width: 100%;
+      margin-left: 25px;
+      border-radius: 30px;
+   }
+
+
+
+   .room {
+      position: relative;
+      /* Ensure the parent container is relatively positioned */
+      display: flex;
+      align-items: flex-start;
+      margin: 0;
+   }
+
+   .room-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      /* Adjust the gap between images */
+   }
+
+   .room {
+      flex: 1 1 300px;
+      /* Example: Adjust flex basis as needed */
+      margin-bottom: 20px;
+      /* Example: Adjust margin between rows */
+   }
+
+   .room img {
+      max-width: 100%;
+      /* Ensure images resize properly */
+      border-radius: 10px;
+      /* Example: Adjust border radius */
+   }
+
+
+   footer {
+      background-color: #f3ecec;
+      /* Dark background color */
+      color: #070000;
+      /* Text color */
+      padding: 20px 0;
+      /* Padding top and bottom */
+      text-align: center;
+      /* Center align text */
+   }
+
+   footer .container {
+      max-width: 30px;
+      /* Max width of content */
+      margin: 0 auto;
+      /* Center align container */
+   }
+
+   /* Adjust paragraph styling */
+   footer p {
+      font-size: 10px;
+      /* Example font size */
+      margin: 0;
+      /* Remove default margin */
+   }
+
+   /* Adjust link styles if needed */
+   footer a {
+      color: #fff;
+      /* Link color */
+      text-decoration: none;
+      /* Remove underline */
+   }
+
+   footer {
+      text-align: center;
+      padding: 40px 0;
+   }
+
+   .large-font {
+      font-size: 30px;
+   }
+
+   .links {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding: 20px 0;
+      gap: 30px;
+   }
+
+   .links a {
+      text-decoration: none;
+      text-align: center;
+   }
+
+   .links img {
+      display: block;
+      border-radius: 50%;
+      transition: transform 0.3s ease-in-out;
+      margin: 0 auto;
+   }
+
+   .links img:hover {
+      transform: scale(1.2);
+   }
+
+   @media (max-width: 768px) {
       .room {
-         display: flex;
-         align-items: flex-start;
-         margin: 0px;
-      }
-
-      .description-container {
-         margin-left: 0px;
-      }
-
-
-      .description-box {
-         display: block;
-         margin-top: 10px;
-         width: 100px;
-         height: 100px;
-         resize: both;
-         /* Allows resizing in both directions */
-         font-size: 16px;
-      }
-
-      .description-box::placeholder {
-         font-size: 16px;
-         /* Adjust the font size for the placeholder text */
-      }
-
-      .service-groups {
-         display: flex;
-         flex-wrap: wrap;
-      }
-
-      .service-group {
-         flex: 1;
-         margin-right: 100px;
-         /* Adjust the spacing between groups */
-      }
-
-      .service-group:last-child {
-         margin-right: 0;
-         /* Remove margin from the last group */
-      }
-
-
-
-      .container {
          width: 100%;
-         margin: 0 auto;
-      }
-
-      .logo {
-         display: inline-block;
-         font-size: 20px;
-         margin: 10px;
-      }
-
-      .container {
-         width: 100%;
-         max-width: 1200px;
-         margin: 0 auto;
-         padding: 0 0px;
-      }
-
-
-      #home {
-         background-color: rgba(81, 59, 209, 0.5);
-         /* semi-transparent color */
-         color: #03000e;
-         padding: 5px 0;
-         text-align: center;
-      }
-
-
-      #home h2 {
-         font-size: 40px;
-         margin: 10px 0;
-         /* Corrected to '10px 0' for margin */
-      }
-
-      /* Style for the h2 inside the #home section */
-      #home h2 {
-         color: #fcfeff;
-         /* Change this color as needed */
-         font-size: 50px;
-         /* Change this size as needed */
-      }
-
-      #home p {
-         font-size: 10px;
-      }
-
-      section {
-         padding: 50px 0;
-      }
-
-
-      .room img {
-         max-width: 100%;
-         margin-left: 25px;
-         border-radius: 30px;
-      }
-
-      .room-details {
-         background-color: rgb(10, 10, 10);
-         padding: 20px;
-         border-radius: 30px;
-         box-shadow: 0 0 50px rgba(161, 141, 141, 0.1);
-         min-height: 210px;
-         /* Minimum height */
-         width: 80%;
-      }
-
-      .room {
-         position: relative;
-         /* Ensure the parent container is relatively positioned */
-         display: flex;
-         align-items: flex-start;
-         margin: 0;
-      }
-
-      .room-grid {
-         display: flex;
-         flex-wrap: wrap;
-         gap: 20px;
-         /* Adjust the gap between images */
-      }
-
-      .room {
-         flex: 1 1 300px;
-         /* Example: Adjust flex basis as needed */
-         margin-bottom: 20px;
-         /* Example: Adjust margin between rows */
-      }
-
-      .room img {
-         max-width: 100%;
-         /* Ensure images resize properly */
-         border-radius: 10px;
-         /* Example: Adjust border radius */
-      }
-
-
-      footer {
-         background-color: #f3ecec;
-         /* Dark background color */
-         color: #070000;
-         /* Text color */
-         padding: 20px 0;
-         /* Padding top and bottom */
-         text-align: center;
-         /* Center align text */
-      }
-
-      footer .container {
-         max-width: 30px;
-         /* Max width of content */
-         margin: 0 auto;
-         /* Center align container */
-      }
-
-      /* Adjust paragraph styling */
-      footer p {
-         font-size: 10px;
-         /* Example font size */
-         margin: 0;
-         /* Remove default margin */
-      }
-
-      /* Adjust link styles if needed */
-      footer a {
-         color: #fff;
-         /* Link color */
-         text-decoration: none;
-         /* Remove underline */
-      }
-
-
-
-      footer {
-         text-align: center;
-         padding: 40px 0;
-      }
-
-      .large-font {
-         font-size: 30px;
-      }
-
-      .links {
-         display: flex;
-         justify-content: left;
-         align-items: center;
-         padding: 20px 0;
-         gap: 30px;
-      }
-
-      .links a {
-         text-decoration: none;
-         text-align: center;
-      }
-
-      .links img {
-         display: block;
-         border-radius: 50%;
-         transition: transform 0.3s ease-in-out;
-         margin: 0 auto;
-      }
-
-      .links img:hover {
-         transform: scale(1.2);
-      }
-
-      @media (max-width: 768px) {
-         .room {
-            width: 100%;
-            flex-direction: column;
-         }
-
-
-      }
-
-      .adjustable-image {
-         margin-left: 400px;
-         /* Adjust as needed */
-         cursor: pointer;
-      }
-
-      .additional-image-container {
-         position: absolute;
-         top: 0;
-         right: 500px;
-         /* Adjust the distance from the right side of the page */
-         margin-top: 100px;
-         /* Optional: Add margin to separate from other elements */
-      }
-
-      .additional-image-container {
-         z-index: 10;
-         /* Adjust as needed to ensure it's above other elements */
-      }
-
-      #popup-box {
-         display: none;
-         position: fixed;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-
-         z-index: 999;
-         justify-content: center;
-         align-items: center;
-      }
-
-      .popup-content {
-         background-color: #faf7f7;
-         padding: 10px;
-         border: 1px solid #0a0a0a;
-         max-width: 70%;
-         max-height: 80%;
-         overflow-y: auto;
-         text-align: left;
-         border-radius: 20px;
-         position: relative;
-      }
-
-      .popup-content p {
-         font-size: 18px;
-         /* Default font size */
-         line-height: 2;
-      }
-
-      /* Font size classes */
-      .small-font {
-         font-size: 10px;
-      }
-
-      .medium-font {
-         font-size: 10px;
-      }
-
-      .large-font {
-         font-size: 10px;
-      }
-
-      .close {
-         position: absolute;
-         top: 10px;
-         right: 25px;
-         color: #080000;
-         font-size: 20px;
-         font-weight: bold;
-         cursor: pointer;
-      }
-
-      .close:hover,
-      .close:focus {
-         color: black;
-         text-decoration: none;
-         cursor: pointer;
-      }
-
-      .image-grid {
-         display: flex;
          flex-direction: column;
       }
 
-      .row {
-         display: flex;
-         justify-content: space-between;
-         /* Adjust spacing between images */
-         margin-bottom: 20px;
-         /* Adjust margin between rows */
-      }
+   }
 
-      .image-wrapper {
-         flex: 1;
-         /* Equal width for each image-wrapper */
-         text-align: center;
-         /* Center align content inside */
-      }
+   .adjustable-image {
+      margin-left: 400px;
+      /* Adjust as needed */
+      cursor: pointer;
+   }
 
-      #about {
-         background-color: rgba(215, 207, 207, 0.5);
-         /* Light gray background color */
-         color: #040404;
-         /* Dark text color */
-         padding: 50px 20px;
-         /* Padding for content */
-         text-align: center;
-      }
+   .additional-image-container {
+      position: absolute;
+      top: 0;
+      right: 500px;
+      /* Adjust the distance from the right side of the page */
+      margin-top: 100px;
+      /* Optional: Add margin to separate from other elements */
+   }
 
-      #about h2 {
-         font-size: 36px;
-         margin-bottom: 30px;
-      }
+   .additional-image-container {
+      z-index: 10;
+      /* Adjust as needed to ensure it's above other elements */
+   }
 
-      #about p {
-         font-size: 18px;
-         line-height: 1.6;
-         max-width: 800px;
-         margin: 0 auto;
-         text-align: left;
-         padding: 20px;
-      }
+   #popup-box {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
-      .image-group {
-         display: flex;
-         justify-content: center;
-         flex-wrap: wrap;
-         margin-top: 30px;
-      }
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+   }
 
-      .image-group img {
-         width: 200px;
-         height: 200px;
-         object-fit: cover;
-         margin: 10px;
-         border-radius: 10px;
-      }
+   .popup-content {
+      background-color: #faf7f7;
+      padding: 10px;
+      border: 1px solid #0a0a0a;
+      max-width: 70%;
+      max-height: 80%;
+      overflow-y: auto;
+      text-align: left;
+      border-radius: 20px;
+      position: relative;
+   }
 
-      .logo {
-         width: 100px;
-         /* Example width */
-         height: auto;
-         /* Maintain aspect ratio */
-      }
+   .popup-content p {
+      font-size: 18px;
+      /* Default font size */
+      line-height: 2;
+   }
 
-      #about .cta-button {
-         display: inline-block;
-         padding: 10px 20px;
-         background-color: #4CAF50;
-         color: white;
-         text-decoration: none;
-         border-radius: 5px;
-         transition: background-color 0.3s ease;
-         /* Example styles for the button */
-      }
+   /* Font size classes */
+   .small-font {
+      font-size: 10px;
+   }
 
-      .check-availability-container {
-         text-align: center;
-         margin-top: 20px;
-      }
+   .medium-font {
+      font-size: 10px;
+   }
 
-      .check-availability-container button {
-         background-color: #4CAF50;
-         color: white;
-         border: none;
-         padding: 10px 20px;
-         border-radius: 5px;
-         cursor: pointer;
-         font-size: 16px;
-         transition: background-color 0.3s ease;
-      }
+   .large-font {
+      font-size: 10px;
+   }
 
-      .check-availability-container button:hover {
-         background-color: #45a049;
-      }
+   .close {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      color: #080000;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+   }
 
-      .availability-options {
-         margin-top: 10px;
-         display: flex;
-         justify-content: center;
-         gap: 20px;
-      }
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+   }
 
-      .availability-options a {
-         padding: 10px 20px;
-         background-color: #f9f9f9;
-         border: 1px solid #ccc;
-         border-radius: 5px;
-         text-decoration: none;
-         color: #333;
-         transition: background-color 0.3s ease;
-      }
+   .image-grid {
+      display: flex;
+      flex-direction: column;
+   }
 
-      .availability-options a:hover {
-         background-color: #eee;
-      }
+   .row {
+      display: flex;
+      justify-content: space-between;
+      /* Adjust spacing between images */
+      margin-bottom: 20px;
+      /* Adjust margin between rows */
+   }
+
+   .image-wrapper {
+      flex: 1;
+      /* Equal width for each image-wrapper */
+      text-align: center;
+      /* Center align content inside */
+   }
+
+   #about {
+      background-color: rgba(215, 207, 207, 0.5);
+      /* Light gray background color */
+      color: #040404;
+      /* Dark text color */
+      padding: 50px 20px;
+      /* Padding for content */
+      text-align: center;
+   }
+
+   #about h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+   }
+
+   #about p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      padding: 20px;
+   }
+
+   .image-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+   }
+
+   .image-group img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 10px;
+   }
+
+   #about .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #248a32;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      /* Example styles for the button */
+   }
+
+   .check-availability-container {
+      text-align: center;
+      margin-top: 20px;
+   }
+
+   .check-availability-container button {
+      background-color: #0408f0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+   }
+
+   .check-availability-container button:hover {
+      background-color: #238526;
+   }
+
+   .availability-options {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+   }
+
+   .availability-options a {
+      padding: 10px 20px;
+      background-color: #0408f0;
+
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #f9f9f9;
+      transition: background-color 0.3s ease;
+   }
+
+   .availability-options a:hover {
+      background-color: #45a049;
+   }
 
 
-      #about .cta-button:hover {
-         background-color: #45a049;
-      }
-   </style>
+   #about .cta-button:hover {
+      background-color: #45a049;
+   }
+</style>
+
+<!-- Popup Box Container -->
+<div id="popup-box" class="popup-box">
+   <div class="popup-content">
+      <span class="close">&times;</span>
+      <div id="popup-images"></div>
+      <div id="popup-details"></div>
+   </div>
+</div>
+
+<section id="home">
+   <div class="container" style="font-family: Arial, sans-serif; background-color: rgba(31, 5, 85, 0.5); padding: 0px;">
+      <h2>Xcess Residence</h2>
+
+   </div>
+</section>
+<section id="about" style="background-color:rgba(255, 252, 252, 0.801);">
+   <div class="container">
+      <div style="padding: 30px;">
+         <h2 style="font-family: font-size 30px; color: #070000;">About Us</h2>
+         <p class=" large-text" style="font-size: 18px; color: #0e0101;">
+            Welcome to Xcess Residence, Rooftop and Spa, a charming boutique hotel nestled in the serene
+            Pratumnak
+            Hill
+            area of Pattaya. With just 15 elegantly designed rooms, we offer an intimate and personalized
+            retreat
+            for
+            travelers seeking comfort and tranquility. Our prime location provides easy access to both
+            the vibrant
+            nightlife of Pattaya and the pristine beaches of Jomtien, ensuring you experience the best of
+            both
+            worlds.
+            Whether you are here for a romantic getaway, a family vacation, or a solo adventure, Xcess
+            Residence,
+            Rooftop and Spa is your perfect home away from home, where luxury meets convenience. Join us
+            for an
+            unforgettable stay, where every detail is designed to exceed your expectations.
+         </p>
+         <!-- Check Availability Button and Options -->
+         <div class="check-availability-container">
+            <button onclick="showAvailabilityOptions()">Check Availability</button>
+            <div id="availability-options" class="availability-options" style="display: none;">
+               <a href="https://www.booking.com/hotel/th/xcess-residence.en-gb.html" target="_blank">Booking.com</a>
+               <a href="https://www.agoda.com/xcess-residence/hotel/pattaya-th.html?finalPriceView=1&isShowMobileAppPrice=false&cid=1919571&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2024-07-1&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=THB&isFreeOccSearch=false&tag=0002d4f2-d0b3-4684-9a42-27ea2c122dab&los=4&searchrequestid=8115e895-498f-4887-adee-e3b95da167a1&ds=wPq3w7xMDXyA%2BClG"
+                  target="_blank">Agoda.com</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+
+
+<body>
+   <section id="rooms" style="background-color: rgba(147, 147, 161, 0.664);">
+      <div class="container">
+         <div class="room-grid">
+            <div class="row">
+               <div class="room">
+                  <div class="clickable-image-container" onclick="openDescriptionPopup('Deluxe Queen Room')">
+                     <img src="xcess11.png" alt="Deluxe Queen Room" width="450" height="300">
+                     <div class="icon"></div>
+                  </div>
+               </div>
+               <div class="room">
+                  <div class="clickable-image-container" onclick="openDescriptionPopup('Superior King Room')">
+                     <img src="xcess10.png" alt="Superior King Room" width="450" height="300">
+                     <div class="icon"></div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="room">
+                  <div class="clickable-image-container" onclick="openDescriptionPopup('Double Room with balcony')">
+                     <img src="xcess13.jpg" alt="Double Room with balcony" width="450" height="300">
+                     <div class="icon"></div>
+                  </div>
+               </div>
+               <div class="room">
+                  <div class="clickable-image-container" onclick="openDescriptionPopup('Family Room')">
+                     <img src="xcess21.png" alt="Family Room" width="450" height="300">
+                     <div class="icon"></div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="room">
+                  <div class="clickable-image-container" onclick="openDescriptionPopup('Queen Room with Balcony')">
+                     <img src="xcess22.png" alt="Queen Room with Balcony" width="450" height="300">
+                     <div class="icon"></div>
+                  </div>
+               </div>
+               <div class="room">
+                  <div class="clickable-image-container" onclick="openDescriptionPopup('Family Room with balcony')">
+                     <img src="xcess23.png" alt="Family Room with balcony" width="450" height="300">
+
+                     <div class="icon"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="services" style="background-color: #583ece; padding: 10px;">
+      <div class="container">
+         <h2 style="font-size: 20px; font-family: Arial, sans-serif;">Our Services</h2>
+         <div class="service-groups">
+            <div class="service-group">
+               <ul>
+                  <li style="font-size: 15px;">Free Wi-Fi</li>
+                  <li style="font-size: 15px;">Spa and Wellness</li>
+                  <li style="font-size: 15px;">Non-smoking rooms</li>
+                  <li style="font-size: 15px;">Shower</li>
+                  <li style="font-size: 15px;">Flat Screen TVs</li>
+               </ul>
+            </div>
+            <div class="service-group">
+               <ul>
+                  <li style="font-size: 15px;">Balcony</li>
+                  <li style="font-size: 15px;">Airport Shuttle</li>
+                  <li style="font-size: 15px;">Outdoor Swimming Pool</li>
+                  <li style="font-size: 15px;">Refrigerator</li>
+                  <li style="font-size: 15px;">Streaming Services</li>
+               </ul>
+            </div>
+            <div class="service-group">
+               <ul>
+                  <li style="font-size: 15px;">Toaster</li>
+                  <li style="font-size: 15px;">Towels</li>
+                  <li style="font-size: 15px;">Electric Kettle</li>
+                  <li style="font-size: 15px;">Tea or Coffee Maker</li>
+               </ul>
+            </div>
+            <div class="service-group">
+               <ul>
+                  <!-- Add more services here -->
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="links" style="background-color: #a7a0c5; padding: 20px;">
+      <div class="container">
+         <h2 style="font-size: 20px; font-family: font-size 5px;">Find Us Online</h2>
+         <div class="links">
+
+
+            <a href="https://www.instagram.com/xcess_pattaya/" target="_blank">
+               <img src="instagram.png" alt="Instagram" width="40" height="40">
+
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61553643703589" target="_blank">
+               <img src="Facebook.png" alt="Facebook" width="40" height="40">
+
+            </a>
+
+   </section>
+
+
+   <footer style="background-color: #faf7f7; text-align: center; padding: 20px 0;">
+      <p style="color: rgb(7, 0, 0); font-size: 10px;">2024 Xcess Residence, Rooftop and Spa. All rights
+         reserved.
+      </p>
+   </footer>
+
 
    <!-- Popup Box Container -->
    <div id="popup-box" class="popup-box">
@@ -594,303 +718,131 @@
    </div>
 
 
-
-
-   <section id="home">
-      <div class="container"
-         style="font-family: Arial, sans-serif; background-color: rgba(31, 5, 85, 0.5); padding: 0px;">
-         <h2>Xcess Residence</h2>
-
-      </div>
-   </section>
-   <section id="about" style="background-color:rgba(255, 252, 252, 0.801);">
-      <div class="container">
-         <div style="padding: 30px;">
-            <h2 style="font-family: font-size 30px; color: #070000;">About Us</h2>
-            <p class=" large-text" style="font-size: 18px; color: #0e0101;">
-               Welcome to Xcess Residence, Rooftop and Spa, a charming boutique hotel nestled in the serene
-               Pratumnak
-               Hill
-               area of Pattaya. With just 15 elegantly designed rooms, we offer an intimate and personalized
-               retreat
-               for
-               travelers seeking comfort and tranquility. Our prime location provides easy access to both
-               the vibrant
-               nightlife of Pattaya and the pristine beaches of Jomtien, ensuring you experience the best of
-               both
-               worlds.
-               Whether you are here for a romantic getaway, a family vacation, or a solo adventure, Xcess
-               Residence,
-               Rooftop and Spa is your perfect home away from home, where luxury meets convenience. Join us
-               for an
-               unforgettable stay, where every detail is designed to exceed your expectations.
-            </p>
-            <!-- Check Availability Button and Options -->
-            <div class="check-availability-container">
-               <button onclick="showAvailabilityOptions()">Check Availability</button>
-               <div id="availability-options" class="availability-options" style="display: none;">
-                  <a href="https://www.booking.com/hotel/th/xcess-residence.en-gb.html" target="_blank">Booking.com</a>
-                  <a href="https://www.agoda.com/xcess-residence/hotel/pattaya-th.html?finalPriceView=1&isShowMobileAppPrice=false&cid=1919571&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2024-07-1&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=THB&isFreeOccSearch=false&tag=0002d4f2-d0b3-4684-9a42-27ea2c122dab&los=4&searchrequestid=8115e895-498f-4887-adee-e3b95da167a1&ds=wPq3w7xMDXyA%2BClG"
-                     target="_blank">Agoda.com</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
+   <script>
+      var slides = document.querySelectorAll('.slide');
+      var currentIndex = 0;
 
 
 
+      var backgroundImages = [
+         { url: 'xcess24.png', size: '100% 100%' },
+      ];
+      var currentBackgroundIndex = 0;
 
-   <body>
-      <section id="rooms" style="background-color: rgba(147, 147, 161, 0.664);">
-         <div class="container">
-            <div class="room-grid">
-               <div class="row">
-                  <div class="room">
-                     <div class="clickable-image-container" onclick="openDescriptionPopup('Deluxe Queen Room')">
-                        <img src="xcess11.png" alt="Deluxe Queen Room" width="450" height="300">
-                        <div class="icon"></div>
-                     </div>
-                  </div>
-                  <div class="room">
-                     <div class="clickable-image-container" onclick="openDescriptionPopup('Superior King Room')">
-                        <img src="xcess10.png" alt="Superior King Room" width="450" height="300">
-                        <div class="icon"></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="room">
-                     <div class="clickable-image-container" onclick="openDescriptionPopup('Double Room with balcony')">
-                        <img src="xcess13.jpg" alt="Double Room with balcony" width="450" height="300">
-                        <div class="icon"></div>
-                     </div>
-                  </div>
-                  <div class="room">
-                     <div class="clickable-image-container" onclick="openDescriptionPopup('Family Room')">
-                        <img src="xcess21.png" alt="Family Room" width="450" height="300">
-                        <div class="icon"></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="room">
-                     <div class="clickable-image-container" onclick="openDescriptionPopup('Queen Room with Balcony')">
-                        <img src="xcess22.png" alt="Queen Room with Balcony" width="450" height="300">
-                        <div class="icon"></div>
-                     </div>
-                  </div>
-                  <div class="room">
-                     <div class="clickable-image-container" onclick="openDescriptionPopup('Family Room with balcony')">
-                        <img src="xcess23.png" alt="Family Room with balcony" width="450" height="300">
+      function changeBackgroundImage() {
+         currentBackgroundIndex++;
 
-                        <div class="icon"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section id="services" style="background-color: #583ece; padding: 10px;">
-         <div class="container">
-            <h2 style="font-size: 20px; font-family: Arial, sans-serif;">Our Services</h2>
-            <div class="service-groups">
-               <div class="service-group">
-                  <ul>
-                     <li style="font-size: 15px;">Free Wi-Fi</li>
-                     <li style="font-size: 15px;">Spa and Wellness</li>
-                     <li style="font-size: 15px;">Non-smoking rooms</li>
-                     <li style="font-size: 15px;">Shower</li>
-                     <li style="font-size: 15px;">Flat Screen TVs</li>
-                  </ul>
-               </div>
-               <div class="service-group">
-                  <ul>
-                     <li style="font-size: 15px;">Balcony</li>
-                     <li style="font-size: 15px;">Airport Shuttle</li>
-                     <li style="font-size: 15px;">Outdoor Swimming Pool</li>
-                     <li style="font-size: 15px;">Refrigerator</li>
-                     <li style="font-size: 15px;">Streaming Services</li>
-                  </ul>
-               </div>
-               <div class="service-group">
-                  <ul>
-                     <li style="font-size: 15px;">Toaster</li>
-                     <li style="font-size: 15px;">Towels</li>
-                     <li style="font-size: 15px;">Electric Kettle</li>
-                     <li style="font-size: 15px;">Tea or Coffee Maker</li>
-                  </ul>
-               </div>
-               <div class="service-group">
-                  <ul>
-                     <!-- Add more services here -->
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <section id="links" style="background-color: #a7a0c5; padding: 20px;">
-         <div class="container">
-            <h2 style="font-size: 20px; font-family: font-size 5px;">Find Us Online</h2>
-            <div class="links">
-
-
-               <a href="https://www.instagram.com/xcess_pattaya/" target="_blank">
-                  <img src="instagram.png" alt="Instagram" width="40" height="40">
-
-               </a>
-
-               <a href="https://www.facebook.com/profile.php?id=61553643703589" target="_blank">
-                  <img src="Facebook.png" alt="Facebook" width="40" height="40">
-
-               </a>
-
-      </section>
-
-
-      <footer style="background-color: #faf7f7; text-align: center; padding: 20px 0;">
-         <p style="color: rgb(7, 0, 0); font-size: 10px;">2024 Xcess Residence, Rooftop and Spa. All rights
-            reserved.
-         </p>
-      </footer>
-
-
-      <!-- Popup Box Container -->
-      <div id="popup-box" class="popup-box">
-         <div class="popup-content">
-            <span class="close">&times;</span>
-            <div id="popup-images"></div>
-            <div id="popup-details"></div>
-         </div>
-      </div>
-
-
-      <script>
-         var slides = document.querySelectorAll('.slide');
-         var currentIndex = 0;
-
-
-
-         var backgroundImages = [
-            { url: 'xcess24.png', size: '100% 100%' },
-         ];
-         var currentBackgroundIndex = 0;
-
-         function changeBackgroundImage() {
-            currentBackgroundIndex++;
-
-            if (currentBackgroundIndex >= backgroundImages.length) {
-               currentBackgroundIndex = 0;
-            }
-
-            document.body.style.backgroundImage = "url('" + backgroundImages[currentBackgroundIndex].url + "')";
-            document.body.style.backgroundSize = backgroundImages[currentBackgroundIndex].size;
+         if (currentBackgroundIndex >= backgroundImages.length) {
+            currentBackgroundIndex = 0;
          }
 
-         setInterval(changeBackgroundImage, 1000);
+         document.body.style.backgroundImage = "url('" + backgroundImages[currentBackgroundIndex].url + "')";
+         document.body.style.backgroundSize = backgroundImages[currentBackgroundIndex].size;
+      }
 
-         // JavaScript for Popup Box Functionality
-         document.addEventListener('DOMContentLoaded', () => {
-            const popupBox = document.getElementById('popup-box');
-            const closeBtn = document.querySelector('.close');
+      setInterval(changeBackgroundImage, 1000);
 
-            // Room data - this is just sample data, replace with actual data
-            const rooms = {
-               "room1": {
-                  images: ["xcess8.png", "xcess12.jpg"],
-                  details: "This double room features a rooftop pool and a sauna. Offering free toiletries and bathrobes, this double room includes a private bathroom with a shower, a bidet and a hairdryer. The spacious air-conditioned double room offers a flat-screen TV with streaming services, a minibar, a tea and coffee maker, a seating area as well as city views. The unit has 2 beds."
-               },
-               "room2": {
-                  images: ["xcess9.png", "xcess14.png"],
-                  details: "This double room's standout features are the rooftop pool and sauna. Featuring free toiletries and bathrobes, this double room includes a private bathroom with a shower, a bidet and a hairdryer. The spacious air-conditioned double room features a flat-screen TV with streaming services, a minibar, a tea and coffee maker, a seating area as well as city views. The unit has 2 beds."
-               },
-               "room3": {
-                  images: ["xcess15.png", "xcess16.png"],
-                  details: "This double room's standout features are the rooftop pool and sauna. This air-conditioned double room is comprised of a flat-screen TV with streaming services, a private bathroom as well as a balcony with city views. The unit has 2 beds.."
-               },
-               "room4": {
-                  images: ["xcess17.png", "xcess18.png"],
-                  details: "This family room's standout features are the rooftop pool and sauna. Providing free toiletries and bathrobes, this family room includes a private bathroom with a shower, a bidet and a hairdryer. The family room provides air conditioning, a minibar, a tea and coffee maker, a wardrobe, as well as a flat-screen TV with streaming services. The unit offers 2 beds.."
-               },
-               "room5": {
-                  images: ["xcess19.png", "xcess20.png"],
-                  details: "This double room's standout features are the rooftop pool and sauna. Providing free toiletries and bathrobes, this double room includes a private bathroom with a shower, a bidet and a hairdryer. The spacious air-conditioned double room provides a flat-screen TV with streaming services, a minibar, a tea and coffee maker, a seating area as well as city views. The unit offers 2 beds.."
-               },
-               "room6": {
-                  images: ["xcess27.jpg", "xcess28.jpg"],
-                  details: "Guests will have a special experience as this family room provides a rooftop pool and a sauna. This air-conditioned family room includes a flat-screen TV with streaming services, a private bathroom as well as a balcony with city views. The unit offers 2 beds."
-               },
-            };
+      // JavaScript for Popup Box Functionality
+      document.addEventListener('DOMContentLoaded', () => {
+         const popupBox = document.getElementById('popup-box');
+         const closeBtn = document.querySelector('.close');
 
-            // Function to open popup with specific room data
-            function openPopup(roomId, imageWidth = '300px', imageHeight = '200px', imageMargin = '20px') {
-               const room = rooms[roomId];
-               if (room) {
-                  // Generate HTML for room images with specified styling
-                  const imagesHtml = room.images.map(img => `<img src="${img}" style="width: ${imageWidth}; height: ${imageHeight}; margin: ${imageMargin};" alt="Room Image">`).join('');
-                  // Generate HTML for room details
-                  const detailsHtml = `<p>${room.details}</p>`;
+         // Room data - this is just sample data, replace with actual data
+         const rooms = {
+            "room1": {
+               images: ["xcess8.png", "xcess12.jpg"],
+               details: "This double room features a rooftop pool and a sauna. Offering free toiletries and bathrobes, this double room includes a private bathroom with a shower, a bidet and a hairdryer. The spacious air-conditioned double room offers a flat-screen TV with streaming services, a minibar, a tea and coffee maker, a seating area as well as city views. The unit has 2 beds."
+            },
+            "room2": {
+               images: ["xcess9.png", "xcess14.png"],
+               details: "This double room's standout features are the rooftop pool and sauna. Featuring free toiletries and bathrobes, this double room includes a private bathroom with a shower, a bidet and a hairdryer. The spacious air-conditioned double room features a flat-screen TV with streaming services, a minibar, a tea and coffee maker, a seating area as well as city views. The unit has 2 beds."
+            },
+            "room3": {
+               images: ["xcess15.png", "xcess16.png"],
+               details: "This double room's standout features are the rooftop pool and sauna. This air-conditioned double room is comprised of a flat-screen TV with streaming services, a private bathroom as well as a balcony with city views. The unit has 2 beds.."
+            },
+            "room4": {
+               images: ["xcess17.png", "xcess18.png"],
+               details: "This family room's standout features are the rooftop pool and sauna. Providing free toiletries and bathrobes, this family room includes a private bathroom with a shower, a bidet and a hairdryer. The family room provides air conditioning, a minibar, a tea and coffee maker, a wardrobe, as well as a flat-screen TV with streaming services. The unit offers 2 beds.."
+            },
+            "room5": {
+               images: ["xcess19.png", "xcess20.png"],
+               details: "This double room's standout features are the rooftop pool and sauna. Providing free toiletries and bathrobes, this double room includes a private bathroom with a shower, a bidet and a hairdryer. The spacious air-conditioned double room provides a flat-screen TV with streaming services, a minibar, a tea and coffee maker, a seating area as well as city views. The unit offers 2 beds.."
+            },
+            "room6": {
+               images: ["xcess27.jpg", "xcess28.jpg"],
+               details: "Guests will have a special experience as this family room provides a rooftop pool and a sauna. This air-conditioned family room includes a flat-screen TV with streaming services, a private bathroom as well as a balcony with city views. The unit offers 2 beds."
+            },
+         };
 
-                  // Update popup content in the DOM
-                  document.getElementById('popup-images').innerHTML = imagesHtml;
-                  document.getElementById('popup-details').innerHTML = detailsHtml;
+         // Function to open popup with specific room data
+         function openPopup(roomId, imageWidth = '300px', imageHeight = '200px', imageMargin = '20px') {
+            const room = rooms[roomId];
+            if (room) {
+               // Generate HTML for room images with specified styling
+               const imagesHtml = room.images.map(img => `<img src="${img}" style="width: ${imageWidth}; height: ${imageHeight}; margin: ${imageMargin};" alt="Room Image">`).join('');
+               // Generate HTML for room details
+               const detailsHtml = `<p>${room.details}</p>`;
 
-                  // Display the popup box
-                  popupBox.style.display = 'flex';
-               }
+               // Update popup content in the DOM
+               document.getElementById('popup-images').innerHTML = imagesHtml;
+               document.getElementById('popup-details').innerHTML = detailsHtml;
+
+               // Display the popup box
+               popupBox.style.display = 'flex';
             }
-            openPopup('roomId', '400px', '400x', '5px');
+         }
+         openPopup('roomId', '400px', '400x', '5px');
 
 
-            // Add click event listeners to room images
-            document.querySelectorAll('.room img').forEach((img, index) => {
-               img.addEventListener('click', () => {
-                  openPopup(`room${index + 1}`);
-               });
-            });
-
-            // Close popup when clicking on the close button
-            closeBtn.addEventListener('click', () => {
-               popupBox.style.display = 'none';
-            });
-
-            // Close popup when clicking outside the popup content
-            window.addEventListener('click', (event) => {
-               if (event.target === popupBox) {
-                  popupBox.style.display = 'none';
-               }
+         // Add click event listeners to room images
+         document.querySelectorAll('.room img').forEach((img, index) => {
+            img.addEventListener('click', () => {
+               openPopup(`room${index + 1}`);
             });
          });
 
-         function showAvailabilityOptions() {
-            var options = document.getElementById('availability-options');
-            if (options.style.display === "none" || options.style.display === "") {
-               options.style.display = "flex";
-            } else {
-               options.style.display = "none";
+         // Close popup when clicking on the close button
+         closeBtn.addEventListener('click', () => {
+            popupBox.style.display = 'none';
+         });
+
+         // Close popup when clicking outside the popup content
+         window.addEventListener('click', (event) => {
+            if (event.target === popupBox) {
+               popupBox.style.display = 'none';
             }
-         }
+         });
+      });
 
-         // JavaScript function to open popup
-         function openDescriptionPopup(roomType) {
-            // Show overlay
-            document.getElementById('overlay').style.display = 'block';
-            // Show popup with room description
-            document.getElementById('popup').style.display = 'block';
-            document.getElementById('roomDescription').innerText = `Room type: ${roomType}`;
+      function showAvailabilityOptions() {
+         var options = document.getElementById('availability-options');
+         if (options.style.display === "none" || options.style.display === "") {
+            options.style.display = "flex";
+         } else {
+            options.style.display = "none";
          }
+      }
 
-         // JavaScript function to close popup
-         function closeDescriptionPopup() {
-            // Hide overlay
-            document.getElementById('overlay').style.display = 'none';
-            // Hide popup
-            document.getElementById('popup').style.display = 'none';
-         }
-      </script>
-      </head>
+      // JavaScript function to open popup
+      function openDescriptionPopup(roomType) {
+         // Show overlay
+         document.getElementById('overlay').style.display = 'block';
+         // Show popup with room description
+         document.getElementById('popup').style.display = 'block';
+         document.getElementById('roomDescription').innerText = `Room type: ${roomType}`;
+      }
 
-   </body>
+      // JavaScript function to close popup
+      function closeDescriptionPopup() {
+         // Hide overlay
+         document.getElementById('overlay').style.display = 'none';
+         // Hide popup
+         document.getElementById('popup').style.display = 'none';
+      }
+   </script>
+   </head>
+
+</body>
 
 </html>
