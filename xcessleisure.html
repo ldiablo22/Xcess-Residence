@@ -169,7 +169,7 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
+      background: url('Beach.jpg') no-repeat center center fixed;
       background-size: cover;
    }
 
@@ -267,8 +267,34 @@
 
 <style>
    header {
+      width: 100%;
+      box-sizing: border-box;
       text-align: right;
       /* Align content to the right */
+      background-color: #faf7f7;
+      color: rgb(7, 6, 10);
+      padding: 8px 8px;
+      /* Adjust top and bottom padding */
+      height: 40px;
+      /* Set a fixed height */
+   }
+
+   .container {
+      font-family: 'Roboto', sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+   }
+
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* Corrected padding value */
+      background-image: url('Beach.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #020008;
    }
 
    nav ul {
@@ -277,7 +303,7 @@
       margin: 0;
       white-space: nowrap;
       /* Prevent items from wrapping */
-      margin-right: 20px;
+      margin-right: 50px;
       /* Initial right margin */
    }
 
@@ -286,6 +312,13 @@
       /* Display items inline */
       margin-left: 20px;
       /* Left margin between items */
+   }
+
+   nav ul li a {
+      color: rgb(7, 0, 0);
+      font-size: 15px;
+      text-decoration: none;
+      /* Remove underlining from links */
    }
 </style>
 
@@ -457,36 +490,7 @@
       Rooftop and Spa. All rights reserved.</p>
 </footer>
 
-<script>
-   var slides = document.querySelectorAll('.slide');
-   var currentIndex = 0;
 
-   // Array of background images with associated sizes
-   var backgroundImages = [{
-      url: 'Beach.jpg', size: '100% 100%'
-   }
-      // Add more images if needed
-   ];
-   var currentBackgroundIndex = 0;
-
-   function changeBackgroundImage() {
-      // Increment index to the next background image
-      currentBackgroundIndex++;
-
-      // Reset index if it exceeds the number of background images
-      if (currentBackgroundIndex >= backgroundImages.length) {
-         currentBackgroundIndex = 0;
-      }
-
-      // Set the new background image
-      document.body.style.backgroundImage = "url('" + backgroundImages[currentBackgroundIndex].url + "')";
-      // Set the new background size
-      document.body.style.backgroundSize = backgroundImages[currentBackgroundIndex].size;
-   }
-
-   // Change background image every 5 seconds (5000 milliseconds)
-   setInterval(changeBackgroundImage, 1000);
-</script>
 </body>
 
 </html>
