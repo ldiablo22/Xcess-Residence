@@ -8,20 +8,6 @@
    <link rel="stylesheet" href="styles.css">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    <style>
-      body {
-         margin: 0;
-         font-family: 'Roboto', sans-serif;
-         color: #040308;
-         background-image: url('xcess7.jpg');
-         background-size: cover;
-         background-position: center;
-         background-attachment: fixed;
-         /* Makes the background image remain stationary */
-         display: flex;
-         flex-direction: column;
-         min-height: 100vh;
-      }
-
       .container {
          max-width: 1200px;
          margin: 0 auto;
@@ -30,18 +16,12 @@
          flex: 1;
       }
 
-      header {
-         background-color: #faf7f7;
-         color: #07060a;
-         padding: 10px 0;
-         height: 25px;
-      }
 
 
       #home {
          background-color: rgba(46, 7, 238, 0.5);
          color: #f7f6fc;
-         padding: 10px 0;
+         padding: 5px 0;
          text-align: center;
       }
 
@@ -87,15 +67,43 @@
          margin-top: 10px;
       }
 
+      footer {
+         background-color: #f3ecec;
+         /* Dark background color */
+         color: #070000;
+         /* Text color */
+         padding: 20px 0;
+         /* Padding top and bottom */
+         text-align: center;
+         /* Center align text */
+      }
+
+
+      /* Adjust paragraph styling */
+      footer p {
+         font-size: 10px;
+         /* Example font size */
+         margin: 0;
+         /* Remove default margin */
+      }
+
+      /* Adjust link styles if needed */
+      footer a {
+         color: #fff;
+         /* Link color */
+         text-decoration: none;
+         /* Remove underline */
+      }
+
+
 
       footer {
          text-align: center;
-         padding: 10px 0;
-         background-color: #faf7f7;
-         margin-top: auto;
-         /* Pushes footer to the bottom */
-         width: 100%;
+         padding: 1px 0;
       }
+
+
+
 
       img {
          max-width: 100%;
@@ -117,8 +125,34 @@
 
    <style>
       header {
+         width: 100%;
+         box-sizing: border-box;
          text-align: right;
          /* Align content to the right */
+         background-color: #faf7f7;
+         color: rgb(7, 6, 10);
+         padding: 0px 0px;
+         /* Adjust top and bottom padding */
+         height: 40px;
+         /* Set a fixed height */
+      }
+
+      .container {
+         font-family: 'Roboto', sans-serif;
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 20px;
+      }
+
+      body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         /* Corrected padding value */
+         background-image: url('xcess24.png');
+         background-size: cover;
+         background-attachment: fixed;
+         color: #020008;
       }
 
       nav ul {
@@ -127,7 +161,7 @@
          margin: 0;
          white-space: nowrap;
          /* Prevent items from wrapping */
-         margin-right: 20px;
+         margin-right: 50px;
          /* Initial right margin */
       }
 
@@ -136,6 +170,18 @@
          /* Display items inline */
          margin-left: 20px;
          /* Left margin between items */
+      }
+
+      nav ul li a {
+         color: rgb(7, 0, 0);
+         font-size: 15px;
+         text-decoration: none;
+         /* Remove underlining from links */
+      }
+
+      nav ul li a:hover {
+         text-decoration: underline;
+         /* Underline on hover if desired */
       }
    </style>
 
