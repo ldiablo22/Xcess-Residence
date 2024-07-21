@@ -11,7 +11,6 @@
    <meta name="keywords"
       content="Xcess Residence, Pattaya hotels, luxury accommodation Pattaya, rooftop spa, Eastern Seaboard">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-   <!-- Other meta tags and CSS styles -->
    <style>
       body {
          margin: 0;
@@ -256,23 +255,21 @@
       .row {
          display: flex;
          flex-wrap: wrap;
-         justify-content: space-around;
+         justify-content: space-between;
          margin-bottom: 20px;
       }
 
       .room {
          flex: 0 0 calc(33.33% - 20px);
-         margin-right: 30px;
-         margin-bottom: 10px;
+         /* Adjust to 3 items per row */
+         margin: 10px;
+         /* Adjust margins to add space between items */
       }
 
-      .room:last-child {
-         margin-right: 0;
-      }
-
-      .room-image {
-         max-width: 100%;
+      .room img {
+         width: 100%;
          height: auto;
+         border-radius: 10px;
       }
 
       @media (min-width: 1024px) {
@@ -292,82 +289,57 @@
          }
       }
 
-      @media (max-width: 768px) and (orientation: portrait) {
+      @media (max-width: 1024px) and (orientation: landscape) {
+         .row {
+            flex-direction: row;
+            flex-wrap: wrap;
+         }
+
+         .room {
+            flex: 0 0 calc(33.33% - 20px);
+            /* Adjust to 3 items per row */
+            margin: 10px;
+            /* Adjust margins to add space between items */
+         }
+
+         .room img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+         .row {
+            flex-direction: column;
+            align-items: center;
+         }
+
+         .room {
+            width: 100%;
+            /* Make each room take the full width in portrait mode */
+            margin: 10px 0;
+            /* Add margin to separate the images */
+         }
+
+         .room img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+         }
+
          .container {
             width: 90%;
          }
 
          .menu-toggle {
-            font-size: 75px;
+            font-size: 35px;
             right: 15px;
-            top: 10px;
+            top: 50px;
          }
 
          nav ul li a {
             font-size: 14px;
-         }
-
-         .room {
-            width: 100%;
-            margin-bottom: 20px;
-         }
-
-         .room img {
-            height: 200px;
-            width: 300px;
-         }
-
-         .content {
-            padding: 10px;
-         }
-
-         .links {
-            flex-direction: column;
-            gap: 10px;
-         }
-
-         footer p {
-            font-size: 8px;
-         }
-
-         #additional-section-2 .container {
-            flex-direction: column;
-            align-items: center;
-         }
-
-         #additional-section-2 .box {
-            width: 100%;
-            margin-bottom: 10px;
-         }
-
-         #additional-section-2 .btn {
-            font-size: 10px;
-         }
-      }
-
-      @media (max-width: 1024px) and (orientation: portrait) {
-         .container {
-            width: 85%;
-         }
-
-         .menu-toggle {
-            font-size: 85px;
-            right: 40px;
-            top: 10px;
-         }
-
-         nav ul li a {
-            font-size: 14px;
-         }
-
-         .room {
-            width: 100%;
-            margin-bottom: 20px;
-         }
-
-         .room img {
-            height: 200px;
-            width: 300px;
          }
 
          .content {
@@ -453,14 +425,17 @@
             setting and cutting-edge beats. Located beneath Walking Street,
             this club boasts an intimate atmosphere,
             pulsating music,
-            and a crowd that's ready to dance until dawn. The immersive experience of Tunnel Club makes it a favorite
+            and a crowd that's ready to dance until dawn. The immersive experience of Tunnel Club makes it a
+            favorite
             among
             locals and tourists alike.</p>
          <p><strong style="font-size: 20px;">Insomnia:</strong><br>
-         <p style="font-size: 18px;">Insomnia is a legendary name in Pattaya's club scene, known for its massive
+         <p style="font-size: 18px;">Insomnia is a legendary name in Pattaya's club scene, known for its
+            massive
             dance floors, high-energy atmosphere,
             and international DJ lineup. Situated on Walking Street,
-            it's a mecca for party animals looking to lose themselves in the music and the moment. From EDM to hip-hop,
+            it's a mecca for party animals looking to lose themselves in the music and the moment. From EDM to
+            hip-hop,
             Insomnia caters to every taste in music.</p>
          <p><strong style="font-size: 20px;">Club Panda:</strong><br>
          <p style="font-size: 18px;">Club Panda brings a touch of Asian-inspired luxury to Pattaya's nightlife
