@@ -35,15 +35,51 @@
          z-index: -1;
       }
 
-      /* Define styles for the custom margin and width */
+      .menu-toggle {
+         display: block;
+         font-size: 40px;
+         cursor: pointer;
+         color: rgb(231, 11, 11);
+         position: fixed;
+         right: 20px;
+         top: 15px;
+         z-index: 1001;
+      }
+
+      nav ul {
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+         display: none;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         background-color: rgba(83, 80, 80, 0.9);
+         position: absolute;
+         top: 40px;
+         left: 0;
+      }
+
+      nav ul.show {
+         display: flex;
+      }
+
+      nav ul li {
+         margin: 10px 0;
+      }
+
+      nav ul li a {
+         color: rgb(253, 249, 249);
+         font-size: 15px;
+         text-decoration: none;
+         font-weight: bold;
+      }
+
       .custom-style {
          margin: 40px auto;
-         /* Center the container horizontally */
          width: 80%;
-         /* Adjust the width value as needed */
          box-sizing: border-box;
          padding: 0 60px;
-         /* Add padding to adjust inner content */
       }
 
       .container {
@@ -51,12 +87,10 @@
          margin: 0 auto;
       }
 
-
-
       #home {
          background-color: rgba(46, 7, 238, 0.5);
          color: rgba(237, 235, 241, 0.5);
-         padding: 25px 0;
+         padding: 45px 0;
          text-align: center;
       }
 
@@ -161,105 +195,257 @@
       .maps {
          display: flex;
          justify-content: space-between;
-         /* Adjust spacing between the images */
          align-items: center;
-         /* Align items vertically */
       }
 
       .map-container {
          position: relative;
-         /* Position container relative to allow absolute positioning inside */
          width: 300px;
-         /* Set the width of each map container */
          height: 200px;
-         /* Set the height of each map container */
          overflow: hidden;
-         /* Ensure content doesn't overflow */
       }
 
       .maps .map {
          position: absolute;
-         /* Position images absolutely inside the container */
          top: 0;
-         /* Example: adjust top position */
          left: 400;
-         /* Example: adjust left position */
          width: 100%;
-         /* Ensure image fills container */
          height: 100%;
-         /* Ensure image fills container */
          object-fit: cover;
-         /* Maintain aspect ratio */
+      }
+
+      /* Media queries for .address-container */
+      @media (max-width: 480px) and (orientation: portrait) {
+         .address-container {
+            flex-direction: column;
+            align-items: center;
+         }
+      }
+
+      @media (max-width: 480px) and (orientation: landscape) {
+         .address-container {
+            flex-direction: row;
+            justify-content: space-around;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: portrait) {
+         .address-container {
+            justify-content: center;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         .address-container {
+            justify-content: space-around;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+         .address-container {
+            justify-content: center;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: landscape) {
+         .address-container {
+            justify-content: space-between;
+         }
+      }
+
+      /* Media queries for the first .address */
+      @media (max-width: 480px) and (orientation: portrait) {
+         .address:first-of-type {
+            margin-right: 0;
+            text-align: center;
+         }
+      }
+
+      @media (max-width: 480px) and (orientation: landscape) {
+         .address:first-of-type {
+            margin-right: 10px;
+            text-align: left;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: portrait) {
+         .address:first-of-type {
+            margin-right: 10px;
+            text-align: center;
+            font-size: 20px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         .address:first-of-type {
+            margin-right: 20px;
+            text-align: left;
+            font-size: 14px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+         .address:first-of-type {
+            margin-right: 100px;
+            text-align: center;
+            font-size: 22px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: landscape) {
+         .address:first-of-type {
+            margin-right: 10px;
+            text-align: left;
+            font-size: 24px;
+         }
+      }
+
+      /* Media queries for the second .address */
+      @media (max-width: 480px) and (orientation: portrait) {
+         .address:last-of-type {
+            margin-right: 0;
+            text-align: center;
+         }
+      }
+
+      @media (max-width: 480px) and (orientation: landscape) {
+         .address:last-of-type {
+            margin-right: 10px;
+            text-align: left;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: portrait) {
+         .address:last-of-type {
+            margin-right: 10px;
+            text-align: center;
+            font-size: 14px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         .address:last-of-type {
+            margin-right: 10px;
+            text-align: left;
+            font-size: 14px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+         .address:last-of-type {
+            margin-right: 100px;
+            text-align: center;
+            font-size: 16px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: landscape) {
+         .address:last-of-type {
+            margin-right: -40px;
+            text-align: left;
+            font-size: 24px;
+         }
+      }
+
+
+
+      /* Media query for screens larger than 1024px (laptops and desktops) */
+      @media (min-width: 1024px) {
+         .container {
+            width: 75%;
+            margin: 0 auto;
+         }
+
+         .menu-toggle {
+            font-size: 40px;
+            /* Adjust font size as needed */
+            right: 20px;
+            top: 55px;
+         }
+
+         nav ul li a {
+            font-size: 18px;
+            /* Adjust font size as needed */
+         }
+      }
+
+      /* Media queries for container, menu-toggle, and nav ul li a */
+      @media (max-width: 768px) and (orientation: portrait) {
+         .container {
+            width: 90%;
+         }
+
+         .menu-toggle {
+            font-size: 75px;
+            right: 15px;
+            top: 10px;
+         }
+
+         nav ul li a {
+            font-size: 14px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         .container {
+            width: 95%;
+         }
+
+         .menu-toggle {
+            font-size: 75px;
+            right: 10px;
+            top: 5px;
+         }
+
+         nav ul li a {
+            font-size: 30px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+         .container {
+            width: 85%;
+         }
+
+         .menu-toggle {
+            font-size: 95px;
+            right: 40px;
+            top: 15px;
+         }
+
+         nav ul li a {
+            font-size: 45px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: landscape) {
+         .container {
+            width: 80%;
+         }
+
+         .menu-toggle {
+            font-size: 55px;
+            right: 15px;
+            top: 55px;
+         }
+
+         nav ul li a {
+            font-size: 30px;
+         }
       }
    </style>
 </head>
 
-<style>
-   header {
-      width: 100%;
-      box-sizing: border-box;
-      text-align: right;
-      /* Align content to the right */
-      background-color: #faf7f7;
-      color: rgb(7, 6, 10);
-      padding: 6px 6px;
-      /* Adjust top and bottom padding */
-      height: 40px;
-      /* Set a fixed height */
-   }
-
-   .container {
-      font-family: 'Roboto', sans-serif;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 15px;
-   }
-
-   body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      /* Corrected padding value */
-      background-image: url('Kohlarnbeach.jpg');
-      background-size: cover;
-      background-attachment: fixed;
-      color: #020008;
-   }
-
-   nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      white-space: nowrap;
-      /* Prevent items from wrapping */
-      margin-right: 50px;
-      /* Initial right margin */
-   }
-
-   nav ul li {
-      display: inline-block;
-      /* Display items inline */
-      margin-left: 20px;
-      /* Left margin between items */
-   }
-
-   nav ul li a {
-      color: rgb(7, 0, 0);
-      font-size: 15px;
-      text-decoration: none;
-      /* Remove underlining from links */
-   }
-</style>
-
 <header>
    <div class="container">
+      <span class="menu-toggle">&#9776;</span>
       <nav>
          <ul>
-            <li><a href="index.html" style="color: rgb(7, 0, 0); font-size: 15px;">Home</a></li>
-            <li><a href="xcessrooms.html" style="color: rgb(7, 0, 0); font-size: 15px;">Gallery</a></li>
-            <li><a href="xcessrt.html" style="color: rgb(7, 0, 0); font-size: 15px;">Rooftop & Spa</a></li>
-            <li><a href="xcesslocation.html" style="color: rgb(7, 0, 0); font-size: 15px;">Location</a></li>
-            <li><a href="xcessleisure.html" style="color: rgb(7, 0, 0); font-size: 15px;">Leisure</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="xcessrooms.html">Gallery</a></li>
+            <li><a href="xcessrt.html">Rooftop & Spa</a></li>
+            <li><a href="xcesslocation.html">Location</a></li>
+            <li><a href="xcessleisure.html">Leisure</a></li>
          </ul>
       </nav>
    </div>
@@ -289,7 +475,7 @@
             <address>
                Xcess Residence<br>
                338, 111 Phra Tamnak, Pattaya City,<br>
-               Pattaya, Cholburi 20150,<br>
+               Pattaya, Chonburi 20150,<br>
                Thailand
             </address>
          </div>
@@ -389,6 +575,24 @@
 <footer style="background-color:  #f3ecec; text-align: center; padding: 10px 0;">
    <p style="color:  rgb(7, 0, 0);  font-size: 10px;">2024 Xcess Residence, Rooftop and Spa. All rights reserved.</p>
 </footer>
+
+
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('nav ul');
+
+      menuToggle.addEventListener('click', function () {
+         navMenu.classList.toggle('show');
+      });
+
+      window.addEventListener('scroll', function () {
+         if (navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+         }
+      });
+   });
+</script>
 
 </body>
 

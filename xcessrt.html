@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="">
@@ -14,282 +12,436 @@
       content="Xcess Residence, Pattaya hotels, luxury accommodation Pattaya, rooftop spa, Eastern Seaboard">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    <!-- Other meta tags and CSS styles -->
-</head>
-<style>
-   body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #040308;
-      background-image: url('xcess6.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      /* Keeps the background fixed while scrolling */
-   }
-
-   .container {
-      font-family: 'Roboto', sans-serif;
-   }
-
-
-   header {
-      background-color: #faf7f7;
-      color: rgb(7, 6, 10);
-      padding: 10px 0;
-      /* Adjust top and bottom padding */
-      height: 25px;
-      /* Set a fixed height */
-   }
-
-   body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(252, 247, 247, 0.534);
-      /* Adjust transparency (0.5) as needed */
-      z-index: -1;
-   }
-
-   /* Define styles for the custom margin and width */
-   .custom-style {
-      margin: 40px auto;
-      /* Center the container horizontally */
-      width: 80%;
-      /* Adjust the width value as needed */
-      box-sizing: border-box;
-      padding: 0 60px;
-      /* Add padding to adjust inner content */
-   }
-
-   /* To explicitly move it to the left */
-   .custom-style {
-      margin: 0px;
-      /* Uniform margin */
-      width: calc(100% - 40px);
-      /* Full width minus total margin */
-   }
-
-
-
-
-   #home {
-      background-color: rgba(46, 7, 238, 0.5);
-      /* semi-transparent color */
-      color: #f7f6fc;
-      padding: 10px 0;
-      text-align: center;
-   }
-
-
-   #home h2 {
-      font-size: 50px;
-      margin: 0;
-   }
-
-   #home p {
-      font-size: 40px;
-   }
-
-   section {
-      padding: 20px 0;
-   }
-
-   .room-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-   }
-
-   .room {
-      text-align: center;
-      width: 48%;
-   }
-
-   .room img {
-      max-width: 80%;
-      border-radius: 10px;
-   }
-
-   .room-details {
-      background-color: rgba(168, 156, 233, 0.8);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   }
-
-   .room-details h3,
-   .room-details p {
-      color: #333;
-   }
-
-   form {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-   }
-
-   form input,
-   form textarea {
-      padding: 20px;
-      border: 1px solid #0875a0;
-      border-radius: 5px;
-   }
-
-   form button {
-      padding: 30px;
-      background-color: #333;
-      color: rgb(78, 66, 66);
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-   }
-
-
-
-   .large-font {
-      font-size: 30px;
-   }
-
-   .links {
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      padding: 20px 0;
-      gap: 30px;
-   }
-
-   .links a {
-      text-decoration: none;
-      text-align: center;
-   }
-
-   .links img {
-      display: block;
-      border-radius: 50%;
-      transition: transform 0.3s ease-in-out;
-      margin: 0 auto;
-   }
-
-   .links img:hover {
-      transform: scale(1.2);
-   }
-
-
-   .room video {
-      width: 100%;
-      /* Adjust width as needed */
-      max-width: 300px;
-      /* Max width constraint */
-      height: 400px;
-      /* Maintain aspect ratio */
-      object-fit: cover;
-      /* Ensure the whole video is shown */
-   }
-
-   .video-container {
-      display: flex;
-      justify-content: center;
-      /* Center horizontally */
-      gap: 120px;
-      /* Adjust gap between videos */
-      margin: 0 auto;
-      /* Center the container itself */
-      text-align: center;
-      /* Center content inside flex items (for older browser support) */
-      max-width: 80%;
-      /* Ensure the container does not exceed its parent width */
-      padding: 40px;
-      /* Optional: Add padding to the container */
-      box-sizing: border-box;
-      /* Ensure padding is included in the width */
-   }
-
-   .video-container video {
-      width: 370px;
-      /* Fixed width for each video */
-      height: 380px;
-      /* Fixed height for each video */
-      max-width: 100%;
-      /* Ensure videos don't exceed their container */
-   }
-</style>
-
-<body>
    <style>
-      header {
-         width: 100%;
-         box-sizing: border-box;
-         text-align: right;
-         /* Align content to the right */
-         background-color: #faf7f7;
-         color: rgb(7, 6, 10);
-         padding: 8px 8px;
-         /* Adjust top and bottom padding */
-         height: 40px;
-         /* Set a fixed height */
+      body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+         color: #040308;
+         background-image: url('xcess6.jpg');
+         background-size: cover;
+         background-position: center;
+         background-attachment: fixed;
       }
 
       .container {
          font-family: 'Roboto', sans-serif;
-         max-width: 1200px;
-         margin: 0 auto;
-         padding: 10px;
       }
 
-      body {
-         font-family: Arial, sans-serif;
+      header {
+         background-color: #faf7f7;
+         color: rgb(7, 6, 10);
+         padding: 10px 0;
+         height: 25px;
+      }
+
+      body::before {
+         content: '';
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(252, 247, 247, 0.534);
+         z-index: -1;
+      }
+
+      .custom-style {
+         margin: 40px auto;
+         width: 80%;
+         box-sizing: border-box;
+         padding: 0 60px;
+      }
+
+      .custom-style {
+         margin: 0px;
+         width: calc(100% - 40px);
+      }
+
+      #home {
+         background-color: rgba(46, 7, 238, 0.5);
+         color: #f7f6fc;
+         padding: 10px 0;
+         text-align: center;
+      }
+
+      #home h2 {
+         font-size: 50px;
          margin: 0;
-         padding: 0;
-         /* Corrected padding value */
-         background-image: url('xcess6.jpg');
-         background-size: cover;
-         background-attachment: fixed;
-         color: #020008;
+      }
+
+      #home p {
+         font-size: 40px;
+      }
+
+      section {
+         padding: 20px 0;
+      }
+
+      .room-grid {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         gap: 30px;
+      }
+
+      .room {
+         text-align: center;
+         width: 48%;
+      }
+
+      .room img {
+         max-width: 80%;
+         border-radius: 10px;
+      }
+
+      .room-details {
+         background-color: rgba(168, 156, 233, 0.8);
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .room-details h3,
+      .room-details p {
+         color: #333;
+      }
+
+      form {
+         display: flex;
+         flex-direction: column;
+         gap: 30px;
+      }
+
+      form input,
+      form textarea {
+         padding: 20px;
+         border: 1px solid #0875a0;
+         border-radius: 5px;
+      }
+
+      form button {
+         padding: 30px;
+         background-color: #333;
+         color: rgb(78, 66, 66);
+         border: none;
+         border-radius: 20px;
+         cursor: pointer;
+      }
+
+      .large-font {
+         font-size: 30px;
+      }
+
+      .links {
+         display: flex;
+         justify-content: left;
+         align-items: center;
+         padding: 20px 0;
+         gap: 30px;
+      }
+
+      .links a {
+         text-decoration: none;
+         text-align: center;
+      }
+
+      .links img {
+         display: block;
+         border-radius: 50%;
+         transition: transform 0.3s ease-in-out;
+         margin: 0 auto;
+      }
+
+      .links img:hover {
+         transform: scale(1.2);
+      }
+
+      .room video {
+         width: 100%;
+         max-width: 300px;
+         height: 400px;
+         object-fit: cover;
+      }
+
+      .video-container {
+         display: flex;
+         justify-content: center;
+         gap: 120px;
+         margin: 0 auto;
+         text-align: center;
+         max-width: 80%;
+         padding: 40px;
+         box-sizing: border-box;
+      }
+
+      .video-container video {
+         width: 370px;
+         height: 380px;
+         max-width: 100%;
+      }
+
+      .menu-toggle {
+         display: block;
+         font-size: 40px;
+         cursor: pointer;
+         color: rgb(231, 11, 11);
+         position: fixed;
+         right: 20px;
+         top: 15px;
+         z-index: 1001;
       }
 
       nav ul {
          list-style-type: none;
          padding: 0;
          margin: 0;
-         white-space: nowrap;
-         /* Prevent items from wrapping */
-         margin-right: 70px;
-         /* Initial right margin */
+         display: none;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         background-color: rgba(83, 80, 80, 0.9);
+         position: absolute;
+         top: 40px;
+         left: 0;
+      }
+
+      nav ul.show {
+         display: flex;
       }
 
       nav ul li {
-         display: inline-block;
-         /* Display items inline */
-         margin-left: 20px;
-         /* Left margin between items */
+         margin: 10px 0;
       }
 
       nav ul li a {
-         color: rgb(7, 0, 0);
+         color: rgb(253, 249, 249);
          font-size: 15px;
          text-decoration: none;
-         /* Remove underlining from links */
+         font-weight: bold;
+      }
+
+      /* Media Queries */
+      @media (max-width: 1024px) {
+         .menu-toggle {
+            font-size: 90px;
+            right: 30px;
+            top: 65px;
+         }
+
+         #home h2 {
+            font-size: 100px;
+            height: 100px;
+         }
+
+         #about .about-title {
+            font-size: 50px;
+         }
+
+         #about .about-text {
+            font-size: 20px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: portrait) {
+         .menu-toggle {
+            font-size: 40px;
+            right: 25px;
+            top: 10px;
+         }
+
+         #home h2 {
+            font-size: 32px;
+            height: 45px;
+         }
+
+         #about .about-title {
+            font-size: 32px;
+         }
+
+         #about .about-text {
+            font-size: 18px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         .menu-toggle {
+            font-size: 35px;
+            right: 20px;
+            top: 5px;
+         }
+
+         #home h2 {
+            font-size: 32px;
+            height: 45px;
+         }
+
+         #about .about-title {
+            font-size: 24px;
+         }
+
+         #about .about-text {
+            font-size: 20px;
+         }
+      }
+
+      @media (max-width: 480px) {
+         .menu-toggle {
+            font-size: 30px;
+            right: 15px;
+            top: 5px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         .menu-toggle {
+            font-size: 20px;
+            /* Adjust this value to change the size of the hamburger menu */
+            right: 20px;
+            /* Adjust this value to change the horizontal position of the hamburger menu */
+            top: 5px;
+            /* Adjust this value to change the vertical position of the hamburger menu */
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: landscape) {
+         .menu-toggle {
+            font-size: 60px;
+            /* Adjust this value to change the size of the hamburger menu */
+            right: 30px;
+            /* Adjust this value to change the horizontal position of the hamburger menu */
+            top: 50px;
+            /* Adjust this value to change the vertical position of the hamburger menu */
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+         .menu-toggle {
+            font-size: 90px;
+            /* Adjust this value to change the size of the hamburger menu */
+            right: 30px;
+            /* Adjust this value to change the horizontal position of the hamburger menu */
+            top: 30px;
+            /* Adjust this value to change the vertical position of the hamburger menu */
+         }
+      }
+
+      /* Media query for tablets in portrait mode (max-width: 768px) */
+      @media (max-width: 768px) and (orientation: portrait) {
+         .menu-toggle {
+            font-size: 35px;
+            /* Adjust this value to change the size of the hamburger menu */
+            right: 20px;
+            /* Adjust this value to change the horizontal position of the hamburger menu */
+            top: 5px;
+            /* Adjust this value to change the vertical position of the hamburger menu */
+         }
+      }
+
+      #home h2 {
+         font-size: 28px;
+         height: 35px;
+      }
+
+      #about .about-title {
+         font-size: 24px;
+      }
+
+      #about .about-text {
+         font-size: 16px;
+      }
+
+
+      /* Media query for laptops (typically min-width: 1024px and max-width: 1440px) */
+      @media (min-width: 1024px) and (max-width: 1440px) {
+         .menu-toggle {
+            font-size: 40px;
+            right: 30px;
+            top: 70px;
+         }
+      }
+
+      /* Media queries for container, menu-toggle, and nav ul li a */
+      @media (max-width: 768px) and (orientation: portrait) {
+         .container {
+            width: 100%;
+         }
+
+         .menu-toggle {
+            font-size: 75px;
+            right: 15px;
+            top: 40px;
+         }
+
+         nav ul li a {
+            font-size: 14px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         .container {
+            width: 95%;
+         }
+
+         .menu-toggle {
+            font-size: 75px;
+            right: 10px;
+            top: 5px;
+         }
+
+         nav ul li a {
+            font-size: 30px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+         .container {
+            width: 100%;
+         }
+
+         .menu-toggle {
+            font-size: 95px;
+            right: 40px;
+            top: 25px;
+         }
+
+         nav ul li a {
+            font-size: 45px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: landscape) {
+         .container {
+            width: 100%;
+         }
+
+         .menu-toggle {
+            font-size: 55px;
+            right: 15px;
+            top: 55px;
+         }
+
+         nav ul li a {
+            font-size: 30px;
+         }
       }
    </style>
+</head>
 
+<body>
    <header>
       <div class="container">
+         <span class="menu-toggle">&#9776;</span>
          <nav>
             <ul>
-               <li><a href="index.html" style="color: rgb(7, 0, 0); font-size: 15px;">Home</a></li>
-               <li><a href="xcessrooms.html" style="color: rgb(7, 0, 0); font-size: 15px;">Gallery</a></li>
-               <li><a href="xcessrt.html" style="color: rgb(7, 0, 0); font-size: 15px;">Rooftop & Spa</a></li>
-               <li><a href="xcesslocation.html" style="color: rgb(7, 0, 0); font-size: 15px;">Location</a></li>
-               <li><a href="xcessleisure.html" style="color: rgb(7, 0, 0); font-size: 15px;">Leisure</a></li>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="xcessrooms.html">Gallery</a></li>
+               <li><a href="xcessrt.html">Rooftop & Spa</a></li>
+               <li><a href="xcesslocation.html">Location</a></li>
+               <li><a href="xcessleisure.html">Leisure</a></li>
             </ul>
          </nav>
       </div>
    </header>
-
 
    <section id="home">
       <div class="container">
@@ -297,37 +449,40 @@
          <p></p>
       </div>
    </section>
+
    <section id="rooftop-and-spa" style="background-color: rgba(237, 235, 241, 0.5);">
       <div class="container">
          <div style="padding: 40px;">
-            <h2 style="font-family: font-size 50px; color: #070000;">Rooftop and Spa</h2>
-
-            <p class=" large-text" style="font-size: 18px; color: #070000;">
+            <h2 style="font-size: 30px; color: #070000;">Rooftop and Spa</h2>
+            <p class="large-text" style="font-size: 18px; color: #070000;">
                Experience unparalleled relaxation and entertainment at Xcess Rooftop and Spa,
                a luxurious retreat offering breathtaking city skyline views. Located atop a stylish low-rise building,
                our spa features comprehensive wellness amenities, including two hot tubs with unique ambiances,
                a tranquil relaxation pool, and two therapeutic saunas designed to detoxify and rejuvenate.
+            </p>
             <p class="large-text" style="font-size: 18px; color: #070000;">
                Enhance your visit with our full-service bar, serving a curated selection of cocktails, fine wines,
                and refreshing beverages. Whether you prefer to sip a drink in the sauna's lounge area, our bar adds
                a touch of sophistication to your spa experience. Additionally, our open-air bar provides the perfect
                setting to enjoy your favorite sport with a cocktail in hand.
+            </p>
             <p class="large-text" style="font-size: 18px; color: #070000;">
                Explore our second location, Excess Rooftop, at 318, 501 Thappraya Road in Pattaya. This venue offers
-               stylish décor,
-               comfortable seating, and stunning city views, making it an ideal spot to unwind. Known for its expertly
-               mixed cocktails,
-               Excess Rooftop combines classic favorites with innovative creations to enhance your sophisticated
+               stylish décor, comfortable seating, and stunning city views, making it an ideal spot to unwind. Known for
+               its expertly
+               mixed cocktails, Excess Rooftop combines classic favorites with innovative creations to enhance your
+               sophisticated
                experience.
+            </p>
             <p class="large-text" style="font-size: 18px; color: #070000;">
                Discover a sanctuary of relaxation and indulgence at Xcess Rooftop and Spa, where wellness and social
-               spaces
-               blend seamlessly to offer the perfect urban escape. Plus, you can book your private party or event with
-               us,
-               ensuring a memorable and exclusive experience for you and your guests.
+               spaces blend seamlessly to offer the perfect urban escape. Plus, you can book your private party or event
+               with
+               us, ensuring a memorable and exclusive experience for you and your guests.
+            </p>
             <p class="large-text" style="font-size: 18px; color: #070000;">
                To book your private event, call us at <a href="tel:+061 478 1105"> 061 478 1105</a>.
-
+            </p>
          </div>
       </div>
    </section>
@@ -359,49 +514,44 @@
             <div class="room">
                <img src="rooftop8.jpg" alt="Rooftop bar" width="900" height="400">
             </div>
-            <!-- Add your videos here -->
-
-
-
-            <section>
-               <div class="video-container">
-                  <video controls>
-                     <source src="video1.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                  </video>
-                  <video controls>
-                     <source src="video3.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                  </video>
-                  <video controls>
-                     <source src="video2.mp4" type="video/mp4">
-                     Your browser does not support the video tag.
-                  </video>
-
-               </div>
+         </div>
+         <div class="video-container">
+            <video controls>
+               <source src="video1.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
+            <video controls>
+               <source src="video3.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
+            <video controls>
+               <source src="video2.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
          </div>
       </div>
    </section>
 
-   <style>
-      .room-title {
-         font-size: 40px;
-         margin: 0;
-         padding: 0;
-      }
-
-      .large-text {
-         font-size: 40px;
-         margin-top: 5px;
-      }
-   </style>
-
    <footer style="background-color: #faf7f7;text-align: center; padding: 10px 0;">
-      <p style="color:  rgb(7, 0, 0);  font-size: 10px;">2024 Xcess Residence, Rooftop and Spa. All rights
-         reserved.
-      </p>
+      <p style="color: rgb(7, 0, 0); font-size: 10px;">2024 Xcess Residence, Rooftop and Spa. All rights reserved.</p>
    </footer>
 
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         const menuToggle = document.querySelector('.menu-toggle');
+         const navMenu = document.querySelector('nav ul');
+
+         menuToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('show');
+         });
+
+         window.addEventListener('scroll', function () {
+            if (navMenu.classList.contains('show')) {
+               navMenu.classList.remove('show');
+            }
+         });
+      });
+   </script>
 </body>
 
 </html>
