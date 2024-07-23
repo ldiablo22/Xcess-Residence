@@ -3,488 +3,419 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="">
-   <title>Xcess Residence - A Peaceful Retreat in Pattaya</ <!DOCTYPE html>
-      <html lang="en">
-
-      <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="">
-         <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
-         <link rel="stylesheet" href="styles.css">
-         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-         <style>
-            /* Consolidated CSS */
-            html,
-            body {
-               margin: 0;
-               padding: 0;
-               font-family: Arial, sans-serif;
-               height: 100%;
-               background-image: url('xcess7.jpg');
-               background-size: cover;
-               background-attachment: fixed;
-               color: #020008;
-            }
-
-            nav {
-               display: flex;
-               justify-content: center;
-               padding: 10px 0;
-               width: 100%;
-               background-color: #eee8e8;
-               z-index: 1000;
-            }
-
-            nav ul {
-               list-style-type: none;
-               padding: 0;
-               margin: 0;
-               display: none;
-               flex-direction: column;
-               align-items: center;
-               width: 100%;
-               background-color: rgba(83, 80, 80, 0.9);
-               position: absolute;
-               top: 40px;
-               left: 0;
-            }
-
-            nav ul.show {
-               display: flex;
-            }
-
-            nav ul li {
-               margin: 10px 0;
-            }
-
-            /* Base styles for the nav menu links */
-            nav ul li a {
-               color: #ffffff;
-               font-size: 15px;
-               text-decoration: none;
-               font-weight: bold;
-            }
-
-            /* Media query for portrait tablets */
-            @media screen and (max-width: 1024px) and (orientation: portrait) {
-               nav ul li a {
-                  font-size: 40px;
-               }
-            }
-
-            /* Media query for landscape tablets */
-            @media screen and (max-width: 1024px) and (orientation: landscape) {
-               nav ul li a {
-                  font-size: 24px;
-               }
-            }
-
-            /* Media query for portrait mobile devices */
-            @media screen and (max-width: 768px) and (orientation: portrait) {
-               nav ul li a {
-                  font-size: 20px;
-               }
-            }
-
-            /* Media query for landscape mobile devices */
-            @media screen and (max-width: 768px) and (orientation: landscape) {
-               nav ul li a {
-                  font-size: 18px;
-               }
-            }
-
-            /* Media query for very small screens */
-            @media screen and (max-width: 480px) {
-               nav ul li a {
-                  font-size: 16px;
-               }
-            }
-
-            .menu-toggle {
-               display: block;
-               font-size: 40px;
-               cursor: pointer;
-               color: rgb(231, 11, 11);
-               position: fixed;
-               right: 40px;
-               top: 50px;
-               z-index: 1001;
-            }
-
-            @media screen and (max-width: 1024px) and (orientation: portrait) {
-               .menu-toggle {
-                  font-size: 100px;
-                  right: 50px;
-                  top: 60px;
-               }
-            }
-
-            @media screen and (max-width: 768px) and (orientation: landscape) {
-               .menu-toggle {
-                  font-size: 80px;
-                  right: 20px;
-                  top: 10px;
-               }
-            }
-
-            @media screen and (max-width: 1024px) and (orientation: landscape) {
-               .menu-toggle {
-                  font-size: 60px;
-                  right: 50px;
-                  top: 50px;
-               }
-            }
-
-            @media screen and (max-width: 600px) and (orientation: portrait) {
-               nav ul {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  width: 100%;
-                  background-color: rgba(12, 2, 2, 0.9);
-                  position: absolute;
-                  top: 40px;
-                  left: 0;
-               }
-
-               nav ul li {
-                  margin: 10px 0;
-               }
-
-               nav ul li a {
-                  font-size: 24px;
-                  padding: 10px;
-               }
-
-               .menu-toggle {
-                  font-size: 24px;
-                  cursor: pointer;
-                  color: white;
-                  position: fixed;
-                  right: 20px;
-                  top: 10px;
-               }
-            }
-
-            .container {
-               font-family: 'Roboto', sans-serif;
-               max-width: 1200px;
-               margin: 0 auto;
-               padding: 15px;
-            }
-
-            header {
-               width: 100%;
-               box-sizing: border-box;
-               text-align: right;
-               background-color: #faf7f7;
-               color: rgb(7, 6, 10);
-               padding: 0px;
-               height: 39px;
-            }
-
-            #home {
-               background-color: rgba(46, 7, 238, 0.5);
-               color: #f7f6fc;
-               padding: 5px 0;
-               text-align: center;
-            }
-
-            /* Media query for portrait tablets and smaller screens */
-            @media screen and (max-width: 1024px) and (orientation: portrait) {
-               #home {
-                  padding: 50px 0;
-                  font-size: 20px;
-               }
-            }
-
-            /* Media query for landscape tablets and smaller screens */
-            @media screen and (max-width: 1024px) and (orientation: landscape) {
-               #home {
-                  padding: 15px 0;
-                  font-size: 18px;
-               }
-            }
-
-            /* Media query for portrait mobile devices */
-            @media screen and (max-width: 768px) and (orientation: portrait) {
-               #home {
-                  padding: 15px 0;
-                  font-size: 18px;
-               }
-            }
-
-            /* Media query for landscape mobile devices */
-            @media screen and (max-width: 768px) and (orientation: landscape) {
-               #home {
-                  padding: 20px 0;
-                  font-size: 16px;
-               }
-            }
-
-            /* Media query for very small screens (portrait and landscape) */
-            @media screen and (max-width: 480px) {
-               #home {
-                  padding: 20px 0;
-                  font-size: 16px;
-               }
-            }
-
-            #home h2 {
-               font-size: 50px;
-               margin: 0;
-            }
-
-            #home p {
-               font-size: 40px;
-            }
-
-            #rooms {
-               background-color: rgba(199, 199, 219, 0.5);
-               padding: 20px 0;
-               min-height: calc(100vh - 170px);
-               display: flex;
-               flex-direction: column;
-               justify-content: space-between;
-            }
-
-            .room-grid {
-               display: flex;
-               flex-wrap: wrap;
-               justify-content: space-between;
-               gap: 30px;
-               flex: 1;
-            }
-
-            .room {
-               text-align: center;
-               width: 48%;
-               margin-bottom: 20px;
-            }
-
-            .room-image {
-               border-radius: 10px;
-               cursor: pointer;
-            }
-
-            .room-details {
-               margin-top: 10px;
-            }
-
-            footer {
-               background-color: #faf7f7;
-               padding: 10px 0;
-               text-align: center;
-            }
-
-            footer p {
-               color: rgb(7, 0, 0);
-               font-size: 10px;
-               margin: 0;
-            }
-
-            footer a {
-               color: #fff;
-               text-decoration: none;
-            }
-
-            img {
-               max-width: 100%;
-               height: auto;
-               display: block;
-               margin: auto;
-               border-radius: 10px;
-            }
-
-            @media (max-width: 768px) {
-               .room {
-                  width: 100%;
-               }
-            }
-
-            /* Media query for laptops (typically min-width: 1024px and max-width: 1440px) */
-            @media (min-width: 1024px) and (max-width: 1440px) {
-               .menu-toggle {
-                  font-size: 40px;
-                  right: 30px;
-                  top: 50px;
-               }
-            }
-
-            /* Media queries for container, menu-toggle, and nav ul li a */
-            @media (max-width: 768px) and (orientation: portrait) {
-               .container {
-                  width: 90%;
-               }
-
-               .menu-toggle {
-                  font-size: 75px;
-                  right: 15px;
-                  top: 10px;
-               }
-
-               nav ul li a {
-                  font-size: 14px;
-               }
-            }
-
-            @media (max-width: 768px) and (orientation: landscape) {
-               .container {
-                  width: 95%;
-               }
-
-               .menu-toggle {
-                  font-size: 75px;
-                  right: 10px;
-                  top: 5px;
-               }
-
-               nav ul li a {
-                  font-size: 30px;
-               }
-            }
-
-            @media (max-width: 1024px) and (orientation: portrait) {
-               .container {
-                  width: 85%;
-               }
-
-               .menu-toggle {
-                  font-size: 95px;
-                  right: 40px;
-                  top: 65px;
-               }
-
-               nav ul li a {
-                  font-size: 45px;
-               }
-            }
-
-            @media (max-width: 1024px) and (orientation: landscape) {
-               .container {
-                  width: 80%;
-               }
-
-               .menu-toggle {
-                  font-size: 55px;
-                  right: 15px;
-                  top: 50px;
-               }
-
-               nav ul li a {
-                  font-size: 30px;
-               }
-            }
-
-            /* Media queries for footer font size */
-
-            /* 768px portrait */
-            @media (max-width: 768px) and (orientation: portrait) {
-               footer p {
-                  font-size: 12px;
-                  /* Adjust as needed */
-               }
-            }
-
-            /* 768px landscape */
-            @media (max-width: 768px) and (orientation: landscape) {
-               footer p {
-                  font-size: 14px;
-                  /* Adjust as needed */
-               }
-            }
-
-            /* 1024px portrait */
-            @media (max-width: 1024px) and (orientation: portrait) {
-               footer p {
-                  font-size: 14px;
-                  /* Adjust as needed */
-               }
-            }
-
-            /* 1024px landscape */
-            @media (max-width: 1024px) and (orientation: landscape) {
-               footer p {
-                  font-size: 16px;
-                  /* Adjust as needed */
-               }
-            }
-
-            /* Pop-up styles */
-            #popup-box {
-               display: none;
-               position: fixed;
-               top: 0;
-               left: 0;
-               width: 100%;
-               height: 100%;
-               background-color: rgba(0, 0, 0, 0.8);
-               justify-content: center;
-               align-items: center;
-               z-index: 1000;
-            }
-
-            #popup-box img {
-               width: 900px;
-               /* Set the desired width */
-               height: 500px;
-               /* Set the desired height */
-               border-radius: 10px;
-            }
-
-            /* Media queries for pop-up image */
-
-            /* 768px portrait */
-            @media (max-width: 768px) and (orientation: portrait) {
-               #popup-box img {
-                  max-width: 700px;
-                  max-height: 900px;
-               }
-            }
-
-            /* 768px landscape */
-            @media (max-width: 768px) and (orientation: landscape) {
-               #popup-box img {
-                  max-width: 200px;
-                  max-height: 200px;
-               }
-            }
-
-            /* 1024px portrait */
-            @media (max-width: 1024px) and (orientation: portrait) {
-               #popup-box img {
-                  max-width: 800px;
-                  max-height: 1000px;
-               }
-            }
-
-            /* 1024px landscape */
-            @media (max-width: 1024px) and (orientation: landscape) {
-               #popup-box img {
-                  max-width: 800px;
-                  max-height: 300px;
-               }
-            }
-
-
-            .close-btn {
-               position: absolute;
-               top: 20px;
-               right: 30px;
-               font-size: 40px;
-               color: white;
-               cursor: pointer;
-            }
-
-            /* Media query for increasing the size of the close button in portrait mode */
-            @media screen and (max-width: 1024px) and (orientation: portrait) {
-               .close-btn {
-                  font-size: 80px;
-               }
-            }
-         </style>
-      </head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
+   <link rel="stylesheet" href="styles.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <style>
+      /* Consolidated CSS */
+      html,
+      body {
+         margin: 0;
+         padding: 0;
+         font-family: Arial, sans-serif;
+         height: 100%;
+         background-image: url('xcess7.jpg');
+         background-size: cover;
+         background-attachment: fixed;
+         color: #020008;
+      }
+
+      nav {
+         display: flex;
+         justify-content: center;
+         padding: 10px 0;
+         width: 100%;
+         background-color: #eee8e8;
+         z-index: 1000;
+      }
+
+
+      nav ul {
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+         display: none;
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+         background-color: rgba(83, 80, 80, 0.9);
+         position: absolute;
+         top: 40px;
+         left: 0;
+      }
+
+      nav ul.show {
+         display: flex;
+      }
+
+      nav ul li {
+         margin: 10px 0;
+      }
+
+      nav ul li a {
+         color: #ffffff;
+         font-size: 15px;
+         text-decoration: none;
+         font-weight: bold;
+      }
+
+      @media screen and (max-width: 1024px) and (orientation: portrait) {
+         nav ul li a {
+            font-size: 40px;
+         }
+      }
+
+      @media screen and (max-width: 1024px) and (orientation: landscape) {
+         nav ul li a {
+            font-size: 24px;
+         }
+      }
+
+      @media screen and (max-width: 768px) and (orientation: portrait) {
+         nav ul li a {
+            font-size: 10px;
+         }
+      }
+
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+         nav ul li a {
+            font-size: 18px;
+         }
+      }
+
+      @media screen and (max-width: 480px) {
+         nav ul li a {
+            font-size: 16px;
+         }
+      }
+
+      nav ul li {
+         margin: 5px 0;
+      }
+
+      nav ul li a {
+         font-size: 15px;
+         padding: 10px;
+      }
+
+      .menu-toggle {
+         font-size: 40px;
+         cursor: pointer;
+         color: rgb(15, 0, 0);
+         position: absolute;
+         right: 20px;
+         top: 10px;
+         z-index: 2000;
+         /* Ensure the toggle button is on top */
+      }
+
+      .container {
+         font-family: 'Roboto', sans-serif;
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 15px;
+      }
+
+      header {
+         width: 100%;
+         box-sizing: border-box;
+         text-align: right;
+         background-color: #faf7f7;
+         color: rgb(7, 6, 10);
+         padding: 0px;
+         height: 39px;
+      }
+
+      #home {
+         background-color: rgba(46, 7, 238, 0.5);
+         color: #f7f6fc;
+         padding: 5px 0;
+         text-align: center;
+      }
+
+      @media screen and (max-width: 1024px) and (orientation: portrait) {
+         #home {
+            padding: 50px 0;
+            font-size: 20px;
+         }
+      }
+
+      @media screen and (max-width: 1024px) and (orientation: landscape) {
+         #home {
+            padding: 15px 0;
+            font-size: 18px;
+         }
+      }
+
+      @media screen and (max-width: 768px) and (orientation: portrait) {
+         #home {
+            padding: 15px 0;
+            font-size: 18px;
+         }
+      }
+
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+         #home {
+            padding: 20px 0;
+            font-size: 16px;
+         }
+      }
+
+      @media screen and (max-width: 480px) {
+         #home {
+            padding: 20px 0;
+            font-size: 16px;
+         }
+      }
+
+      #home h2 {
+         font-size: 50px;
+         margin: 0;
+      }
+
+      #home p {
+         font-size: 40px;
+      }
+
+      #rooms {
+         background-color: rgba(199, 199, 219, 0.5);
+         padding: 20px 0;
+         min-height: calc(100vh - 170px);
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+      }
+
+      .room-grid {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         gap: 30px;
+         flex: 1;
+      }
+
+      .room {
+         text-align: center;
+         width: 48%;
+         margin-bottom: 20px;
+      }
+
+      .room-image {
+         border-radius: 10px;
+         cursor: pointer;
+      }
+
+      .room-details {
+         margin-top: 10px;
+      }
+
+      footer {
+         background-color: #faf7f7;
+         padding: 10px 0;
+         text-align: center;
+      }
+
+      footer p {
+         color: rgb(7, 0, 0);
+         font-size: 10px;
+         margin: 0;
+      }
+
+      footer a {
+         color: #fff;
+         text-decoration: none;
+      }
+
+      img {
+         max-width: 100%;
+         height: auto;
+         display: block;
+         margin: auto;
+         border-radius: 10px;
+      }
+
+      @media (max-width: 768px) {
+         .room {
+            width: 100%;
+         }
+      }
+
+      @media (min-width: 1024px) and (max-width: 1440px) {
+         .menu-toggle {
+            font-size: 40px;
+            right: 30px;
+            top: 50px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: portrait) {
+         .container {
+            width: 90%;
+         }
+
+         .menu-toggle {
+            font-size: 40px;
+            right: 40px;
+            top: 50px;
+         }
+
+         nav ul li a {
+            font-size: 14px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         .container {
+            width: 95%;
+         }
+
+         .menu-toggle {
+            font-size: 40px;
+            right: 40px;
+            top: 50px;
+         }
+
+         nav ul li a {
+            font-size: 30px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+         .container {
+            width: 85%;
+         }
+
+         .menu-toggle {
+            font-size: 30px;
+            right: 20px;
+            top: 0px;
+         }
+
+         nav ul li a {
+            font-size: 15px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: landscape) {
+         .container {
+            width: 80%;
+         }
+
+         .menu-toggle {
+            font-size: 30px;
+            right: 15px;
+            top: 0px;
+         }
+
+         nav ul li a {
+            font-size: 15px;
+         }
+
+         .room-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+         }
+
+         .room {
+            width: 100%;
+         }
+
+         .room img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: portrait) {
+         footer p {
+            font-size: 12px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         footer p {
+            font-size: 14px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+         footer p {
+            font-size: 14px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: landscape) {
+         footer p {
+            font-size: 16px;
+         }
+      }
+
+      #popup-box {
+         display: none;
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.8);
+         justify-content: center;
+         align-items: center;
+         z-index: 1000;
+      }
+
+      #popup-box img {
+         width: 900px;
+         height: 500px;
+         border-radius: 10px;
+      }
+
+      @media (max-width: 768px) and (orientation: portrait) {
+         #popup-box img {
+            max-width: 700px;
+            max-height: 900px;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         #popup-box img {
+            max-width: 200px;
+            max-height: 200px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+         #popup-box img {
+            max-width: 400px;
+            max-height: 220px;
+         }
+      }
+
+      @media (max-width: 1024px) and (orientation: landscape) {
+         #popup-box img {
+            max-width: 500px;
+            max-height: 200px;
+         }
+      }
+
+      .close-btn {
+         position: absolute;
+         top: 20px;
+         right: 30px;
+         font-size: 40px;
+         color: white;
+         cursor: pointer;
+      }
+
+      @media screen and (max-width: 1024px) and (orientation: portrait) {
+         .close-btn {
+            font-size: 40px;
+         }
+      }
+   </style>
+</head>
 
 <body>
    <header>
@@ -507,145 +438,135 @@
       </div>
    </section>
 
+   <section id="about" style="background-color: rgba(255, 252, 252, 0.7);">
+      <div class="container">
+         <h2 style="font-size: 30px; color: #070000;">Rooms</h2>
+         <p class="large-text" style="font-size: 18px; color: #070000;">
+            At Xcess Residence, comfort meets luxury. Our range of meticulously designed rooms ensures that every
+            guest enjoys a truly relaxing stay. Indulge in the serene atmosphere of our double rooms, each adorned
+            with a private balcony offering breathtaking views. Unwind in our Queen rooms, complete with cozy
+            furnishings and the added luxury of a balcony to soak in the fresh air.
 
-   <body>
-      <section id="about" style="background-color: rgba(255, 252, 252, 0.7);">
-         <div class=" container">
-            <h2 style=" font-family: font-size 30px; color: #070000;">Rooms</h2>
-            <p class="large-text" style="font-size: 18px; color:  #070000;">
-               At Xcess Residence, comfort meets luxury. Our range of meticulously designed rooms ensures that every
-               guest enjoys a truly relaxing stay. Indulge in the serene atmosphere of our double rooms, each adorned
-               with a private balcony offering breathtaking views. Unwind in our Queen rooms, complete with cozy
-               furnishings and the added luxury of a balcony to soak in the fresh air.
+            At Xcess Residence, cleanliness is our priority. Rest assured, our rooms are meticulously maintained
+            to guarantee your comfort and well-being throughout your stay.
+         </p>
 
-               At Xcess Residence, cleanliness is our priority. Rest assured, our rooms are meticulously maintained
-               to guarantee your comfort and well-being throughout your stay.
+         <p class="large-text" style="font-size: 18px; color: #070000;">
+            For families seeking spacious accommodation, our family rooms provide ample space and comfort for
+            everyone to enjoy. Upgrade to our Deluxe Queen rooms for enhanced luxury, or opt for our Superior
+            King rooms for an extra touch of elegance and space.
 
+            Families can enjoy the ultimate relaxation in our family rooms with balconies, perfect for spending
+            quality time together while enjoying panoramic views.
 
+            Looking for a budget-friendly option without compromising on comfort? Our Econo double rooms offer
+            great value without sacrificing quality, ensuring a comfortable stay for all our guests.
 
-            <p class="large-text" style="font-size: 18px; color:  #070000;">
-               For families seeking spacious accommodation, our family rooms provide ample space and comfort for
-               everyone to enjoy. Upgrade to our Deluxe Queen rooms for enhanced luxury, or opt for our Superior
-               King
-               rooms for an extra touch of elegance and space.
-
-               Families can enjoy the ultimate relaxation in our family rooms with balconies, perfect for spending
-               quality time together while enjoying panoramic views.
-
-               Looking for a budget-friendly option without compromising on comfort? Our Econo double rooms offer
-               great value without sacrificing quality, ensuring a comfortable stay for all our guests.
-
-               Whether you're traveling for business or leisure, Xcess Residence offers a variety of room options
-               to
-               suit every need. Book your stay with us today and experience the epitome of comfort and
-               hospitality.
-            </p>
-         </div>
-
-         <section id="home" style="padding-top: 10 background-color rgba(77, 77, 90, 0.5);">
-            <div class="container">
-               <div class="overlay">
-                  <div class="room-grid">
-                     <div class="room">
-                        <img class="room-image" src="xcess14.png" alt="Deluxe Room" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess15.png" alt="Suite Room" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess16.png" alt="Executive Room" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess17.png" alt="Rooftop bar" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess18.png" alt="Suite Room" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess19.png" alt="Suite Room" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess22.png" alt="Suite Room" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess8.png" alt="Suite Room" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess12.jpg" alt="Suite Room" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess13.jpg" alt="Suite Room" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess25.jpg" alt="Suite Room" width="800" height="400">
-                        <div class="room-details"></div>
-                     </div>
-                     <div class="room">
-                        <img class="room-image" src="xcess26.png" alt="Suite Room" width="900" height="400">
-                        <div class="room-details"></div>
-                     </div>
-
-         </section>
-         <style>
-
-         </style>
-      </section>
-
-      <footer>
-         <div class="container">
-            <p style="color: #070000; font-size: 40px;">2024 Xcess Residence, Rooftop and Spa. All rights reserved.</p>
-         </div>
-      </footer>
-      <div id="popup-box">
-         <span class="close-btn" onclick="closePopup()">&times;</span>
-         <img id="popup-img" src="" alt="Popup Image">
+            Whether you're traveling for business or leisure, Xcess Residence offers a variety of room options
+            to suit every need. Book your stay with us today and experience the epitome of comfort and
+            hospitality.
+         </p>
       </div>
-      <script>
-         document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navMenu = document.querySelector('nav ul');
+   </section>
 
-            menuToggle.addEventListener('click', function () {
-               navMenu.classList.toggle('show');
-            });
+   <section id="home" style="padding-top: 10px; background-color: rgba(77, 77, 90, 0.5);">
+      <div class="container">
+         <div class="overlay">
+            <div class="room-grid">
+               <div class="room">
+                  <img class="room-image" src="xcess14.png" alt="Deluxe Room" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess15.png" alt="Suite Room" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess16.png" alt="Executive Room" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess17.png" alt="Rooftop bar" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess18.png" alt="Suite Room" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess19.png" alt="Suite Room" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess22.png" alt="Suite Room" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess8.png" alt="Suite Room" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess12.jpg" alt="Suite Room" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess13.jpg" alt="Suite Room" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess25.jpg" alt="Suite Room" width="800" height="400">
+                  <div class="room-details"></div>
+               </div>
+               <div class="room">
+                  <img class="room-image" src="xcess26.png" alt="Suite Room" width="900" height="400">
+                  <div class="room-details"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
 
-            window.addEventListener('scroll', function () {
-               if (navMenu.classList.contains('show')) {
-                  navMenu.classList.remove('show');
-               }
-            });
+   <footer>
+      <div class="container">
+         <p style="color: #070000; font-size: 10px;">2024 Xcess Residence, Rooftop and Spa. All rights reserved.</p>
+      </div>
+   </footer>
 
-            // Add event listener to room images
-            const roomImages = document.querySelectorAll('.room-image');
-            roomImages.forEach(image => {
-               image.addEventListener('click', function () {
-                  openPopup(this.src);
-               });
-            });
+   <div id="popup-box">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <img id="popup-img" src="" alt="Popup Image">
+   </div>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         const menuToggle = document.querySelector('.menu-toggle');
+         const navMenu = document.querySelector('nav ul');
+
+         menuToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('show');
          });
 
-         function openPopup(src) {
-            const popupBox = document.getElementById('popup-box');
-            const popupImg = document.getElementById('popup-img');
-            popupImg.src = src;
-            popupBox.style.display = 'flex';
-         }
+         // Add event listener to room images
+         const roomImages = document.querySelectorAll('.room-image');
+         roomImages.forEach(image => {
+            image.addEventListener('click', function () {
+               openPopup(this.src);
+            });
+         });
+      });
 
-         function closePopup() {
-            const popupBox = document.getElementById('popup-box');
-            popupBox.style.display = 'none';
-         }
-      </script>
-   </body>
+      function openPopup(src) {
+         const popupBox = document.getElementById('popup-box');
+         const popupImg = document.getElementById('popup-img');
+         popupImg.src = src;
+         popupBox.style.display = 'flex';
+      }
 
-</html>
+      function closePopup() {
+         const popupBox = document.getElementById('popup-box');
+         popupBox.style.display = 'none';
+      }
+   </script>
+</body>
+
+</html

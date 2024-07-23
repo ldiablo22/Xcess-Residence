@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
    <link rel="stylesheet" href="styles.css">
    <meta name="description"
@@ -11,7 +11,6 @@
    <meta name="keywords"
       content="Xcess Residence, Pattaya hotels, luxury accommodation Pattaya, rooftop spa, Eastern Seaboard">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-   <!-- Other meta tags and CSS styles -->
    <style>
       body {
          margin: 0;
@@ -25,6 +24,8 @@
 
       .container {
          font-family: 'Roboto', sans-serif;
+         margin: 0 auto;
+         padding: 0 20px;
       }
 
       header {
@@ -65,12 +66,12 @@
       }
 
       #home h2 {
-         font-size: 50px;
+         font-size: 30px;
          margin: 0;
       }
 
       #home p {
-         font-size: 40px;
+         font-size: 20px;
       }
 
       section {
@@ -90,7 +91,7 @@
       }
 
       .room img {
-         max-width: 80%;
+         max-width: 100%;
          border-radius: 10px;
       }
 
@@ -184,8 +185,8 @@
          display: block;
          font-size: 40px;
          cursor: pointer;
-         color: rgb(231, 11, 11);
-         position: fixed;
+         color: rgb(15, 0, 0);
+         position: absolute;
          right: 20px;
          top: 15px;
          z-index: 1001;
@@ -210,7 +211,7 @@
       }
 
       nav ul li {
-         margin: 10px 0;
+         margin: 5px 0;
       }
 
       nav ul li a {
@@ -223,14 +224,18 @@
       /* Media Queries */
       @media (max-width: 1024px) {
          .menu-toggle {
-            font-size: 90px;
+            font-size: 45px;
             right: 30px;
-            top: 65px;
+            top: 25px;
          }
 
          #home h2 {
-            font-size: 100px;
-            height: 100px;
+            font-size: 40px;
+            height: auto;
+         }
+
+         #home p {
+            font-size: 20px;
          }
 
          #about .about-title {
@@ -239,6 +244,16 @@
 
          #about .about-text {
             font-size: 20px;
+         }
+
+         .video-container {
+            flex-direction: column;
+            gap: 20px;
+         }
+
+         .video-container video {
+            width: 100%;
+            height: auto;
          }
       }
 
@@ -251,7 +266,11 @@
 
          #home h2 {
             font-size: 32px;
-            height: 45px;
+            height: auto;
+         }
+
+         #home p {
+            font-size: 16px;
          }
 
          #about .about-title {
@@ -261,9 +280,28 @@
          #about .about-text {
             font-size: 18px;
          }
+
+         .room-grid {
+            flex-direction: column;
+            align-items: center;
+         }
+
+         .room {
+            width: 90%;
+         }
+
+         .video-container {
+            flex-direction: column;
+            gap: 20px;
+         }
+
+         .video-container video {
+            width: 100%;
+            height: auto;
+         }
       }
 
-      @media (max-width: 768px) and (orientation: landscape) {
+      @media (max-width: 1024px) and (orientation: landscape) {
          .menu-toggle {
             font-size: 35px;
             right: 20px;
@@ -272,7 +310,11 @@
 
          #home h2 {
             font-size: 32px;
-            height: 45px;
+            height: auto;
+         }
+
+         #home p {
+            font-size: 16px;
          }
 
          #about .about-title {
@@ -282,6 +324,33 @@
          #about .about-text {
             font-size: 20px;
          }
+
+         .room-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+         }
+
+         .room {
+            width: 100%;
+         }
+
+         .room img {
+            width: 100%;
+            height: 200px;
+            /* Fixed height for consistency */
+            object-fit: cover;
+         }
+
+         .video-container {
+            flex-direction: row;
+            gap: 20px;
+         }
+
+         .video-container video {
+            width: 370px;
+            height: 380px;
+         }
       }
 
       @media (max-width: 480px) {
@@ -290,139 +359,73 @@
             right: 15px;
             top: 5px;
          }
-      }
 
-      @media (max-width: 768px) and (orientation: landscape) {
-         .menu-toggle {
-            font-size: 20px;
-            /* Adjust this value to change the size of the hamburger menu */
-            right: 20px;
-            /* Adjust this value to change the horizontal position of the hamburger menu */
-            top: 5px;
-            /* Adjust this value to change the vertical position of the hamburger menu */
+         #home h2 {
+            font-size: 24px;
+            height: auto;
+         }
+
+         #home p {
+            font-size: 14px;
+         }
+
+         .room-grid {
+            flex-direction: column;
+            align-items: center;
+         }
+
+         .room {
+            width: 90%;
+         }
+
+         .video-container {
+            flex-direction: column;
+            gap: 20px;
+         }
+
+         .video-container video {
+            width: 100%;
+            height: auto;
          }
       }
 
-      @media (max-width: 1024px) and (orientation: landscape) {
-         .menu-toggle {
-            font-size: 60px;
-            /* Adjust this value to change the size of the hamburger menu */
-            right: 30px;
-            /* Adjust this value to change the horizontal position of the hamburger menu */
-            top: 50px;
-            /* Adjust this value to change the vertical position of the hamburger menu */
-         }
-      }
-
-      @media (max-width: 1024px) and (orientation: portrait) {
-         .menu-toggle {
-            font-size: 90px;
-            /* Adjust this value to change the size of the hamburger menu */
-            right: 30px;
-            /* Adjust this value to change the horizontal position of the hamburger menu */
-            top: 30px;
-            /* Adjust this value to change the vertical position of the hamburger menu */
-         }
-      }
-
-      /* Media query for tablets in portrait mode (max-width: 768px) */
-      @media (max-width: 768px) and (orientation: portrait) {
-         .menu-toggle {
-            font-size: 35px;
-            /* Adjust this value to change the size of the hamburger menu */
-            right: 20px;
-            /* Adjust this value to change the horizontal position of the hamburger menu */
-            top: 5px;
-            /* Adjust this value to change the vertical position of the hamburger menu */
-         }
-      }
-
-      #home h2 {
-         font-size: 28px;
-         height: 35px;
-      }
-
-      #about .about-title {
-         font-size: 24px;
-      }
-
-      #about .about-text {
-         font-size: 16px;
-      }
-
-
-      /* Media query for laptops (typically min-width: 1024px and max-width: 1440px) */
       @media (min-width: 1024px) and (max-width: 1440px) {
+         .container {
+            width: 85%;
+            margin: 0 auto;
+         }
+
          .menu-toggle {
             font-size: 40px;
             right: 30px;
             top: 70px;
          }
-      }
 
-      /* Media queries for container, menu-toggle, and nav ul li a */
-      @media (max-width: 768px) and (orientation: portrait) {
-         .container {
-            width: 100%;
-         }
-
-         .menu-toggle {
-            font-size: 75px;
-            right: 15px;
-            top: 40px;
-         }
-
-         nav ul li a {
-            font-size: 14px;
+         .room {
+            width: 48%;
          }
       }
 
-      @media (max-width: 768px) and (orientation: landscape) {
+      @media (min-width: 1440px) {
          .container {
-            width: 95%;
+            width: 75%;
+            margin: 0 auto;
          }
 
          .menu-toggle {
-            font-size: 75px;
-            right: 10px;
-            top: 5px;
+            font-size: 40px;
+            right: 30px;
+            top: 70px;
          }
 
-         nav ul li a {
-            font-size: 30px;
+         .room {
+            width: 48%;
          }
       }
 
-      @media (max-width: 1024px) and (orientation: portrait) {
-         .container {
-            width: 100%;
-         }
-
-         .menu-toggle {
-            font-size: 95px;
-            right: 40px;
-            top: 25px;
-         }
-
-         nav ul li a {
-            font-size: 45px;
-         }
-      }
-
-      @media (max-width: 1024px) and (orientation: landscape) {
-         .container {
-            width: 100%;
-         }
-
-         .menu-toggle {
-            font-size: 55px;
-            right: 15px;
-            top: 55px;
-         }
-
-         nav ul li a {
-            font-size: 30px;
-         }
+      /* Ensuring consistent height for all videos */
+      .video-container video {
+         height: 380px;
       }
    </style>
 </head>
@@ -445,15 +448,15 @@
 
    <section id="home">
       <div class="container">
-         <h2></h2>
-         <p></p>
+         <h2>Xcess Rooftop & Spa</h2>
+         <p>A Peaceful Retreat in Pattaya</p>
       </div>
    </section>
 
    <section id="rooftop-and-spa" style="background-color: rgba(237, 235, 241, 0.5);">
       <div class="container">
          <div style="padding: 40px;">
-            <h2 style="font-size: 30px; color: #070000;">Rooftop and Spa</h2>
+            <h2 style="font-size: 30px; color: #070000;"></h2>
             <p class="large-text" style="font-size: 18px; color: #070000;">
                Experience unparalleled relaxation and entertainment at Xcess Rooftop and Spa,
                a luxurious retreat offering breathtaking city skyline views. Located atop a stylish low-rise building,
@@ -469,19 +472,20 @@
             <p class="large-text" style="font-size: 18px; color: #070000;">
                Explore our second location, Excess Rooftop, at 318, 501 Thappraya Road in Pattaya. This venue offers
                stylish décor, comfortable seating, and stunning city views, making it an ideal spot to unwind. Known for
-               its expertly
-               mixed cocktails, Excess Rooftop combines classic favorites with innovative creations to enhance your
-               sophisticated
-               experience.
+               its expertly mixed cocktails, Excess Rooftop combines classic favorites with innovative creations to
+               enhance your
+               sophisticated experience.
             </p>
             <p class="large-text" style="font-size: 18px; color: #070000;">
                Discover a sanctuary of relaxation and indulgence at Xcess Rooftop and Spa, where wellness and social
                spaces blend seamlessly to offer the perfect urban escape. Plus, you can book your private party or event
-               with
-               us, ensuring a memorable and exclusive experience for you and your guests.
+               with us, ensuring a memorable and exclusive experience for you and your guests.
             </p>
             <p class="large-text" style="font-size: 18px; color: #070000;">
-               To book your private event, call us at <a href="tel:+061 478 1105"> 061 478 1105</a>.
+               To book your private event, call us at:
+            </p>
+            <p class="large-text" style="font-size: 18px; color: #070000;">
+               <a href="tel:+061 478 1105">061 478 1105</a>
             </p>
          </div>
       </div>
