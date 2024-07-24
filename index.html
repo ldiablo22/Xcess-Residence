@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Xcess Residence - A Peaceful Retreat in Pattaya</title>
    <link rel="stylesheet" href="styles.css">
    <meta name="description"
@@ -24,9 +24,10 @@
          padding: 10px 0;
          width: 100%;
          background-color: #eee8e8;
-         position: fixed;
+         position: absolute;
          top: 0;
          z-index: 1000;
+
       }
 
       nav ul {
@@ -62,86 +63,13 @@
          display: block;
          font-size: 40px;
          cursor: pointer;
-         color: rgb(231, 11, 11);
-         position: fixed;
-         right: 40px;
+         color: rgb(15, 0, 0);
+         position: absolute;
+         /* Enforcing absolute positioning */
+         right: 20px;
          top: 10px;
-         z-index: 1001;
+         z-index: 2000;
       }
-
-      /* Media query for laptops (between 1024px and 1440px wide) */
-      @media screen and (min-width: 1024px) and (max-width: 1440px) {
-         .menu-toggle {
-            font-size: 40px;
-            /* Adjust font size for laptops */
-            right: 30px;
-            /* Adjust positioning */
-            top: 55px;
-            /* Adjust positioning */
-         }
-      }
-
-
-      /* Media query for portrait tablets (up to 1024px wide) */
-      @media screen and (max-width: 1024px) and (orientation: portrait) {
-         .menu-toggle {
-            font-size: 90px;
-            /* Adjust font size for portrait tablets */
-            right: 30px;
-            /* Adjust positioning */
-            top: 50px;
-            /* Adjust positioning */
-         }
-      }
-
-      /* Media query for landscape tablets (up to 1024px wide) */
-      @media screen and (max-width: 1024px) and (orientation: landscape) {
-         .menu-toggle {
-            font-size: 65px;
-            /* Adjust font size for landscape tablets */
-            right: 35px;
-            /* Adjust positioning */
-            top: 60px;
-            /* Adjust positioning */
-         }
-      }
-
-      /* Media query for portrait mobile devices (up to 768px wide) */
-      @media screen and (max-width: 768px) and (orientation: portrait) {
-         .menu-toggle {
-            font-size: 40px;
-            /* Adjust font size for portrait mobile devices */
-            right: 25px;
-            /* Adjust positioning */
-            top: 10px;
-            /* Adjust positioning */
-         }
-      }
-
-      /* Media query for landscape mobile devices (up to 768px wide) */
-      @media screen and (max-width: 768px) and (orientation: landscape) {
-         .menu-toggle {
-            font-size: 35px;
-            /* Adjust font size for landscape mobile devices */
-            right: 20px;
-            /* Adjust positioning */
-            top: 5px;
-            /* Adjust positioning */
-         }
-      }
-
-      /* Media query for very small screens (up to 480px wide) */
-      @media screen and (max-width: 480px) {
-         .menu-toggle {
-            font-size: 30px;
-            /* Adjust font size for very small screens */
-            right: 15px;
-            /* Adjust positioning */
-            top: 5px;
-            /* Adjust positioning */
-         }
-      }
-
 
       section {
          padding: 50px 0;
@@ -171,7 +99,6 @@
          /* Existing text color */
          text-align: center;
       }
-
 
       .room {
          display: flex;
@@ -295,7 +222,6 @@
          }
       }
 
-
       #home p {
          font-size: 10px;
       }
@@ -381,8 +307,8 @@
       /* Media query for portrait mode for devices up to 1024px */
       @media screen and (max-width: 1024px) and (orientation: portrait) {
          .links img {
-            width: 70px;
-            height: 70px;
+            width: 45px;
+            height: 45px;
          }
       }
 
@@ -544,7 +470,6 @@
          }
       }
 
-
       /* 768px landscape */
       @media (max-width: 768px) and (orientation: landscape) {
          .popup-content {
@@ -571,7 +496,7 @@
       /* 1024px portrait */
       @media (max-width: 1024px) and (orientation: portrait) {
          .popup-content {
-            max-width: 80%;
+            max-width: 100%;
             padding: 20px;
          }
 
@@ -586,7 +511,7 @@
          }
 
          .close {
-            font-size: 110px;
+            font-size: 40px;
             /* Adjust font size for close button */
          }
       }
@@ -594,7 +519,7 @@
       /* 1024px landscape */
       @media (max-width: 1024px) and (orientation: landscape) {
          .popup-content {
-            max-width: 70%;
+            max-width: 100%;
             padding: 30px;
          }
 
@@ -609,11 +534,10 @@
          }
 
          .close {
-            font-size: 45px;
+            font-size: 40px;
             /* Adjust font size for close button */
          }
       }
-
 
       #about {
          background-color: rgba(215, 207, 207, 0.5);
@@ -743,7 +667,6 @@
          transition: background-color 0.3s ease;
       }
 
-
       .check-availability-container button {
          background-color: #0408f0;
          color: rgb(233, 232, 241);
@@ -810,8 +733,6 @@
          transition: background-color 0.3s ease;
       }
 
-      /* Media queries for 768px and 1024px */
-
       /* 768px portrait */
       @media (max-width: 768px) and (orientation: portrait) {
          .check-availability-container button {
@@ -841,13 +762,13 @@
       /* 1024px portrait */
       @media (max-width: 1024px) and (orientation: portrait) {
          .check-availability-container button {
-            padding: 15px 30px;
-            font-size: 45px;
+            padding: 15px 15px;
+            font-size: 15px;
          }
 
          .availability-options a {
             padding: 15px;
-            font-size: 25px;
+            font-size: 15px;
          }
       }
 
@@ -855,16 +776,14 @@
       @media (max-width: 1024px) and (orientation: landscape) {
          .check-availability-container button {
             padding: 15px 30px;
-            font-size: 30px;
+            font-size: 15px;
          }
 
          .availability-options a {
             padding: 15px;
-            font-size: 26px;
+            font-size: 15px;
          }
       }
-
-
 
       #about .cta-button:hover {
          background-color: #45a049;
@@ -1053,13 +972,14 @@
          }
 
          .menu-toggle {
-            font-size: 95px;
-            right: 30px;
-            top: 40px;
+            font-size: 30px;
+            right: 20px;
+            top: 0px;
          }
 
          nav ul li a {
-            font-size: 45px;
+            font-size: 16px;
+
          }
       }
 
@@ -1075,7 +995,170 @@
          }
 
          nav ul li a {
-            font-size: 30px;
+            font-size: 16px;
+         }
+      }
+
+      /* Media queries for the room grid */
+      @media (max-width: 768px) and (orientation: portrait) {
+         .room-grid {
+            flex-direction: row;
+            gap: 0;
+         }
+
+         .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+         }
+
+         .room {
+            flex: 1;
+            width: 100%;
+         }
+
+         .room img {
+            width: 100%;
+            height: auto;
+            margin: 0;
+         }
+      }
+
+      @media (max-width: 768px) and (orientation: landscape) {
+         .room-grid {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0;
+         }
+
+         .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+         }
+
+         .room {
+            flex: 1;
+            width: 50%;
+         }
+
+         .room img {
+            width: 100%;
+            height: auto;
+            margin: 0;
+         }
+      }
+
+      /* Portrait mode */
+      @media (max-width: 1024px) and (orientation: portrait) {
+         .room-grid {
+            flex-direction: column;
+            gap: 0;
+         }
+
+         .row {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+         }
+
+         .room {
+            flex: 1;
+            width: 80%;
+         }
+
+         .room img {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding-left: 40px;
+            border-top-left-radius: 10px;
+            /* Adjust this value for the rounded corner */
+            border-bottom-left-radius: 10px;
+            /* Adjust this value for the rounded corner */
+            border-top-right-radius: 0;
+            /* 90° corner */
+            border-bottom-right-radius: 0;
+            /* 90° corner */
+         }
+      }
+
+      /* Landscape mode */
+      @media (max-width: 1024px) and (orientation: landscape) {
+         .room-grid {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* Add gap between items */
+            justify-content: space-around;
+            /* Distribute space evenly */
+         }
+
+         .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            /* Ensure space between rows */
+         }
+
+         .room {
+            flex: 1 1 calc(50% - 20px);
+            /* Adjust width to include margin */
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            /* Add space between rows */
+         }
+
+         .room img {
+            width: 90%;
+            /* Reduce width to 90% */
+            height: auto;
+            padding-left: 0;
+            /* Remove left padding */
+            margin-left: auto;
+            /* Center image */
+            margin-right: auto;
+            /* Center image */
+            border-top-left-radius: 10px;
+            /* Rounded corner */
+            border-bottom-left-radius: 10px;
+            /* Rounded corner */
+            border-top-right-radius: 0;
+            /* 90° corner */
+            border-bottom-right-radius: 0;
+            /* 90° corner */
+            display: block;
+            /* Ensure images are displayed as block elements */
+         }
+      }
+
+      .links img {
+         width: 60px;
+         /* Default size */
+         height: 60px;
+         /* Default size */
+      }
+
+      /* Media query for portrait mode for devices up to 1024px */
+      @media screen and (max-width: 1024px) and (orientation: portrait) {
+         .links img {
+            width: 45px !important;
+            /* Force apply if necessary */
+            height: 45px !important;
+            /* Force apply if necessary */
+
+            /* Debugging style */
+         }
+      }
+
+      /* Media query for landscape mode for devices up to 1024px */
+      @media screen and (max-width: 1024px) and (orientation: landscape) {
+         .links img {
+            width: 45px;
+            /* Force apply if necessary */
+            height: 45px;
+            /* Force apply if necessary */
          }
       }
    </style>
