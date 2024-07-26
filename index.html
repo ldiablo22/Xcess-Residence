@@ -150,6 +150,8 @@
          text-align: center;
       }
 
+
+
       #home h2 {
          font-size: 40px;
          margin: 10px 0;
@@ -1060,11 +1062,13 @@
             display: flex;
             flex-direction: column;
             width: 100%;
+
          }
 
          .room {
             flex: 1;
             width: 80%;
+
          }
 
          .room img {
@@ -1072,13 +1076,13 @@
             height: auto;
             margin: 0;
             padding-left: 40px;
-            border-top-left-radius: 10px;
+            border-top-left-radius: 0px !important;
             /* Adjust this value for the rounded corner */
-            border-bottom-left-radius: 10px;
+            border-bottom-left-radius: 0px !important;
             /* Adjust this value for the rounded corner */
-            border-top-right-radius: 0;
+            border-top-right-radius: 0px !important;
             /* 90° corner */
-            border-bottom-right-radius: 0;
+            border-bottom-right-radius: 0px !important;
             /* 90° corner */
          }
       }
@@ -1124,9 +1128,9 @@
             /* Rounded corner */
             border-bottom-left-radius: 10px;
             /* Rounded corner */
-            border-top-right-radius: 0;
+            border-top-right-radius: 10px;
             /* 90° corner */
-            border-bottom-right-radius: 0;
+            border-bottom-right-radius: 10px;
             /* 90° corner */
             display: block;
             /* Ensure images are displayed as block elements */
@@ -1158,6 +1162,7 @@
             width: 35px;
             /* Force apply if necessary */
             height: 35px;
+
             /* Force apply if necessary */
          }
       }
@@ -1217,13 +1222,13 @@
             <div class="row">
                <div class="room">
                   <div class="clickable-image-container" onclick="openDescriptionPopup('Deluxe Queen Room')"><img
-                        src="xcess11.png" alt="Deluxe Queen Room" width="450" height="300">
+                        src="xcess11.png" alt="Deluxe Queen Room" width="630" height="300">
                      <div class="icon"></div>
                   </div>
                </div>
                <div class="room">
                   <div class="clickable-image-container" onclick="openDescriptionPopup('Superior King Room')"><img
-                        src="xcess10.png" alt="Superior King Room" width="450" height="300">
+                        src="xcess10.png" alt="Superior King Room" width="630" height="300">
                      <div class="icon"></div>
                   </div>
                </div>
@@ -1231,13 +1236,14 @@
             <div class="row">
                <div class="room">
                   <div class="clickable-image-container" onclick="openDescriptionPopup('Double Room with balcony')">
-                     <img src="xcess13.jpg" alt="Double Room with balcony" width="450" height="300">
+                     <img src="xcess13.jpg" alt="Double Room with balcony" width="630" height="300">
                      <div class="icon"></div>
                   </div>
                </div>
+
                <div class="room">
                   <div class="clickable-image-container" onclick="openDescriptionPopup('Family Room')"><img
-                        src="xcess21.png" alt="Family Room" width="450" height="300">
+                        src="xcess21.png" alt="Family Room" width="630" height="300">
                      <div class="icon"></div>
                   </div>
                </div>
@@ -1245,19 +1251,16 @@
             <div class="row">
                <div class="room">
                   <div class="clickable-image-container" onclick="openDescriptionPopup('Queen Room with Balcony')">
-                     <img src="xcess22.png" alt="Queen Room with Balcony" width="450" height="300">
+                     <img src="xcess22.png" alt="Queen Room with Balcony" width="630" height="300">
                      <div class="icon"></div>
                   </div>
                </div>
                <div class="room">
                   <div class="clickable-image-container" onclick="openDescriptionPopup('Family Room with balcony')">
-                     <img src="xcess23.png" alt="Family Room with balcony" width="450" height="300">
+                     <img src="xcess23.png" alt="Family Room with balcony" width="630" height="300">
                      <div class="icon"></div>
                   </div>
-               </div>
-            </div>
-         </div>
-      </div>
+
    </section>
    <section id="services" style="background-color: #583ece; padding: 10px;">
       <div class="container services-container">
@@ -1320,12 +1323,9 @@
       </div>
    </div>
 
-
    <script>
       var slides = document.querySelectorAll('.slide');
       var currentIndex = 0;
-
-
 
       var backgroundImages = [
          { url: 'xcess29.jpg', size: '100% 100%' },
